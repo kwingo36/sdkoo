@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samurai Sudoku - Play Free Samurai Sudoku Games Online</title>
+    <meta name="description" content="Play Samurai Sudoku online for free or download printable Samurai Sudoku puzzles. Enjoy daily Samurai Sudoku games, printable sudoku samurai sheets, and free online Samurai Sudoku challenges with solutions. Perfect for Sudoku fans who love 9x9 sudoku, hard puzzles, and advanced sudoku games." />
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="manifest" href="../site.webmanifest">
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../samurai-style.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="theme-light">
+
+    <div id="notification-bar"></div>
+
+    <header>
+        <div class="header-content">
+            <button id="hamburger-btn" aria-label="Open Menu">
+                <span></span><span></span><span></span>
+            </button>
+            <h1><a href="../index.html" style="text-decoration: none; color: inherit;">Sudokuheroes.com</a></h1>
+
+            <!-- START: UPDATED CODE FOR MOBILE THEME TOGGLE -->
+            <div id="theme-toggle-mobile" class="theme-toggle-mobile">
+                <button id="mobile-theme-switcher" aria-label="Toggle Theme">
+                    <!-- Sun Icon SVG -->
+                    <svg class="icon-light" xmlns="http://www.w.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <!-- Moon Icon SVG -->
+                    <svg class="icon-dark" xmlns="http://www.w.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+            </div>
+            <!-- END: UPDATED CODE FOR MOBILE THEME TOGGLE -->
+
+            <nav>
+                <div class="game-mode-selector">
+                    <a href="../index.html" class="mode-btn">Classic Sudoku</a>
+                    <a href="../killer-index.html" class="mode-btn">Killer Sudoku</a>
+                    <a href="../samurai-sudoku.html" class="mode-btn active">Samurai Sudoku</a> 
+                    <a href="../sudoku-x.html" class="mode-btn">Sudoku X</a> 
+                    <a href="../sandwich-sudoku.html" class="mode-btn">Sandwich Sudoku</a>
+                    <a href="../jigsaw-sudoku.html" class="mode-btn">Jigsaw Sudoku</a>
+                    <a href="../word-sudoku.html" class="mode-btn">Word Sudoku</a>
+                    <a href="../daily-challenge.html" class="mode-btn">Daily Challenge</a>
+                </div>
+                <div class="header-right-side">
+    <div class="header-actions">
+        <button id="stats-btn" class="icon-btn">📊</button>
+        <button id="settings-btn" class="icon-btn">⚙️</button>
+    </div>
+    
+    <!-- START: Language Selector المحدث -->
+    <div class="language-selector">
+        <button class="lang-btn" aria-label="Select Language">
+    <!-- START: MODIFIED CODE -->
+    <img id="selected-lang-flag" src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/jp.svg" alt="Selected Language" style="width: 20px; height: auto; border-radius: 2px; box-shadow: 0 0 2px rgba(0,0,0,0.2);">
+    <span id="selected-lang-text">日本語</span>
+    <!-- END: MODIFIED CODE -->
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+    </svg>
+        </button>
+        <div class="lang-dropdown">
+    <a href="../samurai-sudoku.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/gb.svg" alt="English Flag"> English</a>
+    <a href="../es/samurai-sudoku.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/es.svg" alt="Spanish Flag"> Español</a>
+    <a href="../de/samurai-sudoku.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/de.svg" alt="German Flag"> Deutsch</a>
+    <a href="../pt/samurai-sudoku.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/pt.svg" alt="Portuguese Flag"> Português</a>
+    <a href="../fr/samurai-sudoku.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/fr.svg" alt="French Flag"> Français</a>
+    <a href="../it/samurai-sudoku.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/it.svg" alt="Italian Flag"> Italiano</a>
+    <a href="../ar/samurai-sudoku.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/sa.svg" alt="Arabic Flag"> عربى</a>
+    <a href="../ja/samurai-sudoku.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/jp.svg" alt="Japanese Flag"> 日本語</a>
+    <a href="../ru/samurai-sudoku.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/ru.svg" alt="Russian Flag"> Русский</a>
+</div>
+    </div>
+    <!-- END: Language Selector -->
+
+            </nav>
+        </div>
+    </header>
+
+    <div id="mobile-menu">
+        <div class="mobile-menu-content">
+            <button id="close-menu-btn" aria-label="Close Menu">&times;</button>
+            <h3>Game Mode</h3>
+            <div class="game-mode-selector">
+                <a href="../index.html" class="mode-btn">Classic Sudoku</a>
+                <a href="../killer-index.html" class="mode-btn">Killer Sudoku</a>
+                <a href="../samurai-sudoku.html" class="mode-btn active">Samurai Sudoku</a>
+                <a href="../sudoku-x.html" class="mode-btn">Sudoku X</a> 
+                <a href="../sandwich-sudoku.html" class="mode-btn">Sandwich Sudoku</a>
+                <a href="../jigsaw-sudoku.html" class="mode-btn">Jigsaw Sudoku</a>
+                <a href="../word-sudoku.html" class="mode-btn">Word Sudoku</a>
+                <a href="../daily-challenge.html" class="mode-btn">Daily Challenge</a>
+            </div>
+                    <hr>
+        <h3>Actions</h3>
+        <div class="header-actions">
+            <button id="mobile-stats-btn" class="icon-btn">📊 Statistics</button>
+            <button id="mobile-settings-btn" class="icon-btn">⚙️ Settings</button>
+        </div>
+
+        <!-- ============================================= -->
+        <!-- ===== أضف هذا الجزء الجديد بالكامل هنا ===== -->
+        <!-- ============================================= -->
+        <hr>
+        <h3>Languages</h3>
+        <!-- هذا هو الصندوق الفارغ الذي سيستقبل اللغات المنسوخة -->
+        <div id="mobile-language-placeholder" class="mobile-language-links"></div>
+
+        </div>
+    </div>
+
+    <main class="game-container samurai-container">
+        <!-- ** UPDATED CONTROLS TO MATCH OTHER PAGES ** -->
+        <div class="difficulty-and-new-game-controls">
+            <div class="difficulty-selector">
+                <select id="difficulty" title="Select Difficulty">
+                    <option value="samurai-easy">Easy</option>
+                    <option value="samurai-medium" selected>Medium</option>
+                    <option value="samurai-hard">Hard</option>
+                    <option value="samurai-expert">Expert</option>
+                    <option value="samurai-master">Master</option>
+                </select>
+            </div>
+            <div id="mobile-timer-display">00:00</div>
+            <button id="new-game-btn" class="new-game-button-style">New Game</button>
+        </div>
+        
+        <div id="samurai-grid-container">
+            <!-- The five Sudoku grids will be generated here by JavaScript -->
+        </div>
+        
+        <div class="game-controls">
+            <div class="number-pad">
+                <button class="num-btn">1</button>
+                <button class="num-btn">2</button>
+                <button class="num-btn">3</button>
+                <button class="num-btn">4</button>
+                <button class="num-btn">5</button>
+                <button class="num-btn">6</button>
+                <button class="num-btn">7</button>
+                <button class="num-btn">8</button>
+                <button class="num-btn">9</button>
+                <button id="erase-btn" class="control-btn">Erase</button>
+                <button id="pencil-btn" class="control-btn">Pencil</button>
+            </div>
+
+            <div class="action-panel">
+                <div id="timer">00:00</div>
+                <button id="undo-btn" class="action-btn">Undo</button>
+                <button id="hint-btn" class="action-btn">Hint</button>
+                <button id="check-btn" class="action-btn">Check</button>
+                <button id="solve-btn" class="action-btn">Solve</button>
+                <button id="new-game-btn-bottom" class="new-game-button-style">New Game</button>
+            </div>
+        </div>
+    </main>
+
+<div class="info-section">
+    <h2>サムライ数独：壮大なパズルへの挑戦</h2>
+    <p><strong>サムライ数独</strong>（別名：<em>合体5数独</em>）は、これまでに作られた中で最も高度でエキサイティングな数独ゲームの一つです。クラシックな9x9の数独とは異なり、サムライ数独は5つの重なり合うグリッドを一つの巨大なパズルに統合しています。中央のグリッドが4つの外側のグリッドと連結しており、すべての数字が2つのグリッドに影響を与えます。<strong>オンラインのサムライ数独</strong>を楽しむ方も、<strong>印刷用サムライ数独</strong>を好む方も、このパズルは何時間もあなたの脳を挑戦させ続けるでしょう。</p>
+
+    <h3>サムライ数独の起源</h3>
+    <p>サムライ数独は、伝統的な数独パズルに触発されつつも、より手強く、より複雑な挑戦を求めるプレイヤーのために設計されました。最初にパズル雑誌で紹介された後、サムライ数独は瞬く間に世界中で人気を博しました。今日では、<strong>オンラインでサムライ数独ゲーム</strong>をプレイしたり、<strong>無料の印刷用サムライ数独</strong>コレクションをダウンロードしたり、さらにはサムライ形式を特集した<strong>数独問題集</strong>を購入したりすることもできます。</p>
+
+    <h3>サムライ数独の遊び方</h3>
+    <ul>
+        <li>各9x9グリッドは標準ルールに従います。すべての行、列、ブロックには1から9が1回ずつ入ります。</li>
+        <li>重なり合う領域の数字は、同時に2つのグリッドの条件を満たさなければなりません。</li>
+        <li>解答には、忍耐力、論理、そしてクラシックな数独を超える戦略が必要です。</li>
+    </ul>
+    <p>これらのルールが組み合わさることで、サムライ数独は利用可能なオンラインパズルの中でも最もやりがいのあるものの一つとなっています。</p>
+
+    <h3>なぜサムライ数独をプレイするのか？</h3>
+    <ul>
+        <li><strong>脳の発達：</strong>記憶力、論理的思考力、集中力を高めます。</li>
+        <li><strong>多様性：</strong><strong>オンラインのサムライ数独</strong>、<strong>印刷用サムライ数独</strong>、または<strong>無料のオンラインサムライ数独パズル</strong>として利用可能です。</li>
+        <li><strong>毎日の楽しみ：</strong><strong>日替わりサムライ数独</strong>で、毎日新しいパズルに挑戦できます。</li>
+        <li><strong>全レベルに対応：</strong>初心者向けの簡単なグリッドから、エキスパート向けの超難問まで揃っています。</li>
+    </ul>
+
+    <h3>サムライ数独パズルの種類</h3>
+    <p>サムライ数独は多くの方法で楽しむことができます。</p>
+    <ul>
+        <li><strong>クラシック・サムライ数独：</strong>標準的な合体5パズルです。</li>
+        <li><strong>印刷用サムライ数独：</strong>シートをダウンロードして、オフラインプレイを楽しめます。</li>
+        <li><strong>無料オンライン・サムライ数独：</strong>デスクトップやモバイルで、いつでもどこでもプレイできます。</li>
+        <li><strong>日替わりサムライ数独：</strong>無限の練習のために、毎日新しいパズルが更新されます。</li>
+        <li><strong>サムライ数独問題集：</strong>長期間楽しむためのパズルのコレクションです。</li>
+    </ul>
+
+    <h3>サムライ数独を解くための戦略</h3>
+    <p>サムライ数独はクラシックな数独よりもはるかに難しいため、賢いテクニック（<strong>解き方</strong>）を使う必要があります。</p>
+    <ul>
+        <li>まずは中央のグリッドから始めましょう。それが他のすべてのグリッドを繋いでいます。</li>
+        <li>間違いが複数の盤面に影響を与える、重なり合う領域に集中します。</li>
+        <li>消去法とペンシルマーク（メモ）を使って、可能性を追跡します。</li>
+        <li>X-Wing、Swordfish、Coloringのような高度な戦略を適用します。</li>
+    </ul>
+
+    <h3>難易度レベル</h3>
+    <p>サムライ数独は、すべてのプレイヤーに合わせて複数のレベルで利用可能です。</p>
+    <ul>
+        <li><strong>簡単なサムライ数独：</strong>初心者向けの簡略化されたパズルです。</li>
+        <li><strong>中級のサムライ数独：</strong>楽しさと挑戦のバランスが取れています。</li>
+        <li><strong>難問のサムライ数独：</strong>高度な戦略を必要とする手強いパズルです。</li>
+        <li><strong>エキスパート・サムライ数独：</strong>本格的な数独ソルバーのために設計されています。</li>
+        <li><strong>マスター・サムライ数独：</strong>パズル愛好家のための究極のテストです。</li>
+    </ul>
+
+    <h3>印刷とオンラインのオプション</h3>
+    <p>オフラインでプレイするのが好きですか？ <strong>印刷用サムライ数独シート</strong>や<strong>無料の印刷用サムライ数独</strong>をダウンロードして、どこでも解くことができます。デジタルプレイを好みますか？ インスタント解答機能やインタラクティブな機能を備えた<strong>オンライン・サムライ数独</strong>をお試しください。多様性を求めて、Sudoku 247やNYT Sudokuのような他の人気数独プラットフォームを探求することもできます。</p>
+
+    <h3>サムライ数独が特別な理由</h3>
+    <p>通常の簡単な数独パズルとは異なり、サムライ数独は一度に複数の盤面を横断して考える必要があります。それは、標準的な9x9数独ゲームの楽しさと、5つの相互接続されたパズルの複雑さを兼ね備えています。これにより、オンラインおよびオフラインで利用できる最もユニークな数独ゲームの一つとなっています。</p>
+
+    <h3>今日からサムライ数独を始めよう！</h3>
+    <p><strong>オンラインのサムライ数独</strong>で自分自身に挑戦したり、自宅で<strong>印刷用サムライ数独パズル</strong>を楽しんだりしましょう。<strong>日替わりサムライ数独</strong>の更新から、<strong>無料の印刷用サムライ数独シート</strong>まで、あらゆるレベルのパズルがあります。サムライ数独の世界に足を踏み入れ、これまでに作られた最も壮大なロジックゲームのスリルを体験してください！</p>
+</div>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-links" id="difficulty-links">
+                <a href="../easy-samurai.html">Easy</a> <a href="../medium-samurai.html">Medium</a> <a href="../hard-samurai.html">Hard</a> <a href="../expert-samurai.html">Expert</a> <a href="../master-samurai.html">Master</a>
+            </div>
+            <hr class="footer-separator">
+            <div class="footer-links">
+                <a href="../index.html">Home</a> <a href="../about.html">About</a> <a href="../contact.html">Contact Us</a> <a href="../privacy.html">Privacy Policy</a> <a href="../terms.html">Terms of Service</a>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2025 Sudokuheroes.com. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ** UPDATED WIN MODAL ** -->
+    <div id="win-modal" class="modal"><div class="modal-content"><span class="close-btn">&times;</span><h2>Congratulations!</h2><p>You conquered the Samurai!</p><p>Difficulty: <span id="win-difficulty"></span></p><p>Your time: <span id="win-time"></span></p><p id="best-time-msg"></p><button id="win-new-game-btn" class="new-game-button-style">Play Again</button></div></div>
+    
+    <!-- Other Modals -->
+    <div id="settings-modal" class="modal"><div class="modal-content"><span class="close-btn">&times;</span><h2>Settings</h2><div class="setting-item"><label for="theme-select">Theme</label><select id="theme-select"><option value="theme-light">Light</option><option value="theme-dark">Dark</option><option value="theme-paper">Paper</option></select></div><div class="setting-item"><label for="highlight-duplicates-toggle">Highlight Duplicates</label><input type="checkbox" id="highlight-duplicates-toggle" class="toggle-switch" checked></div><div class="setting-item"><label for="highlight-same-toggle">Highlight Same Numbers</label><input type="checkbox" id="highlight-same-toggle" class="toggle-switch" checked></div><div class="setting-item"><label for="timer-toggle">Show Timer</label><input type="checkbox" id="timer-toggle" class="toggle-switch" checked></div><div class="setting-item"><label for="auto-remove-notes-toggle">Auto-remove Notes</label><input type="checkbox" id="auto-remove-notes-toggle" class="toggle-switch" checked></div><div class="setting-item"><label for="sound-toggle">Sound Effects</label><input type="checkbox" id="sound-toggle" class="toggle-switch" checked></div></div></div>
+    <div id="stats-modal" class="modal"><div class="modal-content"><span class="close-btn">&times;</span><h2>Statistics</h2><div id="stats-container"></div><button id="reset-stats-btn">Reset Stats</button></div></div>
+    <div id="confirm-modal" class="modal"><div class="modal-content"><h2 id="confirm-title">Are you sure?</h2><p id="confirm-text">This action cannot be undone.</p><div class="confirm-buttons"><button id="confirm-cancel-btn">Cancel</button><button id="confirm-ok-btn" class="new-game-button-style">OK</button></div></div></div>
+    
+    <audio id="click-sound" src="../assets/sounds/click.mp3" preload="auto"></audio>
+    <audio id="place-sound" src="../assets/sounds/place.mp3" preload="auto"></audio>
+    <audio id="error-sound" src="../assets/sounds/error.mp3" preload="auto"></audio>
+    <audio id="win-sound" src="../assets/sounds/win.mp3" preload="auto"></audio>
+    
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+    <script src="../samurai-script.js"></script>
+</body>
+</html>

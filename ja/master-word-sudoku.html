@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master Word Sudoku - Play Free Letter Sudoku Puzzles Online</title>
+    <meta name="description" content="Challenge yourself with Master Word Sudoku! The toughest sudoku with letters, free online and printable puzzles, and daily master-level sudoku word games to sharpen your mind." />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="description" content="Play free master-level Word Sudoku (Letter Sudoku) online. Only the best can solve this extremely difficult letter-based puzzle.">
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../sudoku-word-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="theme-light">
+
+    <div id="notification-bar"></div>
+
+    <header>
+        <div class="header-content">
+            <button id="hamburger-btn" aria-label="Open Menu">
+                <span></span><span></span><span></span>
+            </button>
+            <h1><a href="../index.html" style="text-decoration: none; color: inherit;">Sudokuheroes.com</a></h1>
+            
+            <!-- START: ADDED CODE FOR MOBILE THEME TOGGLE -->
+<div id="theme-toggle-mobile" class="theme-toggle-mobile">
+    <button id="mobile-theme-switcher" aria-label="Toggle Theme">
+        <!-- Sun Icon SVG -->
+        <svg class="icon-light" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <!-- Moon Icon SVG -->
+        <svg class="icon-dark" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+    </button>
+</div>
+<!-- END: ADDED CODE FOR MOBILE THEME TOGGLE -->
+ 
+            <nav>
+                <div class="game-mode-selector">
+                    <a href="../index.html" class="mode-btn">Classic Sudoku</a>
+                    <a href="../killer-index.html" class="mode-btn">Killer Sudoku</a> 
+                    <a href="../samurai-sudoku.html" class="mode-btn">Samurai Sudoku</a> 
+                    <a href="../sudoku-x.html" class="mode-btn">Sudoku X</a> 
+                    <a href="../sandwich-sudoku.html" class="mode-btn">Sandwich Sudoku</a>
+                    <a href="../jigsaw-sudoku.html" class="mode-btn">Jigsaw Sudoku</a>
+                    <a href="../word-sudoku.html" class="mode-btn active">Word Sudoku</a>
+                    <a href="../daily-challenge.html" class="mode-btn">Daily Challenge</a>
+                </div>
+                <div class="header-right-side">
+    <div class="header-actions">
+        <button id="stats-btn" class="icon-btn">📊</button>
+        <button id="settings-btn" class="icon-btn">⚙️</button>
+    </div>
+    
+    <!-- START: Language Selector المحدث -->
+    <div class="language-selector">
+        <button class="lang-btn" aria-label="Select Language">
+    <!-- START: MODIFIED CODE -->
+    <img id="selected-lang-flag" src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/jp.svg" alt="Selected Language" style="width: 20px; height: auto; border-radius: 2px; box-shadow: 0 0 2px rgba(0,0,0,0.2);">
+    <span id="selected-lang-text">日本語</span>
+    <!-- END: MODIFIED CODE -->
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+    </svg>
+        </button>
+        <div class="lang-dropdown">
+    <a href="../master-word-sudoku.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/gb.svg" alt="English Flag"> English</a>
+    <a href="../es/master-word-sudoku.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/es.svg" alt="Spanish Flag"> Español</a>
+    <a href="../de/master-word-sudoku.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/de.svg" alt="German Flag"> Deutsch</a>
+    <a href="../pt/master-word-sudoku.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/pt.svg" alt="Portuguese Flag"> Português</a>
+    <a href="../fr/master-word-sudoku.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/fr.svg" alt="French Flag"> Français</a>
+    <a href="../it/master-word-sudoku.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/it.svg" alt="Italian Flag"> Italiano</a>
+    <a href="../ar/master-word-sudoku.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/sa.svg" alt="Arabic Flag"> عربى</a>
+    <a href="../ja/master-word-sudoku.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/jp.svg" alt="Japanese Flag"> 日本語</a>
+    <a href="../ru/master-word-sudoku.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/ru.svg" alt="Russian Flag"> Русский</a>
+</div>
+    </div>
+    <!-- END: Language Selector -->
+
+            </nav>
+        </div>
+    </header>
+
+    <div id="mobile-menu">
+        <div class="mobile-menu-content">
+            <button id="close-menu-btn" aria-label="Close Menu">&times;</button>
+            <h3>Game Mode</h3>
+            <div class="game-mode-selector">
+
+                <a href="../index.html" class="mode-btn">Classic Sudoku</a>
+                <a href="../killer-index.html" class="mode-btn">Killer Sudoku</a> 
+                <a href="../samurai-sudoku.html" class="mode-btn">Samurai Sudoku</a> 
+                <a href="../sudoku-x.html" class="mode-btn">Sudoku X</a> 
+                <a href="../sandwich-sudoku.html" class="mode-btn">Sandwich Sudoku</a>
+                <a href="../jigsaw-sudoku.html" class="mode-btn">Jigsaw Sudoku</a>
+                <a href="../word-sudoku.html" class="mode-btn active">Word Sudoku</a>
+                <a href="../daily-challenge.html" class="mode-btn">Daily Challenge</a>
+            </div>
+                    <hr>
+        <h3>Actions</h3>
+        <div class="header-actions">
+            <button id="mobile-stats-btn" class="icon-btn">📊 Statistics</button>
+            <button id="mobile-settings-btn" class="icon-btn">⚙️ Settings</button>
+        </div>
+
+        <!-- ============================================= -->
+        <!-- ===== أضف هذا الجزء الجديد بالكامل هنا ===== -->
+        <!-- ============================================= -->
+        <hr>
+        <h3>Languages</h3>
+        <!-- هذا هو الصندوق الفارغ الذي سيستقبل اللغات المنسوخة -->
+        <div id="mobile-language-placeholder" class="mobile-language-links"></div>
+
+        </div>
+    </div>
+
+    <main class="game-container">
+        <div class="difficulty-and-new-game-controls">
+            <div class="difficulty-selector">
+                <select id="difficulty" title="Select Difficulty">
+                    <option value="word-easy">Easy</option>
+                    <option value="word-medium">Medium</option>
+                    <option value="word-hard">Hard</option>
+                    <option value="word-expert">Expert</option>
+                    <option value="word-master" selected>Master</option>
+                </select>
+            </div>
+            <div id="mobile-timer-display">00:00</div>
+            <button id="new-game-btn" class="new-game-button-style">New Game</button>
+        </div>
+
+        <div id="grid-container">
+            <div id="sudoku-grid"></div>
+        </div>        
+        
+        <div class="game-controls">
+            <div class="number-pad">
+                <button class="num-btn">A</button><button class="num-btn">B</button><button class="num-btn">C</button>
+                <button class="num-btn">D</button><button class="num-btn">E</button><button class="num-btn">F</button>
+                <button class="num-btn">G</button><button class="num-btn">H</button><button class="num-btn">I</button>
+                <button id="erase-btn" class="control-btn">Erase</button>
+                <button id="pencil-btn" class="control-btn">Pencil</button>
+            </div>
+
+            <div class="action-panel">
+                <div id="timer">00:00</div>
+                <button id="undo-btn" class="action-btn">Undo</button>
+                <button id="hint-btn" class="action-btn">Hint</button>
+                <button id="check-btn" class="action-btn">Check</button>
+                <button id="solve-btn" class="action-btn">Solve</button>
+                <button id="new-game-btn-bottom" class="new-game-button-style">New Game</button>
+            </div>
+        </div>
+    </main>
+
+<div class="info-section">
+    <h2>マスター・ワード数独：真のエキスパートのための究極の挑戦</h2>
+    <p><strong>文字数独</strong>パズルの頂点、<strong>マスター・ワード数独</strong>へようこそ。最も上級のプレイヤーのために設計されたこのレベルは、すでに簡単、中級、難問、そしてエキスパートレベルのワード数独チャレンジをマスターした方々のためのものです。各9x9グリッドは、あなたの論理、忍耐力、そして問題解決能力を限界まで押し上げます。<strong>オンライン</strong>で最も手強い<strong>単語数独パズル</strong>に立ち向かう準備はできていますか？</p>
+
+    <h3>マスター・ワード数独の遊び方（ルール）</h3>
+    <p>ルールはクラシックですが、その難易度は比類なきものです。</p>
+    <ul>
+        <li>すべての<strong>行</strong>には、9つすべての文字が1回ずつ入ります。</li>
+        <li>すべての<strong>列</strong>には、各文字が1回ずつ含まれます。</li>
+        <li>すべての<strong>3x3のブロック</strong>は、重複なく文字の全セットで埋められなければなりません。</li>
+    </ul>
+    <p>簡単なレベルとは異なり、<strong>オンラインのマスター・ワード数独</strong>パズルは、高度なテクニック、多段階の推論、そして戦略的な先見性を必要とします。</p>
+
+    <h3>なぜマスター・ワード数独をプレイするのか？</h3>
+    <ul>
+        <li><strong>究極の脳トレ：</strong>エキスパートレベルで記憶力、集中力、そして論理的思考を研ぎ澄まします。</li>
+        <li><strong>独占的なパズル：</strong>他では見つけられない、ユニークな<em>印刷用文字数独</em>チャレンジ。</li>
+        - <strong>日替わりマスターチャレンジ：</strong>毎日新しい<strong>オンライン・マスター・ワード数独</strong>パズルが、あなたの頭脳を鋭く保ちます。</li>
+        <li><strong>印刷可能なオプション：</strong>オフラインで解くために、<strong>印刷用文字数独シート</strong>をダウンロードできます。</li>
+        <li><strong>楽しく、そして競争的に：</strong>友人と競い合ったり、自分の解答記録を追跡したりできます。</li>
+    </ul>
+
+    <h3>マスター・ワード数独のための高度な戦略（超上級の解き方）</h3>
+    <p>これらの極限のパズルを解くためには、以下を考慮してください。</p>
+    <ul>
+        <li>多段階の論理連鎖を用いて、可能性を排除します。</li>
+        - <em>Coloring</em>、<em>XYZ-Wing</em>、<em>Forcing Chains</em>、<em>Chains of Pairs</em>のような高度な手法を適用します。</li>
+        <li>すべてのマスに対して、詳細な候補リストを維持します。</li>
+        <li>複数の行、列、ブロックにまたがるパターンを同時に観察します。</li>
+        <li>忍耐強くあってください。いくつかのパズルは、完全に解くのに数時間、あるいは数日かかることさえあります。</li>
+    </ul>
+
+    <h3>マスター・ワード数独のメリット</h3>
+    <ul>
+        <li>高度な論理的推論と問題解決スキルを向上させます。</li>
+        <li>集中力、記憶力、そして認知の柔軟性を高めます。</li>
+        <li>経験豊富なパズルソルバーに、満足のいく挑戦を提供します。</li>
+        <li>パターン認識と戦略的思考能力を向上させます。</li>
+    </ul>
+
+    <h3>誰がマスター・ワード数独に挑戦すべきか？</h3>
+    <p>このレベルは、次のような方に理想的です。</p>
+    <ul>
+        <li>すべての下位レベルをマスターしたエキスパートプレイヤー。</li>
+        <li>トーナメントやタイムチャレンジに備える競技志向のソルバー。</li>
+        <li>極限の論理テストを求めるパズル愛好家。</li>
+        <li><strong>オンライン</strong>または<strong>印刷</strong>形式で、最も難しい<strong>単語数独パズル</strong>に取り組む準備ができているすべての人。</li>
+    </ul>
+
+    <h3>マスター・ワード数独を解くためのヒント</h3>
+    <ul>
+        <li>ユニークな文字を探して、行、列、ブロックをスキャンすることから始めます。</li>
+        <li>ペンシルモード（メモ機能）や候補のメモを使って、可能性を追跡します。</li>
+        <li>圧倒されないように、パズルをセクションに分割します。</li>
+        <li>スピードと正確性を徐々に向上させるために、毎日練習します。</li>
+        <li>複雑な解法のために、論理とパターン認識を組み合わせます。</li>
+    </ul>
+
+    <h3>今日、あなたのマスターへの旅を始めよう</h3>
+    <p><strong>無料</strong>で<strong>マスター・ワード数独</strong>をオンラインでプレイするか、オフラインで楽しむために<strong>印刷用文字数独シート</strong>を<strong>印刷</strong>してください。各パズルは、最も経験豊富なソルバーでさえも挑戦するように作られています。毎日何千人ものプレイヤーに加わり、あなたが究極の文字数独チャレンジをマスターできることを証明しましょう！</p>
+</div>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-links" id="difficulty-links">
+                <a href="../easy-word-sudoku.html">Easy</a>
+                <a href="../medium-word-sudoku.html">Medium</a>
+                <a href="../hard-word-sudoku.html">Hard</a>
+                <a href="../expert-word-sudoku.html">Expert</a>
+                <a href="../master-word-sudoku.html" class="active">Master</a>
+            </div>
+            <hr class="footer-separator">
+            <div class="footer-links">
+                <a href="../index.html">Home</a>
+                <a href="../about.html">About</a>
+                <a href="../contact.html">Contact Us</a>
+                <a href="../privacy.html">Privacy Policy</a>
+                <a href="../terms.html">Terms of Service</a>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2025 Sudokuheroes.com. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <div id="settings-modal" class="modal"><div class="modal-content"><span class="close-btn">&times;</span><h2>Settings</h2><div class="setting-item"><label for="theme-select">Theme</label><select id="theme-select"><option value="theme-light">Light</option><option value="theme-dark">Dark</option><option value="theme-paper">Paper</option></select></div><div class="setting-item"><label for="highlight-duplicates-toggle">Highlight Duplicates</label><input type="checkbox" id="highlight-duplicates-toggle" class="toggle-switch" checked></div><div class="setting-item"><label for="highlight-same-toggle">Highlight Same Numbers</label><input type="checkbox" id="highlight-same-toggle" class="toggle-switch" checked></div><div class="setting-item"><label for="timer-toggle">Show Timer</label><input type="checkbox" id="timer-toggle" class="toggle-switch" checked></div><div class="setting-item"><label for="auto-remove-notes-toggle">Auto-remove Notes</label><input type="checkbox" id="auto-remove-notes-toggle" class="toggle-switch" checked></div><div class="setting-item"><label for="sound-toggle">Sound Effects</label><input type="checkbox" id="sound-toggle" class="toggle-switch" checked></div></div></div>
+    <div id="stats-modal" class="modal"><div class="modal-content"><span class="close-btn">&times;</span><h2>Statistics</h2><div id="stats-container"></div><button id="reset-stats-btn">Reset Stats</button></div></div>
+    <div id="win-modal" class="modal"><div class="modal-content"><span class="close-btn">&times;</span><h2>Congratulations!</h2><p>You solved the puzzle!</p><p>Difficulty: <span id="win-difficulty"></span></p><p>Your time: <span id="win-time"></span></p><p id="best-time-msg"></p><button id="win-new-game-btn" class="new-game-button-style">Play New Game</button></div></div>
+    <div id="confirm-modal" class="modal"><div class="modal-content"><h2 id="confirm-title">Are you sure?</h2><p id="confirm-text">This action cannot be undone.</p><div class="confirm-buttons"><button id="confirm-cancel-btn">Cancel</button><button id="confirm-ok-btn" class="new-game-button-style">OK</button></div></div></div>
+    
+    <audio id="click-sound" src="../assets/sounds/click.mp3" preload="auto"></audio>
+    <audio id="place-sound" src="../assets/sounds/place.mp3" preload="auto"></audio>
+    <audio id="error-sound" src="../assets/sounds/error.mp3" preload="auto"></audio>
+    <audio id="win-sound" src="../assets/sounds/win.mp3" preload="auto"></audio>
+    
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+    <script src="../word-sudoku-script.js"></script>
+</body>
+</html>

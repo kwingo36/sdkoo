@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easy Sudoku Online - Play Free Daily Sudoku Easy Puzzles</title>
+    <meta name="description" content="Play Easy Sudoku online for free! Enjoy beginner-friendly sudoku puzzles with plenty of clues. Solve daily easy sudoku, printable sudoku puzzles, web sudoku, and NYT sudoku easy. Perfect for kids, beginners, and anyone looking for relaxing sudoku games. Start your sudoku journey today with free online sudoku puzzles!" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="manifest" href="../site.webmanifest">
+
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="theme-light">
+
+    <div id="notification-bar"></div>
+
+    <header>
+        <div class="header-content">
+            <!-- أيقونة الهامبرغر (للشاشات الصغيرة) تم نقلها إلى اليسار -->
+            <button id="hamburger-btn" aria-label="Open Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- عنوان الموقع -->
+            <h1><a href="../index.html" style="text-decoration: none; color: inherit;">Sudokuheroes.com</a></h1>
+
+            <!-- START: UPDATED CODE FOR MOBILE THEME TOGGLE -->
+<div id="theme-toggle-mobile" class="theme-toggle-mobile">
+    <button id="mobile-theme-switcher" aria-label="Toggle Theme">
+        <!-- Sun Icon SVG -->
+        <svg class="icon-light" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <!-- Moon Icon SVG -->
+        <svg class="icon-dark" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+    </button>
+</div>
+<!-- END: UPDATED CODE FOR MOBILE THEME TOGGLE -->
+
+            <!-- حاوية التنقل (للشاشات الكبيرة) -->
+            <nav>
+                <div class="game-mode-selector">
+                    <a href="../index.html" class="mode-btn">Classic Sudoku</a>
+                    <a href="../killer-index.html" class="mode-btn">Killer Sudoku</a> 
+                    <a href="../samurai-sudoku.html" class="mode-btn">Samurai Sudoku</a> 
+                    <a href="../sudoku-x.html" class="mode-btn">Sudoku X</a> 
+                    <a href="../sandwich-sudoku.html" class="mode-btn">Sandwich Sudoku</a>
+                    <a href="../jigsaw-sudoku.html" class="mode-btn">Jigsaw Sudoku</a>
+                    <a href="../word-sudoku.html" class="mode-btn">Word Sudoku</a>
+                    <a href="../daily-challenge.html" class="mode-btn">Daily Challenge</a>
+                </div>
+                <div class="header-right-side">
+    <div class="header-actions">
+        <button id="stats-btn" class="icon-btn">📊</button>
+        <button id="settings-btn" class="icon-btn">⚙️</button>
+    </div>
+    
+    <!-- START: Language Selector المحدث -->
+    <div class="language-selector">
+        <button class="lang-btn" aria-label="Select Language">
+    <!-- START: MODIFIED CODE -->
+    <img id="selected-lang-flag" src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/jp.svg" alt="Selected Language" style="width: 20px; height: auto; border-radius: 2px; box-shadow: 0 0 2px rgba(0,0,0,0.2);">
+    <span id="selected-lang-text">日本語</span>
+    <!-- END: MODIFIED CODE -->
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+    </svg>
+        </button>
+        <div class="lang-dropdown">
+    <a href="../easy.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/gb.svg" alt="English Flag"> English</a>
+    <a href="../es/easy.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/es.svg" alt="Spanish Flag"> Español</a>
+    <a href="../de/easy.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/de.svg" alt="German Flag"> Deutsch</a>
+    <a href="../pt/easy.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/pt.svg" alt="Portuguese Flag"> Português</a>
+    <a href="../fr/easy.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/fr.svg" alt="French Flag"> Français</a>
+    <a href="../it/easy.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/it.svg" alt="Italian Flag"> Italiano</a>
+    <a href="../ar/easy.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/sa.svg" alt="Arabic Flag"> عربى</a>
+    <a href="../ja/easy.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/jp.svg" alt="Japanese Flag"> 日本語</a>
+    <a href="../ru/easy.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/ru.svg" alt="Russian Flag"> Русский</a>
+</div>
+    </div>
+    <!-- END: Language Selector -->
+
+            </nav>
+        </div>
+    </header>
+
+    <!-- القائمة الجانبية للشاشات الصغيرة (توضع خارج الهيدر) -->
+    <div id="mobile-menu">
+        <div class="mobile-menu-content">
+            <button id="close-menu-btn" aria-label="Close Menu">&times;</button>
+            <h3>Game Mode</h3>
+            <div class="game-mode-selector">
+                <a href="../index.html" class="mode-btn">Classic Sudoku</a>
+                <a href="../killer-index.html" class="mode-btn">Killer Sudoku</a> 
+                <a href="../samurai-sudoku.html" class="mode-btn">Samurai Sudoku</a> 
+                <a href="../sudoku-x.html" class="mode-btn">Sudoku X</a> 
+                <a href="../sandwich-sudoku.html" class="mode-btn">Sandwich Sudoku</a>
+                <a href="../jigsaw-sudoku.html" class="mode-btn">Jigsaw Sudoku</a>
+                <a href="../word-sudoku.html" class="mode-btn">Word Sudoku</a>
+                <a href="../daily-challenge.html" class="mode-btn">Daily Challenge</a>
+            </div>
+                    <hr>
+        <h3>Actions</h3>
+        <div class="header-actions">
+            <button id="mobile-stats-btn" class="icon-btn">📊 Statistics</button>
+            <button id="mobile-settings-btn" class="icon-btn">⚙️ Settings</button>
+        </div>
+
+        <!-- ============================================= -->
+        <!-- ===== أضف هذا الجزء الجديد بالكامل هنا ===== -->
+        <!-- ============================================= -->
+        <hr>
+        <h3>Languages</h3>
+        <!-- هذا هو الصندوق الفارغ الذي سيستقبل اللغات المنسوخة -->
+        <div id="mobile-language-placeholder" class="mobile-language-links"></div>
+
+        </div>
+    </div>
+        </div>
+
+    <main class="game-container">
+        <div class="difficulty-and-new-game-controls">
+            <div class="difficulty-selector">
+                <select id="difficulty" title="Select Difficulty">
+                    <option value="easy" selected>Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                    <option value="expert">Expert</option>
+                    <option value="master">Master</option>
+                </select>
+            </div>
+            <div id="mobile-timer-display">00:00</div>
+            <button id="new-game-btn" class="new-game-button-style">New Game</button>
+        </div>
+
+        <div id="sudoku-grid"></div>
+        
+        <div class="game-controls">
+            <div class="number-pad">
+                <button class="num-btn">1</button>
+                <button class="num-btn">2</button>
+                <button class="num-btn">3</button>
+                <button class="num-btn">4</button>
+                <button class="num-btn">5</button>
+                <button class="num-btn">6</button>
+                <button class="num-btn">7</button>
+                <button class="num-btn">8</button>
+                <button class="num-btn">9</button>
+                <button id="erase-btn" class="control-btn">Erase</button>
+                <button id="pencil-btn" class="control-btn">Pencil</button>
+            </div>
+
+            <div class="action-panel">
+                <div id="timer">00:00</div>
+                <button id="undo-btn" class="action-btn">Undo</button>
+                <button id="hint-btn" class="action-btn">Hint</button>
+                <button id="check-btn" class="action-btn">Check</button>
+                <button id="solve-btn" class="action-btn">Solve</button>
+                <button id="new-game-btn-bottom" class="new-game-button-style">New Game</button>
+            </div>
+        </div>
+    </main>
+
+<div class="info-section">
+    <h2>簡単な数独：初心者向けの無料数独パズルをオンラインで</h2>
+    <p><strong>簡単な数独</strong>（<strong>数独 初級</strong>）は、数独パズルの魔法の世界を発見したいすべての人にとって最高の入り口です。特に初心者向けに設計されたこれらのパズルは、難しすぎずに解く楽しさを味わえるよう、たくさんのヒント（数字）が最初から配置されています。<strong>数独 無料</strong>でオンラインプレイを楽しみたい方も、NYTの簡単な数独に挑戦したい方も、あるいはオフラインで解くために<strong>簡単な数独パズル</strong>を<strong>印刷</strong>したい方も、いつでもリラックスできる挑戦があなたを待っています。</p>
+
+    <h3>簡単な数独（数独 初級）とは？</h3>
+    <p>数独は、論理力、忍耐力、そして注意力が一つになるクラシックな数字ゲームです。<em>簡単な数独パズル</em>では、最初からグリッドに多くの数字が埋まっているため、解くプロセスがシンプルで楽しくなります。これは、お子様や初心者の方、あるいはストレスのない頭の体操（脳トレ）を求めている方に最適なバージョンです。</p>
+
+    <h3>簡単な数独の遊び方</h3>
+    <p>ルールはどの難易度でも共通で、とてもシンプルです。</p>
+    <ul>
+        <li>各<strong>行</strong>には、1から9までの数字が1回ずつ入ります。</li>
+        <li>各<strong>列</strong>にも、1から9までの各数字が重複しないように入ります。</li>
+        <li>各<strong>3x3のブロック</strong>にも、1から9までの数字がすべて入ります。</li>
+    </ul>
+    <p><strong>簡単な数独</strong>（<strong>数独 初級 問題</strong>）には開始時の数字が多いため、初心者はロジックがどのように機能するかをすぐに理解できます。これにより、<em>数独 中級</em>、そして最終的には<em>数独 難問</em>へと進むのが容易になります。</p>
+
+    <h3>なぜ簡単な数独から始めるべきか？</h3>
+    <ul>
+        <li><strong>初心者向け：</strong>高度なテクニックは不要で、明確で分かりやすい論理ステップで解くことができます。<strong>数独 解き方 初級</strong>を学ぶのに最適です。</li>
+        <li><strong>教育的：</strong>子供たちに数独の遊び方を教え、問題解決スキルを高めるのにぴったりです。</li>
+        <li><strong>ストレスフリー：</strong>シンプルでありながら満足感のあるパズルで、リラックスして心を落ち着かせることができます。</li>
+        <li><strong>毎日の挑戦：</strong>NYT Sudoku TodayやSudoku 247のようなサイトで、毎日新しい<strong>無料 数独 パズル</strong>にアクセスできます。</li>
+        <li><strong>柔軟な形式：</strong><strong>ナンプレ オンライン</strong>でプレイしたり、<strong>印刷用数独パズル</strong>を使ったり、<strong>数独 アプリ</strong>をダウンロードしたりできます。</li>
+    </ul>
+
+    <h3>簡単な数独パズルのメリット</h3>
+    <p>毎日簡単な数独をプレイすることには、楽しさを超える多くのメリットがあります。</p>
+    <ul>
+        <li>集中力、記憶力、注意力を向上させます。</li>
+        <li>より複雑な数独パズルを解くための基礎を築きます。</li>
+        <li>論理的思考力と忍耐力を養います。</li>
+        <li>子供から高齢者まで、すべての年齢層で楽しめます。</li>
+        <li>中級や難問レベルに進む前に自信をつけることができます。</li>
+    </ul>
+
+    <h3>利用可能な簡単な数独の種類</h3>
+    <ul>
+        <li><strong>クラシックな9x9の簡単な数独：</strong>最も人気があり、初心者フレンドリーな形式です。</li>
+        <li><strong>印刷可能な簡単な数独：</strong>いつでも紙で解けるように、<strong>無料 数独 パズル</strong>をダウンロードできます。</li>
+        <li><strong>毎日の簡単な数独：</strong>NYT Sudoku EasyやWeb Sudokuで、毎日新鮮なパズルが提供されます。</li>
+        <li><strong>無料オンライン数独：</strong>ダウンロード不要で、ブラウザ上で直接プレイできます。</li>
+        <li><strong>数独パズルブック：</strong>オフラインで楽しむための簡単な数独パズルのコレクションです。</li>
+    </ul>
+
+    <h3>初心者向けのヒント</h3>
+    <p><strong>簡単な数独パズル</strong>をより楽しむためのヒントをいくつか紹介します。</p>
+    <ul>
+        <li>最も多くの数字が埋まっている行、列、または3x3のブロックから始めましょう。</li>
+        <li>消去法を使って、ありえない数字を候補から外していきます。</li>
+        <li>グリッド全体で頻繁に現れる数字を探し、配置のガイドにしましょう。</li>
+        <li>急がないでください。簡単な数独はリラックスして楽しむために作られています。</li>
+        <li>毎日<strong>無料の数独パズル</strong>で練習して、少しずつ上達しましょう。</li>
+    </ul>
+
+    <h3>毎日の簡単な数独チャレンジ</h3>
+    <p>継続的に楽しみたいなら、NYT Sudoku TodayやSudoku 247のようなサイトが提供する<strong>日替わり数独</strong>に挑戦してみてください。これらの毎日の挑戦は、論理的思考の習慣を作り、脳をシャープに保つのに役立ちます。<strong>簡単なオンライン数独</strong>なら、いつでもどこでもプレイできます。</p>
+
+    <h3>今日から簡単な数独を始めよう！</h3>
+    <p><strong>無料オンライン数独</strong>、NYTの簡単な数独、または<strong>印刷可能な数独パズル</strong>のどれを好む場合でも、あなたにぴったりのパズルが常に待っています。簡単な数独は、遊び方を学び、心をリラックスさせ、より難しいレベルに備えるための最良の方法です。今日から解き始めて、世界中の何百万人もの数独ファンに加わりましょう！</p>
+</div>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-links" id="difficulty-links">
+                <a href="../easy.html">Easy</a>
+                <a href="../medium.html">Medium</a>
+                <a href="../hard.html">Hard</a>
+                <a href="../expert.html">Expert</a>
+                <a href="../master.html">Master</a>
+            </div>
+            <hr class="footer-separator">
+            <div class="footer-links">
+                <a href="../index.html">Home</a>
+                <a href="../about.html">About</a>
+                <a href="../contact.html">Contact Us</a>
+                <a href="../privacy.html">Privacy Policy</a>
+                <a href="../terms.html">Terms of Service</a>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2025 Sudokuheroes.com. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- --- START: All Modals --- -->
+    <div id="settings-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Settings</h2>
+            <div class="setting-item">
+                <label for="theme-select">Theme</label>
+                <select id="theme-select">
+                    <option value="theme-light">Light</option>
+                    <option value="theme-dark">Dark</option>
+                    <option value="theme-paper">Paper</option>
+                </select>
+            </div>
+            <div class="setting-item">
+                <label for="highlight-duplicates-toggle">Highlight Duplicates</label>
+                <input type="checkbox" id="highlight-duplicates-toggle" class="toggle-switch" checked>
+            </div>
+            <div class="setting-item">
+                <label for="highlight-same-toggle">Highlight Same Numbers</label>
+                <input type="checkbox" id="highlight-same-toggle" class="toggle-switch" checked>
+            </div>
+            <div class="setting-item">
+                <label for="timer-toggle">Show Timer</label>
+                <input type="checkbox" id="timer-toggle" class="toggle-switch" checked>
+            </div>
+            <div class="setting-item">
+                <label for="auto-remove-notes-toggle">Auto-remove Notes</label>
+                <input type="checkbox" id="auto-remove-notes-toggle" class="toggle-switch" checked>
+            </div>
+            <div class="setting-item">
+                <label for="sound-toggle">Sound Effects</label>
+                <input type="checkbox" id="sound-toggle" class="toggle-switch" checked>
+            </div>
+        </div>
+    </div>
+    
+    <div id="stats-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Statistics</h2>
+            <div id="stats-container"></div>
+            <button id="reset-stats-btn">Reset Stats</button>
+        </div>
+    </div>
+
+    <div id="win-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Congratulations!</h2>
+            <p>You solved the puzzle!</p>
+            <p>Difficulty: <span id="win-difficulty"></span></p>
+            <p>Your time: <span id="win-time"></span></p>
+            <p id="best-time-msg"></p>
+            <button id="win-new-game-btn" class="new-game-button-style">Play New Game</button>
+        </div>
+    </div>
+    
+    <div id="confirm-modal" class="modal">
+        <div class="modal-content">
+            <h2 id="confirm-title">Are you sure?</h2>
+            <p id="confirm-text">This action cannot be undone.</p>
+            <div class="confirm-buttons">
+                <button id="confirm-cancel-btn">Cancel</button>
+                <button id="confirm-ok-btn" class="new-game-button-style">OK</button>
+            </div>
+        </div>
+    </div>
+    <!-- --- END: All Modals --- -->
+
+    <audio id="click-sound" src="../assets/sounds/click.mp3" preload="auto"></audio>
+    <audio id="place-sound" src="../assets/sounds/place.mp3" preload="auto"></audio>
+    <audio id="error-sound" src="../assets/sounds/error.mp3" preload="auto"></audio>
+    <audio id="win-sound" src="../assets/sounds/win.mp3" preload="auto"></audio>
+    
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html>

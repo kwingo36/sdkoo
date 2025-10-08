@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Killer Sudoku - Play Free Killer Sudoku Online</title>
+    <meta name="description" content="Play Killer Sudoku online free! Enjoy daily killer sudoku puzzles from easy to hard, printable killer sudoku sheets, and famous versions like Guardian Killer Sudoku & Brainbashers Killer Sudoku. Solve with killer sudoku combinations, calculators, and tips. Perfect for Killer sudoku lovers who want the ultimate challenge!" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="manifest" href="../site.webmanifest">
+
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="theme-light">
+
+    <div id="notification-bar"></div>
+
+    <header>
+        <div class="header-content">
+            <!-- أيقونة الهامبرغر (للشاشات الصغيرة) تم نقلها إلى اليسار -->
+            <button id="hamburger-btn" aria-label="Open Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- عنوان الموقع -->
+            <h1><a href="../index.html" style="text-decoration: none; color: inherit;">Sudokuheroes.com</a></h1>
+
+            <!-- START: UPDATED CODE FOR MOBILE THEME TOGGLE -->
+<div id="theme-toggle-mobile" class="theme-toggle-mobile">
+    <button id="mobile-theme-switcher" aria-label="Toggle Theme">
+        <!-- Sun Icon SVG -->
+        <svg class="icon-light" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <!-- Moon Icon SVG -->
+        <svg class="icon-dark" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+    </button>
+</div>
+<!-- END: UPDATED CODE FOR MOBILE THEME TOGGLE -->
+
+            <!-- حاوية التنقل (للشاشات الكبيرة) -->
+            <nav>
+                <div class="game-mode-selector">
+                    <a href="../index.html" class="mode-btn">Classic Sudoku</a>
+                    <a href="../killer-index.html" class="mode-btn">Killer Sudoku</a> 
+                    <a href="../samurai-sudoku.html" class="mode-btn">Samurai Sudoku</a> 
+                    <a href="../sudoku-x.html" class="mode-btn">Sudoku X</a> 
+                    <a href="../sandwich-sudoku.html" class="mode-btn">Sandwich Sudoku</a>
+                    <a href="../jigsaw-sudoku.html" class="mode-btn">Jigsaw Sudoku</a>
+                    <a href="../word-sudoku.html" class="mode-btn">Word Sudoku</a>
+                    <a href="../daily-challenge.html" class="mode-btn">Daily Challenge</a>
+                </div>
+                <div class="header-right-side">
+    <div class="header-actions">
+        <button id="stats-btn" class="icon-btn">📊</button>
+        <button id="settings-btn" class="icon-btn">⚙️</button>
+    </div>
+    
+    <!-- START: Language Selector المحدث -->
+    <div class="language-selector">
+        <button class="lang-btn" aria-label="Select Language">
+    <!-- START: MODIFIED CODE -->
+    <img id="selected-lang-flag" src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/jp.svg" alt="Selected Language" style="width: 20px; height: auto; border-radius: 2px; box-shadow: 0 0 2px rgba(0,0,0,0.2);">
+    <span id="selected-lang-text">日本語</span>
+    <!-- END: MODIFIED CODE -->
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+    </svg>
+        </button>
+        <div class="lang-dropdown">
+    <a href="../killer-index.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/gb.svg" alt="English Flag"> English</a>
+    <a href="../es/killer-index.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/es.svg" alt="Spanish Flag"> Español</a>
+    <a href="../de/killer-index.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/de.svg" alt="German Flag"> Deutsch</a>
+    <a href="../pt/killer-index.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/pt.svg" alt="Portuguese Flag"> Português</a>
+    <a href="../fr/killer-index.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/fr.svg" alt="French Flag"> Français</a>
+    <a href="../it/killer-index.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/it.svg" alt="Italian Flag"> Italiano</a>
+    <a href="../ar/killer-index.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/sa.svg" alt="Arabic Flag"> عربى</a>
+    <a href="../ja/killer-index.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/jp.svg" alt="Japanese Flag"> 日本語</a>
+    <a href="../ru/killer-index.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/ru.svg" alt="Russian Flag"> Русский</a>
+</div>
+    </div>
+    <!-- END: Language Selector -->
+
+            </nav>
+        </div>
+    </header>
+
+    <!-- القائمة الجانبية للشاشات الصغيرة (توضع خارج الهيدر) -->
+    <div id="mobile-menu">
+        <div class="mobile-menu-content">
+            <button id="close-menu-btn" aria-label="Close Menu">&times;</button>
+            <h3>Game Mode</h3>
+            <div class="game-mode-selector">
+                <a href="../index.html" class="mode-btn">Classic Sudoku</a>
+                <a href="../killer-index.html" class="mode-btn">Killer Sudoku</a> 
+                <a href="../samurai-sudoku.html" class="mode-btn">Samurai Sudoku</a> 
+                <a href="../sudoku-x.html" class="mode-btn">Sudoku X</a> 
+                <a href="../sandwich-sudoku.html" class="mode-btn">Sandwich Sudoku</a>
+                <a href="../jigsaw-sudoku.html" class="mode-btn">Jigsaw Sudoku</a>
+                <a href="../word-sudoku.html" class="mode-btn">Word Sudoku</a>
+                <a href="../daily-challenge.html" class="mode-btn">Daily Challenge</a>
+            </div>
+                    <hr>
+        <h3>Actions</h3>
+        <div class="header-actions">
+            <button id="mobile-stats-btn" class="icon-btn">📊 Statistics</button>
+            <button id="mobile-settings-btn" class="icon-btn">⚙️ Settings</button>
+        </div>
+
+        <!-- ============================================= -->
+        <!-- ===== أضف هذا الجزء الجديد بالكامل هنا ===== -->
+        <!-- ============================================= -->
+        <hr>
+        <h3>Languages</h3>
+        <!-- هذا هو الصندوق الفارغ الذي سيستقبل اللغات المنسوخة -->
+        <div id="mobile-language-placeholder" class="mobile-language-links"></div>
+
+        </div>
+    </div>
+        </div>
+
+    <main class="game-container">
+        <div class="difficulty-and-new-game-controls">
+            <div class="difficulty-selector">
+                <select id="difficulty" title="Select Difficulty">
+                    <option value="killer-easy">Easy</option>
+                    <option value="killer-medium" selected>Medium</option>
+                    <option value="killer-hard">Hard</option>
+                    <option value="killer-expert">Expert</option>
+                    <option value="killer-master">Master</option>
+                </select>
+            </div>
+            <div id="mobile-timer-display">00:00</div>
+            <button id="new-game-btn" class="new-game-button-style">New Game</button>
+        </div>
+
+        <div id="sudoku-grid"></div>
+        
+        <div class="game-controls">
+            <div class="number-pad">
+                <button class="num-btn">1</button>
+                <button class="num-btn">2</button>
+                <button class="num-btn">3</button>
+                <button class="num-btn">4</button>
+                <button class="num-btn">5</button>
+                <button class="num-btn">6</button>
+                <button class="num-btn">7</button>
+                <button class="num-btn">8</button>
+                <button class="num-btn">9</button>
+                <button id="erase-btn" class="control-btn">Erase</button>
+                <button id="pencil-btn" class="control-btn">Pencil</button>
+            </div>
+
+            <div class="action-panel">
+                <div id="timer">00:00</div>
+                <button id="undo-btn" class="action-btn">Undo</button>
+                <button id="hint-btn" class="action-btn">Hint</button>
+                <button id="check-btn" class="action-btn">Check</button>
+                <button id="solve-btn" class="action-btn">Solve</button>
+                <button id="new-game-btn-bottom" class="new-game-button-style">New Game</button>
+            </div>
+        </div>
+    </main>
+
+<div class="info-section">
+    <h2>キラー数独：論理マスターのための究極のパズル</h2>
+    <p><strong>キラー数独</strong>（Killer Sudoku、別名：サムクロス）は、最もエキサイティングでやりごたえのある数独の派生パズルの一つです。クラシックな数独のルールに、「ケージ」と呼ばれるブロック内の数字の合計が指定された数にならなければならない、という追加の難易度が加わっています。オンラインの<strong>キラー数独</strong>、<strong>日替わりキラー数独</strong>、または<strong>印刷用キラー数独パズル</strong>をお探しの方へ、今日からプレイを始めるために必要なすべてをこのページで提供します。</p>
+
+    <h3>キラー数独とは？</h3>
+    <p>キラー数独は、<em>クラシック数独の論理</em>と<em>カックロ風の計算</em>を融合させたパズルです。9x9のグリッドが「ケージ」と呼ばれる点線で囲まれたブロックに分割されており、各ケージの左上には小さな数字が書かれています。ケージ内の数字の合計は、その小さな数字と等しくならなければならず、また、同じケージ内で数字を重複させることはできません。これにより、キラー数独パズルを解くことは、算数、論理、そして戦略のミックスとなります。</p>
+
+    <h3>キラー数独の遊び方</h3>
+    <ul>
+        <li>すべての<strong>行</strong>、<strong>列</strong>、そして<strong>3x3のブロック</strong>を1から9の数字で埋めます。</li>
+        <li>各<strong>ケージ</strong>の合計数を守ります。ケージ内の数字は、指定された数と等しくなければなりません。</li>
+        <li>同じケージ内で数字を繰り返してはいけません。</li>
+        <li>論理的な推論、キラー数独特有の数字の組み合わせ、そして時には補助としてキラー数独計算ツールを使用します。</li>
+    </ul>
+
+    <h3>なぜキラー数独をプレイするのか？</h3>
+    <p>キラー数独は単なるパズルではなく、優れた脳のトレーニングです。以下の魅力があります。</p>
+    <ul>
+        <li><strong>日替わりキラー数独：</strong>毎日新しいパズルに挑戦し、あなたの頭脳をシャープに保ちます。</li>
+        <li><strong>簡単なレベルから難問まで：</strong>初心者向けの簡単なキラー数独から、エキスパート向けの難しいキラー数独まで揃っています。</li>
+        <li><strong>印刷可能なキラー数独：</strong>オフラインで楽しむために、<strong>印刷用キラー数独</strong>や無料のオンラインキラー数独にアクセスできます。</li>
+        <li><strong>人気バージョン：</strong><em>Guardian Killer Sudoku</em>や<em>Brainbashers Killer Sudoku</em>をプレイしたり、オンラインのデイリーチャレンジを楽しんだりできます。</li>
+        <li><strong>無料ゲーム：</strong>いつでもどこでも楽しめる、<strong>無料のキラー数独オンラインゲーム</strong>が見つかります。</li>
+    </ul>
+
+    <h3>キラー数独を解くためのヒントと戦略</h3>
+    <ul>
+        <li>合計が3、4、または17のような小さなケージから始めましょう。これらのケージは、数字の組み合わせが限られているため、突破口になりやすいです。</li>
+        <li>キラー数独計算ツールを使って、可能性のある合計を素早く確認します。</li>
+        <li>各マスに候補となる数字を書き留め（ペンシルマーク）、考えられる解答を追跡します。</li>
+        <li>ケージの合計と、行や列のロジックを組み合わせることで、より速く解くことができます。</li>
+        <li><strong>日替わりオンラインキラー数独</strong>で定期的に練習し、スピードと正確性を向上させましょう。</li>
+    </ul>
+
+    <h3>キラー数独パズルの種類</h3>
+    <ul>
+        <li><strong>簡単なキラー数独：</strong>シンプルなケージから始まる、初心者に最適です。</li>
+        <li><strong>中級のキラー数独：</strong>カジュアルプレイヤー向けの、バランスの取れた難易度です。</li>
+        <li><strong>難しいキラー数独：</strong>挑戦を楽しむ上級ソルバーのための、手強いグリッドです。</li>
+        <li><strong>エキスパート＆マスターレベル：</strong>究極のテストを求めるプロフェッショナル向けに設計されています。</li>
+        <li><strong>Guardian & Brainbashers キラー数独：</strong>有名なオンラインパズルのバリエーションです。</li>
+    </ul>
+
+    <h3>デイリーキラー数独チャレンジ</h3>
+    <p>毎日の脳トレを習慣にしたいなら、日替わりのオンラインキラー数独がおすすめです。毎日、新鮮なパズルで自分自身を試すことができます。GuardianやBrainbashersのキラー数独であれ、他の無料オンラインプラットフォームであれ、毎日の挑戦はキラー数独をあなたの日常の一部にしてくれるでしょう。</p>
+
+    <h3>印刷可能なキラー数独のオプション</h3>
+    <p>ペンと紙でパズルを解くのが好きなファンのために、<strong>印刷用キラー数独シート</strong>が利用可能です。キラー数独ゲームを印刷したり、無料のサムライ数独（印刷可能）を試したり、キラー数独パズルブックのコレクションを楽しんだりできます。印刷用パズルは、旅行中、学校、またはオフラインでの練習に最適です。
+    </p>
+
+    <h3>キラー数独に関するよくある質問 (FAQ)</h3>
+    <ul>
+        <li><strong>キラー数独は通常の数独より難しいですか？</strong> はい。数独のロジックに、計算ベースのケージの合計が加わるため、より難しくなります。</li>
+        <li><strong>計算が苦手でもキラー数独は解けますか？</strong> もちろんです。計算は役立ちますが、解決の鍵はあくまで論理です。</li>
+        <li><strong>無料でオンラインのキラー数独はどこでプレイできますか？</strong> 多くのサイトが、毎日更新される無料のキラー数独パズルを提供しています。</li>
+        <li><strong>キラー数独と数独Xの違いは何ですか？</strong> キラー数独はケージの合計を使用しますが、数独Xは対角線のルールが追加されます。</li>
+    </ul>
+
+    <h3>今日からキラー数独を解き始めよう！</h3>
+    <p><strong>無料のオンラインキラー数独</strong>で自分自身に挑戦し、<strong>日替わりキラー数独</strong>をプレイし、あるいはどこでも<strong>印刷用キラー数独シート</strong>を楽しみましょう。GuardianやBrainbashersのキラー数独を探したり、キラー数独計算ツールを使って練習し、上達したり。簡単なものから難しいものまで、誰にでも楽しめるキラー数独パズルがあります。今すぐ解き始めて、マスターを目指しましょう！</p>
+</div>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-links" id="difficulty-links">
+                <a href="../killer-easy.html">Easy</a>
+                <a href="../killer-medium.html">Medium</a>
+                <a href="../killer-hard.html">Hard</a>
+                <a href="../killer-expert.html">Expert</a>
+                <a href="../killer-master.html">Master</a>
+            </div>
+            <hr class="footer-separator">
+            <div class="footer-links">
+                <a href="../index.html">Home</a>
+                <a href="../about.html">About</a>
+                <a href="../contact.html">Contact Us</a>
+                <a href="../privacy.html">Privacy Policy</a>
+                <a href="../terms.html">Terms of Service</a>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2025 Sudokuheroes.com. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- --- START: All Modals --- -->
+    <div id="settings-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Settings</h2>
+            <div class="setting-item">
+                <label for="theme-select">Theme</label>
+                <select id="theme-select">
+                    <option value="theme-light">Light</option>
+                    <option value="theme-dark">Dark</option>
+                    <option value="theme-paper">Paper</option>
+                </select>
+            </div>
+            <div class="setting-item">
+                <label for="highlight-duplicates-toggle">Highlight Duplicates</label>
+                <input type="checkbox" id="highlight-duplicates-toggle" class="toggle-switch" checked>
+            </div>
+            <div class="setting-item">
+                <label for="highlight-same-toggle">Highlight Same Numbers</label>
+                <input type="checkbox" id="highlight-same-toggle" class="toggle-switch" checked>
+            </div>
+            <div class="setting-item">
+                <label for="timer-toggle">Show Timer</label>
+                <input type="checkbox" id="timer-toggle" class="toggle-switch" checked>
+            </div>
+            <div class="setting-item">
+                <label for="auto-remove-notes-toggle">Auto-remove Notes</label>
+                <input type="checkbox" id="auto-remove-notes-toggle" class="toggle-switch" checked>
+            </div>
+            <div class="setting-item">
+                <label for="sound-toggle">Sound Effects</label>
+                <input type="checkbox" id="sound-toggle" class="toggle-switch" checked>
+            </div>
+        </div>
+    </div>
+    
+    <div id="stats-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Statistics</h2>
+            <div id="stats-container"></div>
+            <button id="reset-stats-btn">Reset Stats</button>
+        </div>
+    </div>
+
+    <div id="win-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Congratulations!</h2>
+            <p>You solved the puzzle!</p>
+            <p>Difficulty: <span id="win-difficulty"></span></p>
+            <p>Your time: <span id="win-time"></span></p>
+            <p id="best-time-msg"></p>
+            <button id="win-new-game-btn" class="new-game-button-style">Play New Game</button>
+        </div>
+    </div>
+    
+    <div id="confirm-modal" class="modal">
+        <div class="modal-content">
+            <h2 id="confirm-title">Are you sure?</h2>
+            <p id="confirm-text">This action cannot be undone.</p>
+            <div class="confirm-buttons">
+                <button id="confirm-cancel-btn">Cancel</button>
+                <button id="confirm-ok-btn" class="new-game-button-style">OK</button>
+            </div>
+        </div>
+    </div>
+    <!-- --- END: All Modals --- -->
+
+    <audio id="click-sound" src="../assets/sounds/click.mp3" preload="auto"></audio>
+    <audio id="place-sound" src="../assets/sounds/place.mp3" preload="auto"></audio>
+    <audio id="error-sound" src="../assets/sounds/error.mp3" preload="auto"></audio>
+    <audio id="win-sound" src="../assets/sounds/win.mp3" preload="auto"></audio>
+    
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+    <script src="../script.js"></script> 
+</body>
+</html>

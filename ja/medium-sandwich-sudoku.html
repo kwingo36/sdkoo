@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medium Sandwich Sudoku - Play Free Sandwich Sudoku puzzles Online</title>
+    <meta name="description" content="Play Medium Sandwich Sudoku online for free! Balanced puzzles with sandwich sums between 1 and 9. Enjoy daily sandwich sudoku, printable sheets, and fun irregular challenges to sharpen your logic and brainpower." />
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="manifest" href="../site.webmanifest">
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../sandwich-style.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="theme-light">
+
+    <div id="notification-bar"></div>
+
+    <header>
+        <div class="header-content">
+            <button id="hamburger-btn" aria-label="Open Menu">
+                <span></span><span></span><span></span>
+            </button>
+            <h1><a href="../index.html" style="text-decoration: none; color: inherit;">Sudokuheroes.com</a></h1>
+
+            <!-- START: ADDED CODE FOR MOBILE THEME TOGGLE -->
+<div id="theme-toggle-mobile" class="theme-toggle-mobile">
+    <button id="mobile-theme-switcher" aria-label="Toggle Theme">
+        <!-- Sun Icon SVG -->
+        <svg class="icon-light" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <!-- Moon Icon SVG -->
+        <svg class="icon-dark" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+    </button>
+</div>
+<!-- END: ADDED CODE FOR MOBILE THEME TOGGLE -->
+ 
+            <nav>
+                <div class="game-mode-selector">
+                    <a href="../index.html" class="mode-btn">Classic Sudoku</a>
+                    <a href="../killer-index.html" class="mode-btn">Killer Sudoku</a>
+                    <a href="../samurai-sudoku.html" class="mode-btn">Samurai Sudoku</a>
+                    <a href="../sudoku-x.html" class="mode-btn">Sudoku X</a>
+                    <a href="../sandwich-sudoku.html" class="mode-btn active">Sandwich Sudoku</a>
+                    <a href="../jigsaw-sudoku.html" class="mode-btn">Jigsaw Sudoku</a>
+                    <a href="../word-sudoku.html" class="mode-btn">Word Sudoku</a>
+                    <a href="../daily-challenge.html" class="mode-btn">Daily Challenge</a>
+                </div>
+                <div class="header-right-side">
+    <div class="header-actions">
+        <button id="stats-btn" class="icon-btn">📊</button>
+        <button id="settings-btn" class="icon-btn">⚙️</button>
+    </div>
+    
+    <!-- START: Language Selector المحدث -->
+    <div class="language-selector">
+        <button class="lang-btn" aria-label="Select Language">
+    <!-- START: MODIFIED CODE -->
+    <img id="selected-lang-flag" src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/jp.svg" alt="Selected Language" style="width: 20px; height: auto; border-radius: 2px; box-shadow: 0 0 2px rgba(0,0,0,0.2);">
+    <span id="selected-lang-text">日本語</span>
+    <!-- END: MODIFIED CODE -->
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+    </svg>
+        </button>
+        <div class="lang-dropdown">
+    <a href="../medium-sandwich-sudoku.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/gb.svg" alt="English Flag"> English</a>
+    <a href="../es/medium-sandwich-sudoku.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/es.svg" alt="Spanish Flag"> Español</a>
+    <a href="../de/medium-sandwich-sudoku.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/de.svg" alt="German Flag"> Deutsch</a>
+    <a href="../pt/medium-sandwich-sudoku.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/pt.svg" alt="Portuguese Flag"> Português</a>
+    <a href="../fr/medium-sandwich-sudoku.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/fr.svg" alt="French Flag"> Français</a>
+    <a href="../it/medium-sandwich-sudoku.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/it.svg" alt="Italian Flag"> Italiano</a>
+    <a href="../ar/medium-sandwich-sudoku.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/sa.svg" alt="Arabic Flag"> عربى</a>
+    <a href="../ja/medium-sandwich-sudoku.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/jp.svg" alt="Japanese Flag"> 日本語</a>
+    <a href="../ru/medium-sandwich-sudoku.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/ru.svg" alt="Russian Flag"> Русский</a>
+</div>
+    </div>
+    <!-- END: Language Selector -->
+
+            </nav>
+        </div>
+    </header>
+
+    <div id="mobile-menu">
+        <div class="mobile-menu-content">
+            <button id="close-menu-btn" aria-label="Close Menu">&times;</button>
+            <h3>Game Mode</h3>
+            <div class="game-mode-selector">
+                <a href="../index.html" class="mode-btn">Classic Sudoku</a>
+                <a href="../killer-index.html" class="mode-btn">Killer Sudoku</a>
+                <a href="../samurai-sudoku.html" class="mode-btn">Samurai Sudoku</a>
+                <a href="../sudoku-x.html" class="mode-btn">Sudoku X</a>
+                <a href="../sandwich-sudoku.html" class="mode-btn active">Sandwich Sudoku</a>
+                <a href="../jigsaw-sudoku.html" class="mode-btn">Jigsaw Sudoku</a>
+                <a href="../word-sudoku.html" class="mode-btn">Word Sudoku</a>
+                <a href="../daily-challenge.html" class="mode-btn">Daily Challenge</a>
+            </div>
+                    <hr>
+        <h3>Actions</h3>
+        <div class="header-actions">
+            <button id="mobile-stats-btn" class="icon-btn">📊 Statistics</button>
+            <button id="mobile-settings-btn" class="icon-btn">⚙️ Settings</button>
+        </div>
+
+        <!-- ============================================= -->
+        <!-- ===== أضف هذا الجزء الجديد بالكامل هنا ===== -->
+        <!-- ============================================= -->
+        <hr>
+        <h3>Languages</h3>
+        <!-- هذا هو الصندوق الفارغ الذي سيستقبل اللغات المنسوخة -->
+        <div id="mobile-language-placeholder" class="mobile-language-links"></div>
+
+        </div>
+    </div>
+
+    <main class="game-container sandwich-container">
+                <div class="difficulty-and-new-game-controls">
+            <div class="difficulty-selector">
+                <select id="difficulty" title="Select Difficulty">
+                    <option value="sandwich-easy">Easy</option>
+                    <option value="sandwich-medium" selected>Medium</option>
+                    <option value="sandwich-hard">Hard</option>
+                    <option value="sandwich-expert">Expert</option>
+                    <option value="sandwich-master">Master</option>
+                </select>
+            </div>
+            <div id="mobile-timer-display">00:00</div>
+            <button id="new-game-btn" class="new-game-button-style">New Game</button>
+        </div>
+        
+        <div id="sandwich-grid-wrapper">
+            <!-- Game board is generated by JS -->
+        </div>
+        
+        <div class="game-controls">
+            <div class="number-pad">
+                <button class="num-btn">1</button><button class="num-btn">2</button><button class="num-btn">3</button>
+                <button class="num-btn">4</button><button class="num-btn">5</button><button class="num-btn">6</button>
+                <button class="num-btn">7</button><button class="num-btn">8</button><button class="num-btn">9</button>
+                <button id="erase-btn" class="control-btn">Erase</button>
+                <button id="pencil-btn" class="control-btn">Pencil</button>
+            </div>
+
+            <div class="action-panel">
+                <div id="timer">00:00</div>
+                <button id="undo-btn" class="action-btn">Undo</button>
+                <button id="hint-btn" class="action-btn">Hint</button>
+                <button id="check-btn" class="action-btn">Check</button>
+                <button id="solve-btn" class="action-btn">Solve</button>
+                <button id="new-game-btn-bottom" class="new-game-button-style">New Game</button>
+            </div>
+        </div>
+    </main>
+
+<div class="info-section">
+    <h2>中級サンドイッチ数 độc：パズル愛好家のためのバランスの取れた挑戦</h2>
+    <p><strong>中級サンドイッチ数独</strong>は、簡単なサンドイッチ数独の基本をすでにマスターし、より刺激的なパズルを求めているプレイヤーにとって完璧なレベルです。これらのパズルは、クラシックな数独のルールに、「1」と「9」の間の数字を使って「サンドイッチの合計」を作るというエキサイティングなひねりを加えています。中級レベルでは、グリッドは単純すぎず、かといって圧倒されるほどでもなく、楽しさと頭の体操の両方を求めるプレイヤーに最適です。</p>
+
+    <h3>中級サンドイッチ数独の遊び方（ルール）</h3>
+    <p>クラシックな数独と同様に、1から9までの各数字は、すべての行と列に1回ずつ現れなければなりません。しかし、サンドイッチの派生ルールは、それをユニークにする新しいヒントを導入します。</p>
+    <ul>
+        <li>数字の<strong>「1」と「9」</strong>は、サンドイッチの「パン」の役割を果たします。</li>
+        <li>各行または列にある<strong>「1」と「9」の間にはさまれた数字</strong>は、グリッドの外側に示されたヒント（合計数）と等しくなければなりません。</li>
+        <li>パズルを成功裏に完成させるには、推測ではなく、論理的な推論を用いなければなりません。</li>
+    </ul>
+    <p>中級レベルでは、サンドイッチはよりトリッキーになり、先を読み、可能性を排除し、行と列を注意深くクロスチェックすることが求められます。</p>
+
+    <h3>なぜ中級レベルが理想的なのか？</h3>
+    <p>中級サンドイッチ数独は、簡単なパズルと高度な頭脳クイズの間の完璧なバランスを提供します。</p>
+    <ul>
+        <li>難問サンドイッチ数独に進む前に、プレイヤーが自信を築くのに役立ちます。</li>
+        <li>パズルは論理だけで解決可能です。推測は必要ありません。</li>
+        <li><strong>日替わりサンドイッチ数独</strong>チャレンジは、脳を鍛えるための一貫性を提供します。</li>
+        <li><strong>オンラインで数独</strong>を楽しみたい方や、オフラインで解くために<strong>印刷用サンドイッチ数独シート</strong>をダウンロードしたい方に最適です。</li>
+    </ul>
+
+    <h3>中級サンドイッチ数独をプレイするメリット</h3>
+    <p>これらのパズルに定期的に取り組むことは、エンターテイメントと認知的なメリットの両方を提供します。</p>
+    <ul>
+        <li>論理的思考力と推論スキルを強化します。</li>
+        <li>ステップバイステップの挑戦を解決することで、記憶力と集中力を高めます。</li>
+        <li>忍耐力、戦略的計画、そして批判的思考を奨励します。</li>
+        <li>心をアクティブに保ちながらストレスを軽減する、リラックスできる趣味を提供します。</li>
+        <li>柔軟なプレイオプション：<strong>無料のオンライン・サンドイッチ数独</strong>または、どこでも楽しめる<strong>印刷用パズル</strong>。</li>
+    </ul>
+
+    <h3>人気の中級サンドイッチ数独バリエーション</h3>
+    <ul>
+        <li><strong>9x9 サンドイッチ数独：</strong>バランスの取れた難易度を提供するクラシックなサイズです。</li>
+        <li><strong>日替わりサンドイッチ数独：</strong>着実な上達のために、毎日新鮮なパズルがリリースされます。</li>
+        <li><strong>印刷用サンドイッチ数独シート：</strong>休憩中や旅行中に紙で解くのに最適です。</li>
+        <li><strong>オンライン中級サンドイッチ数独：</strong>即時フィードバック付きのインタラクティブな解答が楽しめます。</li>
+    </ul>
+
+    <h3>中級サンドイッチ数独を解くための戦略（解き方）</h3>
+    <p>簡単なパズルとは異なり、中級のものはより深い思考を必要とします。ここにいくつかの戦略があります。</p>
+    <ul>
+        <li>サンドイッチの合計が最も小さい、または最も大きいものから始めましょう。それらはしばしば数字の選択肢が少なくなります。</li>
+        <li>「1」と「9」の位置を特定しやすい行や列に集中します。</li>
+        <li>重なりを探します。2つのサンドイッチが交差する場合、共有セルがしばしばヒントを与えます。</li>
+        <li>最終的な決定を下す前に、ペンシルマーク（メモ）やノートを使って可能性のある値を記録しておきます。</li>
+        <li>以前の配置を頻繁に見直します。一つの行を解くことが、他の場所で隠れた解法を解き放つことがあります。</li>
+    </ul>
+
+    <h3>中級サンドイッチ数独 vs 他のレベル</h3>
+    <p>どのレベルを選ぶべきか迷っている場合、中級がどのように比較されるかを以下に示します。</p>
+    <ul>
+        <li><strong>簡単なサンドイッチ数独：</strong>ルールを学ぶ初心者に最適です。</li>
+        <li><strong>中級サンドイッチ数独：</strong>適度な挑戦を伴う、バランスの取れたパズルです。</li>
+        <li><strong>難問サンドイッチ数独：</strong>複雑な論理連鎖を楽しむ上級ソルバー向けです。</li>
+        <li><strong>エキスパート＆マスターレベル：</strong>最高の難易度を求める、非常に経験豊富なプレイヤー専用です。</li>
+    </ul>
+
+    <h3>印刷とオンラインのオプション</h3>
+    <p>すぐに解きたい場合はオンラインで中級サンドイッチ数独をプレイしたり、オフラインでの練習用に<strong>印刷用サンドイッチ数独</strong>をダウンロードしたりできます。多くのプレイヤーは、デジタルの利便性と紙パズルの伝統的な感触の両方を楽しむために、2つを切り替えることを好みます。</p>
+
+    <h3>今日から中級サンドイッチ数独を始めよう！</h3>
+    <p><strong>無料のオンライン・サンドイッチ数独</strong>を解く場合でも、<strong>印刷用サンドイッチ数独パズル</strong>を楽しむ場合でも、中級レベルはフラストレーションなく、やりがいのある体験を求めるパズル愛好家に最適です。毎日の更新で自分自身に挑戦し、スキルを磨き、楽しみながら上級レベルへの準備をしましょう。今すぐ中級パズルを試して、あなたの論理がどれだけ速く向上するか見てみましょう！</p>
+</div>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+             <div class="footer-links" id="difficulty-links">
+                 <a href="../easy-sandwich-sudoku.html">Easy</a> 
+                 <a href="../medium-sandwich-sudoku.html">Medium</a> 
+                 <a href="../hard-sandwich-sudoku.html">Hard</a> 
+                 <a href="../expert-sandwich-sudoku.html">Expert</a> 
+                 <a href="../master-sandwich-sudoku.html">Master</a>
+            </div>
+             <hr class="footer-separator">
+            <div class="footer-links">
+                <a href="../index.html">Home</a> <a href="../about.html">About</a> <a href="../contact.html">Contact Us</a> <a href="../privacy.html">Privacy Policy</a> <a href="../terms.html">Terms of Service</a>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2025 Sudokuheroes.com. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <div id="win-modal" class="modal"><div class="modal-content"><span class="close-btn">&times;</span><h2>Congratulations!</h2><p>You solved the Sandwich Sudoku!</p><p>Difficulty: <span id="win-difficulty"></span></p><p>Your time: <span id="win-time"></span></p><p id="best-time-msg"></p><button id="win-new-game-btn" class="new-game-button-style">Play Again</button></div></div>
+    <div id="settings-modal" class="modal"><div class="modal-content"><span class="close-btn">&times;</span><h2>Settings</h2><div class="setting-item"><label for="theme-select">Theme</label><select id="theme-select"><option value="theme-light">Light</option><option value="theme-dark">Dark</option><option value="theme-paper">Paper</option></select></div><div class="setting-item"><label for="highlight-duplicates-toggle">Highlight Duplicates</label><input type="checkbox" id="highlight-duplicates-toggle" class="toggle-switch" checked></div><div class="setting-item"><label for="highlight-same-toggle">Highlight Same Numbers</label><input type="checkbox" id="highlight-same-toggle" class="toggle-switch" checked></div><div class="setting-item"><label for="sound-toggle">Sound Effects</label><input type="checkbox" id="sound-toggle" class="toggle-switch" checked></div></div></div>
+    <div id="stats-modal" class="modal"><div class="modal-content"><span class="close-btn">&times;</span><h2>Statistics</h2><div id="stats-container"></div><button id="reset-stats-btn">Reset Stats</button></div></div>
+    <div id="confirm-modal" class="modal"><div class="modal-content"><h2 id="confirm-title">Are you sure?</h2><p id="confirm-text">This action cannot be undone.</p><div class="confirm-buttons"><button id="confirm-cancel-btn">Cancel</button><button id="confirm-ok-btn" class="new-game-button-style">OK</button></div></div></div>
+    
+    <audio id="click-sound" src="../assets/sounds/click.mp3" preload="auto"></audio>
+    <audio id="place-sound" src="../assets/sounds/place.mp3" preload="auto"></audio>
+    <audio id="error-sound" src="../assets/sounds/error.mp3" preload="auto"></audio>
+    <audio id="win-sound" src="../assets/sounds/win.mp3" preload="auto"></audio>
+    
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+    <script src="../sandwich-script.js"></script>
+</body>
+</html>
