@@ -1,0 +1,95 @@
+/* --- Samurai Sudoku Specific Styles --- */
+
+.samurai-container {
+    max-width: 900px;
+    justify-content: center;
+    gap: 20px;
+}
+
+#samurai-grid-container {
+    display: grid;
+    grid-template-columns: repeat(21, 1fr);
+    grid-template-rows: repeat(21, 1fr);
+    width: 100%;
+    max-width: 550px;
+    aspect-ratio: 1 / 1;
+    margin: 0 auto;
+}
+
+.sudoku-grid {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    border: 2px solid #333;
+    position: relative;
+}
+
+.theme-dark .sudoku-grid { border-color: var(--text-color-dark); }
+.theme-paper .sudoku-grid { border-color: var(--text-color-paper); }
+
+#grid-0 { grid-area: 1 / 1 / 10 / 10; }
+#grid-1 { grid-area: 1 / 13 / 10 / 22; }
+#grid-2 { grid-area: 13 / 1 / 22 / 10; }
+#grid-3 { grid-area: 13 / 13 / 22 / 22; }
+#grid-4 { 
+    grid-area: 7 / 7 / 16 / 16;
+    z-index: 2;
+}
+
+.overlapping-region {
+    transition: background-color 0.3s;
+}
+.theme-light .overlapping-region { background-color: #f0f4f8; }
+.theme-dark .overlapping-region { background-color: #40566e; }
+.theme-paper .overlapping-region { background-color: #f5efd8; }
+
+#samurai-grid-container .cell {
+    font-size: clamp(8px, 2.2vw, 18px);
+    transition: background-color 0.2s;
+}
+
+#samurai-grid-container .notes-grid {
+    font-size: clamp(6px, 1.5vw, 9px);
+}
+
+@media (max-width: 768px) {
+    .samurai-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 100%;
+    }
+    #samurai-grid-container {
+        max-width: 95vw;
+        order: 1;
+    }
+    .game-controls {
+        width: 95vw;
+        max-width: 400px;
+        order: 2;
+        margin-top: 15px;
+    }
+}
+
+@media (min-width: 769px) {
+  .samurai-container {
+    display: grid;
+    grid-template-columns: minmax(0, 600px) auto;
+    gap: 25px;
+    align-items: flex-start;
+  }
+  .difficulty-and-new-game-controls {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    padding-left: 25px; /* <-- هذا هو الكود الجديد والوحيد المطلوب */
+  }
+  #samurai-grid-container {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .game-controls {
+    grid-column: 2;
+    grid-row: 2;
+    width: 240px;
+  }
+}

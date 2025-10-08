@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Sudokuheroes.com</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <meta name="description" content="Read the official privacy policy for Sudokuheroes.com. Understand what data we collect through your browser's local storage and our commitment to protecting your privacy.">
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS مخصص لهذه الصفحات لضمان أفضل مظهر -->
+    <style>
+        .info-container {
+            max-width: 800px;
+            margin: 20px auto 40px auto;
+            padding: 20px 40px;
+            line-height: 1.7;
+            background-color: var(--grid-bg-light);
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+        .theme-dark .info-container { background-color: var(--grid-bg-dark); }
+        .theme-paper .info-container { background-color: var(--grid-bg-paper); }
+
+        .info-container h1 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border-color-light);
+        }
+        .theme-dark .info-container h1 { border-bottom-color: var(--border-color-dark); }
+        .theme-paper .info-container h1 { border-bottom-color: var(--border-color-paper); }
+
+        .info-container h2 {
+            font-size: 1.6rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: var(--primary-color-light);
+        }
+        .theme-dark .info-container h2 { color: var(--primary-color-dark); }
+        .theme-paper .info-container h2 { color: var(--primary-color-paper); }
+        
+        .info-container ul { padding-left: 25px; margin-bottom: 15px; }
+        .info-container li { margin-bottom: 10px; }
+        .info-container a {
+            color: var(--user-num-color-light);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .info-container a:hover { text-decoration: underline; }
+        .theme-dark .info-container a { color: var(--user-num-color-dark); }
+        .theme-paper .info-container a { color: var(--user-num-color-paper); }
+    </style>
+</head>
+<body class="theme-light">
+
+    <div id="notification-bar"></div>
+
+    <header>
+        <div class="header-content">
+            <button id="hamburger-btn" aria-label="Open Menu">
+                <span></span><span></span><span></span>
+            </button>
+            <h1><a href="index.html" style="text-decoration: none; color: inherit;">Sudokuheroes.com</a></h1>
+            
+            <!-- START: ADDED CODE FOR MOBILE THEME TOGGLE -->
+<div id="theme-toggle-mobile" class="theme-toggle-mobile">
+    <button id="mobile-theme-switcher" aria-label="Toggle Theme">
+        <!-- Sun Icon SVG -->
+        <svg class="icon-light" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <!-- Moon Icon SVG -->
+        <svg class="icon-dark" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+    </button>
+</div>
+<!-- END: ADDED CODE FOR MOBILE THEME TOGGLE -->
+ 
+            <nav>
+                <div class="game-mode-selector">
+                    <a href="index.html" class="mode-btn">Classic Sudoku</a>
+                    <a href="killer-index.html" class="mode-btn">Killer Sudoku</a> 
+                    <a href="samurai-sudoku.html" class="mode-btn">Samurai Sudoku</a> 
+                    <a href="sudoku-x.html" class="mode-btn">Sudoku X</a> 
+                    <a href="sandwich-sudoku.html" class="mode-btn">Sandwich Sudoku</a>
+                    <a href="jigsaw-sudoku.html" class="mode-btn">Jigsaw Sudoku</a>
+                    <a href="word-sudoku.html" class="mode-btn">Word Sudoku</a>
+                    <a href="daily-challenge.html" class="mode-btn">Daily Challenge</a>
+                </div>
+                <div class="header-right-side">
+    <div class="header-actions">
+        <button id="stats-btn" class="icon-btn">📊</button>
+        <button id="settings-btn" class="icon-btn">⚙️</button>
+    </div>
+    
+    <!-- START: Language Selector المحدث -->
+    <div class="language-selector">
+        <button class="lang-btn" aria-label="Select Language">
+    <!-- START: MODIFIED CODE -->
+    <img id="selected-lang-flag" src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/gb.svg" alt="Selected Language" style="width: 20px; height: auto; border-radius: 2px; box-shadow: 0 0 2px rgba(0,0,0,0.2);">
+    <span id="selected-lang-text">English</span>
+    <!-- END: MODIFIED CODE -->
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+    </svg>
+        </button>
+        <div class="lang-dropdown">
+    <a href="/index.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/gb.svg" alt="English Flag"> English</a>
+    <a href="/es/index.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/es.svg" alt="Spanish Flag"> Español</a>
+    <a href="/de/index.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/de.svg" alt="German Flag"> Deutsch</a>
+    <a href="/pt/index.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/pt.svg" alt="Portuguese Flag"> Português</a>
+    <a href="/fr/index.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/fr.svg" alt="French Flag"> Français</a>
+    <a href="/it/index.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/it.svg" alt="Italian Flag"> Italiano</a>
+    <a href="/ar/index.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/sa.svg" alt="Arabic Flag"> عربى</a>
+    <a href="/ja/index.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/jp.svg" alt="Japanese Flag"> 日本語</a>
+    <a href="/ru/index.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/ru.svg" alt="Russian Flag"> Русский</a>
+</div>
+    </div>
+    <!-- END: Language Selector -->
+
+            </nav>
+        </div>
+    </header>
+
+    <div id="mobile-menu">
+        <div class="mobile-menu-content">
+            <button id="close-menu-btn" aria-label="Close Menu">&times;</button>
+            <h3>Game Mode</h3>
+            <div class="game-mode-selector">
+                <a href="index.html" class="mode-btn">Classic Sudoku</a>
+                <a href="killer-index.html" class="mode-btn">Killer Sudoku</a> 
+                <a href="samurai-sudoku.html" class="mode-btn">Samurai Sudoku</a> 
+                <a href="sudoku-x.html" class="mode-btn">Sudoku X</a> 
+                <a href="sandwich-sudoku.html" class="mode-btn">Sandwich Sudoku</a>
+                <a href="jigsaw-sudoku.html" class="mode-btn">Jigsaw Sudoku</a>
+                <a href="word-sudoku.html" class="mode-btn">Word Sudoku</a>
+                <a href="daily-challenge.html" class="mode-btn">Daily Challenge</a>
+            </div>
+                    <hr>
+        <h3>Actions</h3>
+        <div class="header-actions">
+            <button id="mobile-stats-btn" class="icon-btn">📊 Statistics</button>
+            <button id="mobile-settings-btn" class="icon-btn">⚙️ Settings</button>
+        </div>
+
+        <!-- ============================================= -->
+        <!-- ===== أضف هذا الجزء الجديد بالكامل هنا ===== -->
+        <!-- ============================================= -->
+        <hr>
+        <h3>Languages</h3>
+        <!-- هذا هو الصندوق الفارغ الذي سيستقبل اللغات المنسوخة -->
+        <div id="mobile-language-placeholder" class="mobile-language-links"></div>
+
+        </div>
+    </div>
+
+    <main class="info-container">
+        <section>
+            <h1>Privacy Policy for Sudokuheroes.com</h1>
+            <p><em>Last Updated: August 20, 2025</em></p>
+
+            <p>Welcome to Sudokuheroes.com. Your privacy is critically important to us. This Privacy Policy document outlines the types of information that is collected and recorded by our website and how we use it. This policy applies only to our online activities and is valid for visitors to our website.</p>
+
+            <h2>Information We Collect (And Why)</h2>
+            <p>Sudokuheroes.com is designed to be a privacy-first experience. <strong>We do not collect any personally identifiable information (PII)</strong> such as your name, email address, or location.</p>
+            <p>The only data we "collect" is stored locally on your own web browser using a technology called <strong>Local Storage</strong>. This data is essential for the functionality of the game and remains on your device; it is never transmitted to our servers. This includes:</p>
+            <ul>
+                <li><strong>Game State (sudokuGameState):</strong> This saves your current puzzle progress, including the numbers you've entered and the timer, so you can close the page and resume your game later.</li>
+                <li><strong>User Settings (sudokuSettings):</strong> This saves your preferences, such as your chosen theme (Light/Dark/Paper) and in-game settings (e.g., whether to highlight duplicates).</li>
+                <li><strong>Game Statistics (sudokuStats):</strong> This stores your win counts and best times for each difficulty level. This data helps you track your own performance.</li>
+            </ul>
+            <p>You have full control over this data and can clear it at any time by clearing your browser's cache and site data.</p>
+            
+            <h2>Third-Party Services</h2>
+            <p>We use a limited number of third-party services to enhance our website:</p>
+            <ul>
+                <li><strong>Google Fonts:</strong> We use the Google Fonts library to provide the typography on our website. When you visit our site, your browser may send requests to Google's servers to fetch these font files. This may include your IP address. This is governed by Google's own privacy policy.</li>
+                <li><strong>Canvas Confetti:</strong> This is a JavaScript library used to create the celebration effect when you solve a puzzle. It runs entirely within your browser and does not collect or transmit any data.</li>
+            </ul>
+
+            <h2>Cookies and Local Storage</h2>
+            <p>As mentioned, we use Local Storage instead of traditional cookies for core site functionality. Local Storage is a more modern and secure way to store data on your device without sending it across the internet with every page request. We do not use cookies for tracking or advertising purposes.</p>
+
+            <h2>Your Data Rights</h2>
+            <p>Since all functional data is stored on your own device, you are in complete control. You have the right to view, amend, or delete this data by using your browser's developer tools or by clearing your browser's site data for Sudokuheroes.com.</p>
+
+            <h2>Changes to This Policy</h2>
+            <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date. We advise you to review this page periodically for any changes.</p>
+
+            <h2>Contact Us</h2>
+            <p>If you have any questions or suggestions about our Privacy Policy, do not hesitate to <a href="contact.html">contact us</a>.</p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-links" id="difficulty-links">
+                <a href="easy.html">Easy</a><a href="medium.html">Medium</a><a href="hard.html">Hard</a><a href="expert.html">Expert</a><a href="master.html">Master</a>
+            </div>
+            <hr class="footer-separator">
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2025 Sudokuheroes.com. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- --- START: All Modals --- -->
+    <div id="settings-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Settings</h2>
+            <div class="setting-item"><label for="theme-select">Theme</label><select id="theme-select"><option value="theme-light">Light</option><option value="theme-dark">Dark</option><option value="theme-paper">Paper</option></select></div>
+            <div class="setting-item"><label for="highlight-duplicates-toggle">Highlight Duplicates</label><input type="checkbox" id="highlight-duplicates-toggle" class="toggle-switch" checked></div>
+            <div class="setting-item"><label for="highlight-same-toggle">Highlight Same Numbers</label><input type="checkbox" id="highlight-same-toggle" class="toggle-switch" checked></div>
+            <div class="setting-item"><label for="timer-toggle">Show Timer</label><input type="checkbox" id="timer-toggle" class="toggle-switch" checked></div>
+            <div class="setting-item"><label for="auto-remove-notes-toggle">Auto-remove Notes</label><input type="checkbox" id="auto-remove-notes-toggle" class="toggle-switch" checked></div>
+            <div class="setting-item"><label for="sound-toggle">Sound Effects</label><input type="checkbox" id="sound-toggle" class="toggle-switch" checked></div>
+        </div>
+    </div>
+    <div id="stats-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span><h2>Statistics</h2><div id="stats-container"></div><button id="reset-stats-btn">Reset Stats</button>
+        </div>
+    </div>
+    <div id="win-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span><h2>Congratulations!</h2><p>You solved the puzzle!</p><p>Difficulty: <span id="win-difficulty"></span></p><p>Your time: <span id="win-time"></span></p><p id="best-time-msg"></p><button id="win-new-game-btn" class="new-game-button-style">Play New Game</button>
+        </div>
+    </div>
+    <div id="confirm-modal" class="modal">
+        <div class="modal-content">
+            <h2 id="confirm-title">Are you sure?</h2><p id="confirm-text">This action cannot be undone.</p><div class="confirm-buttons"><button id="confirm-cancel-btn">Cancel</button><button id="confirm-ok-btn" class="new-game-button-style">OK</button></div>
+        </div>
+    </div>
+    <!-- --- END: All Modals --- -->
+
+    <audio id="click-sound" src="assets/sounds/click.mp3" preload="auto"></audio>
+    <audio id="place-sound" src="assets/sounds/place.mp3" preload="auto"></audio>
+    <audio id="error-sound" src="assets/sounds/error.mp3" preload="auto"></audio>
+    <audio id="win-sound" src="assets/sounds/win.mp3" preload="auto"></audio>
+    
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

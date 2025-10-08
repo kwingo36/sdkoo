@@ -1,0 +1,117 @@
+--- START OF FILE jigsaw-style.css ---
+
+/* --- Jigsaw Sudoku Specific Styles --- */
+
+.jigsaw-container {
+    max-width: 900px;
+    justify-content: center;
+    gap: 20px;
+}
+
+#jigsaw-grid-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+.sudoku-grid {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    border: none; /* Borders will be handled by individual cells */
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+}
+
+.jigsaw-cell {
+    position: relative;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    border-top: 1px solid var(--grid-border-color);
+    border-left: 1px solid var(--grid-border-color);
+}
+
+/* Override for the first row and first column cells, as their top/left borders are part of the main grid outline */
+.jigsaw-cell[data-row="0"] { border-top-width: 3px; }
+.jigsaw-cell[data-col="0"] { border-left-width: 3px; }
+
+/* Apply darker borders for the main 3x3 box outlines implicitly, but mainly for the jigsaw regions */
+.jigsaw-cell.border-bottom { border-bottom: 3px solid var(--grid-border-color-thick); }
+.jigsaw-cell.border-right { border-right: 3px solid var(--grid-border-color-thick); }
+
+/* Ensure the full grid has a consistent outer border */
+#jigsaw-grid-container .sudoku-grid {
+    border-top: 3px solid var(--grid-border-color-thick);
+    border-left: 3px solid var(--grid-border-color-thick);
+    border-bottom: 3px solid var(--grid-border-color-thick);
+    border-right: 3px solid var(--grid-border-color-thick);
+}
+
+/* Theme specific border colors */
+.theme-light {
+    --grid-border-color: #aaa;
+    --grid-border-color-thick: #333;
+}
+.theme-dark {
+    --grid-border-color: #666;
+    --grid-border-color-thick: var(--text-color-dark);
+}
+.theme-paper {
+    --grid-border-color: #bbb;
+    --grid-border-color-thick: var(--text-color-paper);
+}
+
+
+#jigsaw-grid-container .jigsaw-cell {
+    font-size: clamp(12px, 4vw, 28px);
+    transition: background-color 0.2s;
+}
+
+#jigsaw-grid-container .notes-grid {
+    font-size: clamp(8px, 2vw, 12px);
+}
+
+/* --- Responsive Layout --- */
+@media (max-width: 768px) {
+    .jigsaw-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 100%;
+    }
+    #jigsaw-grid-container {
+        max-width: 95vw;
+        order: 1;
+    }
+    .game-controls {
+        width: 95vw;
+        max-width: 400px;
+        order: 2;
+        margin-top: 15px;
+    }
+}
+
+@media (min-width: 769px) {
+  .jigsaw-container {
+    display: grid;
+    grid-template-columns: minmax(0, 600px) auto;
+    gap: 25px;
+    align-items: flex-start;
+  }
+  .difficulty-and-new-game-controls {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+  #jigsaw-grid-container {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .game-controls {
+    grid-column: 2;
+    grid-row: 2;
+    width: 240px;
+  }
+}

@@ -1,0 +1,105 @@
+/* --- Sandwich Sudoku Specific Styles --- */
+
+.sandwich-container {
+    max-width: 950px; /* Wider container to accommodate clues */
+}
+
+#sandwich-grid-wrapper {
+    display: grid;
+    /* Grid layout: corner, top clues, corner, left clues, main grid, right clues, etc. */
+    grid-template-columns: 40px 1fr 40px;
+    grid-template-rows: 40px 1fr 40px;
+    width: 100%;
+    max-width: 575px;
+    margin: 0 auto;
+    gap: 5px;
+}
+
+.sudoku-grid {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    border: 3px solid #333;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+}
+
+.theme-dark .sudoku-grid { border-color: var(--text-color-dark); }
+.theme-paper .sudoku-grid { border-color: var(--text-color-paper); }
+
+.clue-holder {
+    display: grid;
+    font-weight: bold;
+    font-size: clamp(12px, 2.5vw, 18px);
+}
+
+.theme-light .clue-holder { color: var(--primary-color-light); }
+.theme-dark .clue-holder { color: var(--primary-color-dark); }
+.theme-paper .clue-holder { color: var(--primary-color-paper); }
+
+
+.clue-holder.top, .clue-holder.bottom {
+    grid-column: 2 / 3;
+    grid-template-columns: repeat(9, 1fr);
+}
+.clue-holder.top { grid-row: 1 / 2; }
+.clue-holder.bottom { grid-row: 3 / 4; }
+
+.clue-holder.left, .clue-holder.right {
+    grid-row: 2 / 3;
+    grid-template-rows: repeat(9, 1fr);
+}
+.clue-holder.left { grid-column: 1 / 2; }
+.clue-holder.right { grid-column: 3 / 4; }
+
+.clue {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    min-height: 20px;
+    min-width: 20px;
+}
+.theme-light .clue { background-color: #e8f2fe; }
+.theme-dark .clue { background-color: #3a506b; }
+.theme-paper .clue { background-color: #f5efd8; }
+
+
+/* --- Responsive Layout --- */
+@media (max-width: 768px) {
+    #sandwich-grid-wrapper {
+        grid-template-columns: 30px 1fr 30px;
+        grid-template-rows: 30px 1fr 30px;
+        max-width: 95vw;
+        gap: 3px;
+    }
+    .clue-holder {
+        font-size: clamp(10px, 2.5vw, 14px);
+    }
+}
+
+@media (min-width: 769px) {
+  .sandwich-container {
+    display: grid;
+    grid-template-columns: minmax(0, 650px) auto;
+    gap: 25px;
+    align-items: flex-start;
+  }
+  .difficulty-and-new-game-controls {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    padding-left: 85px; /* <-- هذا هو الكود الجديد والوحيد المطلوب */
+  }
+  #sandwich-grid-wrapper {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .game-controls {
+    grid-column: 2;
+    grid-row: 2;
+    width: 240px;
+  }
+}

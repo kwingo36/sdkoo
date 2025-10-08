@@ -1,0 +1,176 @@
+/*
+ * sudoku-x-style.css
+ * النسخة النهائية والمُحسّنة
+ * -----------------------------
+ * - دمج نظام الألوان المتغير الكامل (فاتح، داكن، ورقي).
+ * - تكبير واجهة اللعبة وتوسيطها لتحسين تجربة المستخدم.
+ * - الحفاظ على التناسق البصري مع بقية صفحات الموقع.
+ */
+
+/* --- 1. تعريفات الثيمات (مستوردة من التحديات الأخرى للتناسق) --- */
+
+:root, .theme-light {
+  --bg: #f6f8fa;
+  --panel: #ffffff;
+  --accent: #2b8cff;
+  --muted: #6c757d;
+  --cell: #ffffff;
+  --cell-fixed: #eef3fb;
+  --cell-selected: #dff3ff;
+  --error-bg: #ffecec;
+  --border-color: #e1e4e8;
+  --text-color: #24292e;
+  --text-fixed-color: #0b2546;
+  --shadow: rgba(0, 0, 0, 0.1);
+  /* لون خاص بخلايا سودوكو إكس القطرية */
+  --diagonal-cell-bg: #e7eef5; 
+}
+
+.theme-dark {
+  --bg: #1c2128;
+  --panel: #2d333b;
+  --accent: #58a6ff;
+  --muted: #8b949e;
+  --cell: #22272e;
+  --cell-fixed: #343a44;
+  --cell-selected: #388bfd4d;
+  --error-bg: #5c2c33;
+  --border-color: #444c56;
+  --text-color: #c9d1d9;
+  --text-fixed-color: #e6edf3;
+  --shadow: rgba(0, 0, 0, 0.4);
+  /* لون خاص بخلايا سودوكو إكس القطرية */
+  --diagonal-cell-bg: #2f3b4a;
+}
+
+.theme-paper {
+  --bg: #f4f1e9;
+  --panel: #ffffff;
+  --accent: #005a9c;
+  --muted: #7d7365;
+  --cell: #fffcf5;
+  --cell-fixed: #e9e5d9;
+  --cell-selected: #d4e5f3;
+  --error-bg: #f3e2e2;
+  --border-color: #dcd6c8;
+  --text-color: #4a443a;
+  --text-fixed-color: #2b2823;
+  --shadow: rgba(80, 70, 50, 0.15);
+  /* لون خاص بخلايا سودوكو إكس القطرية */
+  --diagonal-cell-bg: #f0ebde;
+}
+
+
+/* --- 2. أنماط واجهة اللعبة المُكبّرة والمتناسقة --- */
+
+/* تعديل الحاوية الرئيسية لتكون أكبر */
+.sudoku-x-container {
+    max-width: 1000px; /* زيادة العرض الأقصى */
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(240px, 1fr); /* إعطاء مساحة أكبر للشبكة */
+    gap: 30px;
+    align-items: flex-start;
+}
+
+/* تعديل حاوية الشبكة */
+#sudoku-x-grid-container {
+    width: 100%;
+    margin: 0; /* إزالة التوسيط التلقائي */
+}
+
+.sudoku-grid {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    border: 3px solid var(--text-fixed-color); /* استخدام لون متناسق */
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 8px; /* إضافة حواف دائرية */
+    overflow: hidden; /* ضمان أن الخلايا لا تتجاوز الحدود الدائرية */
+    box-shadow: 0 5px 15px var(--shadow);
+}
+
+/* استخدام المتغيرات لألوان الخلايا القطرية */
+.diagonal-cell {
+    background-color: var(--diagonal-cell-bg);
+    transition: background-color 0.3s;
+}
+
+/* تنسيق الخلايا ليتناسب مع بقية الموقع */
+.sudoku-grid .cell {
+    font-size: clamp(14px, 4vw, 32px); /* تكبير حجم الخط قليلاً */
+    transition: background-color 0.2s;
+    /* يتم تطبيق الألوان الأساسية من ملف style.css العام */
+}
+
+.sudoku-grid .notes-grid {
+    font-size: clamp(9px, 2vw, 14px);
+}
+
+/* إعادة ترتيب عناصر التحكم لتناسب التخطيط الجديد */
+.difficulty-and-new-game-controls {
+    grid-column: 1 / -1; /* تمتد على العمودين */
+    grid-row: 1;
+}
+
+#sudoku-x-grid-container {
+    grid-column: 1; /* الشبكة في العمود الأول */
+    grid-row: 2;
+}
+
+.game-controls {
+    grid-column: 2; /* لوحة التحكم في العمود الثاني */
+    grid-row: 2;
+    width: 100%; /* تأخذ عرض العمود المتاح لها */
+    max-width: 240px; /* مع الحفاظ على حد أقصى للعرض */
+}
+
+
+/* --- 3. قسم التصميم المتجاوب للهواتف --- */
+@media (max-width: 768px) {
+    .sudoku-x-container {
+        display: flex; /* العودة إلى التخطيط العمودي المرن */
+        flex-direction: column;
+        align-items: center;
+        max-width: 100%;
+        gap: 15px;
+    }
+    
+    .difficulty-and-new-game-controls {
+        order: 1;
+    }
+    
+    #sudoku-x-grid-container {
+        max-width: 95vw;
+        width: 100%;
+        order: 2; /* الشبكة تأتي ثانياً */
+    }
+    
+    .game-controls {
+        width: 100%;
+        max-width: 450px; /* السماح بعرض أكبر للأزرار على الشاشات الصغيرة */
+        order: 3; /* الأزرار تأتي أخيراً */
+        margin-top: 15px;
+    }
+}
+/* --- 4. أنماط إضافية لتحسين تجربة المستخدم --- */
+
+/* نمط للخلايا التي يتم حلها بواسطة الذكاء الاصطناعي */
+.cell.solved-by-ai {
+    color: var(--accent); /* استخدام اللون المميز للثيم */
+    font-weight: bold;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+/* حركة بسيطة لظهور الحرف */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

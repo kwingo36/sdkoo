@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expert Word Sudoku - Play Free Letter Sudoku Puzzles Online</title>
+    <meta name="description" content="Challenge yourself with Expert Word Sudoku online! Free letter sudoku puzzles, printable sudoku word games, and advanced daily challenges for true puzzle masters." />
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="sudoku-word-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="theme-light">
+
+    <div id="notification-bar"></div>
+
+    <header>
+        <div class="header-content">
+            <button id="hamburger-btn" aria-label="Open Menu">
+                <span></span><span></span><span></span>
+            </button>
+            <h1><a href="index.html" style="text-decoration: none; color: inherit;">Sudokuheroes.com</a></h1>
+            
+            <!-- START: ADDED CODE FOR MOBILE THEME TOGGLE -->
+<div id="theme-toggle-mobile" class="theme-toggle-mobile">
+    <button id="mobile-theme-switcher" aria-label="Toggle Theme">
+        <!-- Sun Icon SVG -->
+        <svg class="icon-light" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <!-- Moon Icon SVG -->
+        <svg class="icon-dark" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+    </button>
+</div>
+<!-- END: ADDED CODE FOR MOBILE THEME TOGGLE -->
+ 
+            <nav>
+                <div class="game-mode-selector">
+                    <a href="index.html" class="mode-btn">Classic Sudoku</a>
+                    <a href="killer-index.html" class="mode-btn">Killer Sudoku</a> 
+                    <a href="samurai-sudoku.html" class="mode-btn">Samurai Sudoku</a> 
+                    <a href="sudoku-x.html" class="mode-btn">Sudoku X</a> 
+                    <a href="sandwich-sudoku.html" class="mode-btn">Sandwich Sudoku</a>
+                    <a href="jigsaw-sudoku.html" class="mode-btn">Jigsaw Sudoku</a>
+                    <a href="word-sudoku.html" class="mode-btn active">Word Sudoku</a>
+                    <a href="daily-challenge.html" class="mode-btn">Daily Challenge</a>
+                </div>
+                <div class="header-right-side">
+    <div class="header-actions">
+        <button id="stats-btn" class="icon-btn">📊</button>
+        <button id="settings-btn" class="icon-btn">⚙️</button>
+    </div>
+    
+    <!-- START: Language Selector المحدث -->
+    <div class="language-selector">
+        <button class="lang-btn" aria-label="Select Language">
+    <!-- START: MODIFIED CODE -->
+    <img id="selected-lang-flag" src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/gb.svg" alt="Selected Language" style="width: 20px; height: auto; border-radius: 2px; box-shadow: 0 0 2px rgba(0,0,0,0.2);">
+    <span id="selected-lang-text">English</span>
+    <!-- END: MODIFIED CODE -->
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+    </svg>
+        </button>
+        <div class="lang-dropdown">
+    <a href="/expert-word-sudoku.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/gb.svg" alt="English Flag"> English</a>
+    <a href="/es/expert-word-sudoku.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/es.svg" alt="Spanish Flag"> Español</a>
+    <a href="/de/expert-word-sudoku.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/de.svg" alt="German Flag"> Deutsch</a>
+    <a href="/pt/expert-word-sudoku.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/pt.svg" alt="Portuguese Flag"> Português</a>
+    <a href="/fr/expert-word-sudoku.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/fr.svg" alt="French Flag"> Français</a>
+    <a href="/it/expert-word-sudoku.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/it.svg" alt="Italian Flag"> Italiano</a>
+    <a href="/ar/expert-word-sudoku.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/sa.svg" alt="Arabic Flag"> عربى</a>
+    <a href="/ja/expert-word-sudoku.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/jp.svg" alt="Japanese Flag"> 日本語</a>
+    <a href="/ru/expert-word-sudoku.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/ru.svg" alt="Russian Flag"> Русский</a>
+</div>
+    </div>
+    <!-- END: Language Selector -->
+
+            </nav>
+        </div>
+    </header>
+
+    <div id="mobile-menu">
+        <div class="mobile-menu-content">
+            <button id="close-menu-btn" aria-label="Close Menu">&times;</button>
+            <h3>Game Mode</h3>
+            <div class="game-mode-selector">
+                <a href="index.html" class="mode-btn">Classic Sudoku</a>
+                <a href="killer-index.html" class="mode-btn">Killer Sudoku</a> 
+                <a href="samurai-sudoku.html" class="mode-btn">Samurai Sudoku</a> 
+                <a href="sudoku-x.html" class="mode-btn">Sudoku X</a> 
+                <a href="sandwich-sudoku.html" class="mode-btn">Sandwich Sudoku</a>
+                <a href="jigsaw-sudoku.html" class="mode-btn">Jigsaw Sudoku</a>
+                <a href="word-sudoku.html" class="mode-btn active">Word Sudoku</a>
+                <a href="daily-challenge.html" class="mode-btn">Daily Challenge</a>
+            </div>
+                    <hr>
+        <h3>Actions</h3>
+        <div class="header-actions">
+            <button id="mobile-stats-btn" class="icon-btn">📊 Statistics</button>
+            <button id="mobile-settings-btn" class="icon-btn">⚙️ Settings</button>
+        </div>
+
+        <!-- ============================================= -->
+        <!-- ===== أضف هذا الجزء الجديد بالكامل هنا ===== -->
+        <!-- ============================================= -->
+        <hr>
+        <h3>Languages</h3>
+        <!-- هذا هو الصندوق الفارغ الذي سيستقبل اللغات المنسوخة -->
+        <div id="mobile-language-placeholder" class="mobile-language-links"></div>
+
+        </div>
+    </div>
+
+    <main class="game-container">
+        <div class="difficulty-and-new-game-controls">
+            <div class="difficulty-selector">
+                <select id="difficulty" title="Select Difficulty">
+                    <option value="word-easy">Easy</option>
+                    <option value="word-medium">Medium</option>
+                    <option value="word-hard">Hard</option>
+                    <option value="word-expert" selected>Expert</option>
+                    <option value="word-master">Master</option>
+                </select>
+            </div>
+            <div id="mobile-timer-display">00:00</div>
+            <button id="new-game-btn" class="new-game-button-style">New Game</button>
+        </div>
+
+        <div id="grid-container">
+            <div id="sudoku-grid"></div>
+        </div>        
+        
+        <div class="game-controls">
+            <div class="number-pad">
+                <button class="num-btn">A</button><button class="num-btn">B</button><button class="num-btn">C</button>
+                <button class="num-btn">D</button><button class="num-btn">E</button><button class="num-btn">F</button>
+                <button class="num-btn">G</button><button class="num-btn">H</button><button class="num-btn">I</button>
+                <button id="erase-btn" class="control-btn">Erase</button>
+                <button id="pencil-btn" class="control-btn">Pencil</button>
+            </div>
+
+            <div class="action-panel">
+                <div id="timer">00:00</div>
+                <button id="undo-btn" class="action-btn">Undo</button>
+                <button id="hint-btn" class="action-btn">Hint</button>
+                <button id="check-btn" class="action-btn">Check</button>
+                <button id="solve-btn" class="action-btn">Solve</button>
+                <button id="new-game-btn-bottom" class="new-game-button-style">New Game</button>
+            </div>
+        </div>
+    </main>
+
+    <div class="info-section">
+    <h2>Expert Word Sudoku: The Ultimate Letter Puzzle Experience</h2>
+    <p>If you’re searching for the toughest word sudoku puzzles, then Expert Word Sudoku is where the real challenge begins. This advanced level is designed for players who have already mastered easy, medium, and hard word sudoku, and now want to test their skills with grids that demand maximum logic, patience, and strategy.</p>
+    
+    <h3>What Makes Expert Word Sudoku Special?</h3>
+    <p>Unlike traditional number-based Sudoku, here you’ll work with letters—making it both fun and mentally stimulating. Each puzzle is unique and designed to push your problem-solving abilities. With expert word sudoku online, you can play anytime, anywhere, and even print puzzles with letter sudoku printable free sheets for offline practice.</p>
+
+    <h3>How to Play Expert Word Sudoku</h3>
+    <ul>
+        <li>Every <strong>row</strong> must include all nine letters exactly once.</li>
+        <li>Every <strong>column</strong> must include all nine letters exactly once.</li>
+        <li>Every <strong>3x3 block</strong> must also contain the full set of letters with no repetition.</li>
+    </ul>
+    <p>These puzzles may look simple at first glance—but solving them requires multiple steps, advanced reasoning, and expert techniques.</p>
+
+    <h3>Tips & Strategies for Success</h3>
+    <ul>
+        <li>Use pencil marks to note possible letters for each square.</li>
+        <li>Apply advanced solving methods like <em>X-Wing</em>, <em>Swordfish</em>, and <em>XYZ-Wing</em>.</li>
+        <li>Look for hidden pairs, triples, and advanced elimination strategies.</li>
+        <li>Be patient—some expert puzzles may take hours to complete.</li>
+    </ul>
+
+    <h3>Why Play Expert Word Sudoku?</h3>
+    <ul>
+        <li><strong>Boost Brainpower:</strong> Perfect for enhancing focus, memory, and logical thinking.</li>
+        <li><strong>Daily Challenges:</strong> A new expert sudoku word puzzle is available every day.</li>
+        <li><strong>Multiple Formats:</strong> Play letter sudoku online or print puzzles for offline solving.</li>
+        <li><strong>Ultimate Challenge:</strong> Ideal for advanced players who want to push their limits.</li>
+    </ul>
+
+    <h3>Who Should Play?</h3>
+    <p>Expert Word Sudoku is best suited for players who:</p>
+    <ul>
+        <li>Have mastered beginner and intermediate sudoku puzzles.</li>
+        <li>Want to sharpen their advanced logical reasoning skills.</li>
+        <li>Enjoy solving the hardest sudoku word puzzles.</li>
+        <li>Are preparing for sudoku competitions or want to challenge friends.</li>
+    </ul>
+
+    <h3>Variations of Expert Word Sudoku</h3>
+    <p>Keep the challenge exciting with different puzzle types:</p>
+    <ul>
+        <li>Classic expert word sudoku puzzles with letters A–I.</li>
+        <li>Printable expert sudoku word puzzles for offline practice.</li>
+        <li>Themed expert puzzles with special grid designs.</li>
+        <li>Daily updates with fresh expert letter sudoku online challenges.</li>
+    </ul>
+
+    <h3>Start Playing Expert Word Sudoku Today</h3>
+    <p>Take your puzzle skills to the next level with Expert Word Sudoku online. Whether you play interactively on the web or prefer letter sudoku printable sheets, you’ll face some of the most challenging grids ever created. If you’re a true puzzle lover, this is the ultimate test of skill, strategy, and patience.</p>
+</div>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-links" id="difficulty-links">
+                <a href="easy-word-sudoku.html">Easy</a>
+                <a href="medium-word-sudoku.html">Medium</a>
+                <a href="hard-word-sudoku.html">Hard</a>
+                <a href="expert-word-sudoku.html" class="active">Expert</a>
+                <a href="master-word-sudoku.html">Master</a>
+            </div>
+            <hr class="footer-separator">
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2025 Sudokuheroes.com. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <div id="settings-modal" class="modal"><div class="modal-content"><span class="close-btn">&times;</span><h2>Settings</h2><div class="setting-item"><label for="theme-select">Theme</label><select id="theme-select"><option value="theme-light">Light</option><option value="theme-dark">Dark</option><option value="theme-paper">Paper</option></select></div><div class="setting-item"><label for="highlight-duplicates-toggle">Highlight Duplicates</label><input type="checkbox" id="highlight-duplicates-toggle" class="toggle-switch" checked></div><div class="setting-item"><label for="highlight-same-toggle">Highlight Same Numbers</label><input type="checkbox" id="highlight-same-toggle" class="toggle-switch" checked></div><div class="setting-item"><label for="timer-toggle">Show Timer</label><input type="checkbox" id="timer-toggle" class="toggle-switch" checked></div><div class="setting-item"><label for="auto-remove-notes-toggle">Auto-remove Notes</label><input type="checkbox" id="auto-remove-notes-toggle" class="toggle-switch" checked></div><div class="setting-item"><label for="sound-toggle">Sound Effects</label><input type="checkbox" id="sound-toggle" class="toggle-switch" checked></div></div></div>
+    <div id="stats-modal" class="modal"><div class="modal-content"><span class="close-btn">&times;</span><h2>Statistics</h2><div id="stats-container"></div><button id="reset-stats-btn">Reset Stats</button></div></div>
+    <div id="win-modal" class="modal"><div class="modal-content"><span class="close-btn">&times;</span><h2>Congratulations!</h2><p>You solved the puzzle!</p><p>Difficulty: <span id="win-difficulty"></span></p><p>Your time: <span id="win-time"></span></p><p id="best-time-msg"></p><button id="win-new-game-btn" class="new-game-button-style">Play New Game</button></div></div>
+    <div id="confirm-modal" class="modal"><div class="modal-content"><h2 id="confirm-title">Are you sure?</h2><p id="confirm-text">This action cannot be undone.</p><div class="confirm-buttons"><button id="confirm-cancel-btn">Cancel</button><button id="confirm-ok-btn" class="new-game-button-style">OK</button></div></div></div>
+    
+    <audio id="click-sound" src="assets/sounds/click.mp3" preload="auto"></audio>
+    <audio id="place-sound" src="assets/sounds/place.mp3" preload="auto"></audio>
+    <audio id="error-sound" src="assets/sounds/error.mp3" preload="auto"></audio>
+    <audio id="win-sound" src="assets/sounds/win.mp3" preload="auto"></audio>
+    
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+    <script src="word-sudoku-script.js"></script>
+</body>
+</html>

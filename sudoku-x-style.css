@@ -1,0 +1,89 @@
+/* --- Sudoku X Specific Styles --- */
+
+.sudoku-x-container {
+    max-width: 900px;
+    justify-content: center;
+    gap: 20px;
+}
+
+#sudoku-x-grid-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+.sudoku-grid {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    border: 3px solid #333;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+}
+
+.theme-dark .sudoku-grid { border-color: var(--text-color-dark); }
+.theme-paper .sudoku-grid { border-color: var(--text-color-paper); }
+
+/* Style for the diagonal cells */
+.diagonal-cell {
+    transition: background-color 0.3s;
+}
+.theme-light .diagonal-cell { background-color: #e7eef5; }
+.theme-dark .diagonal-cell { background-color: #40566e; }
+.theme-paper .diagonal-cell { background-color: #f5efd8; }
+
+#sudoku-x-grid-container .cell {
+    font-size: clamp(12px, 4vw, 28px);
+    transition: background-color 0.2s;
+}
+
+#sudoku-x-grid-container .notes-grid {
+    font-size: clamp(8px, 2vw, 12px);
+}
+
+/* --- Responsive Layout --- */
+@media (max-width: 768px) {
+    .sudoku-x-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 100%;
+    }
+    #sudoku-x-grid-container {
+        max-width: 95vw;
+        order: 1;
+    }
+    .game-controls {
+        width: 95vw;
+        max-width: 400px;
+        order: 2;
+        margin-top: 15px;
+    }
+}
+
+@media (min-width: 769px) {
+  .sudoku-x-container {
+    display: grid;
+    grid-template-columns: minmax(0, 600px) auto;
+    gap: 25px;
+    align-items: flex-start;
+  }
+  .difficulty-and-new-game-controls {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    padding-left: 25px; /* <-- هذا هو الكود الجديد والوحيد المطلوب */
+  }
+  #sudoku-x-grid-container {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .game-controls {
+    grid-column: 2;
+    grid-row: 2;
+    width: 240px;
+  }
+}
