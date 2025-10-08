@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medium Jigsaw Sudoku - Play Free Irregular Sudoku puzzles Online</title>
+    <meta name="description" content="Play Medium Jigsaw Sudoku online for free! Enjoy challenging irregular Sudoku puzzles, printable jigsaw sudoku sheets, daily 9x9 jigsaw puzzles, and boost your logic and problem-solving skills.">
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="manifest" href="../site.webmanifest">
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../jigsaw-style.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="theme-light">
+
+    <div id="notification-bar"></div>
+
+    <header>
+        <div class="header-content">
+            <button id="hamburger-btn" aria-label="Open Menu">
+                <span></span><span></span><span></span>
+            </button>
+            <h1><a href="../index.html" style="text-decoration: none; color: inherit;">Sudokuheroes.com</a></h1>
+            
+            <!-- START: ADDED CODE FOR MOBILE THEME TOGGLE -->
+<div id="theme-toggle-mobile" class="theme-toggle-mobile">
+    <button id="mobile-theme-switcher" aria-label="Toggle Theme">
+        <!-- Sun Icon SVG -->
+        <svg class="icon-light" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <!-- Moon Icon SVG -->
+        <svg class="icon-dark" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+    </button>
+</div>
+<!-- END: ADDED CODE FOR MOBILE THEME TOGGLE -->
+ 
+            <nav>
+                <div class="game-mode-selector">
+                    <a href="../index.html" class="mode-btn">Classic Sudoku</a>
+                    <a href="../killer-index.html" class="mode-btn">Killer Sudoku</a>
+                    <a href="../samurai-sudoku.html" class="mode-btn">Samurai Sudoku</a>
+                    <a href="../sudoku-x.html" class="mode-btn">Sudoku X</a>
+                    <a href="../sandwich-sudoku.html" class="mode-btn">Sandwich Sudoku</a>
+                    <a href="../jigsaw-sudoku.html" class="mode-btn active">Jigsaw Sudoku</a>
+                    <a href="../word-sudoku.html" class="mode-btn">Word Sudoku</a>
+                    <a href="../daily-challenge.html" class="mode-btn">Daily Challenge</a>
+                </div>
+                <div class="header-right-side">
+    <div class="header-actions">
+        <button id="stats-btn" class="icon-btn">📊</button>
+        <button id="settings-btn" class="icon-btn">⚙️</button>
+    </div>
+    
+    <!-- START: Language Selector المحدث -->
+    <div class="language-selector">
+        <button class="lang-btn" aria-label="Select Language">
+    <!-- START: MODIFIED CODE -->
+    <img id="selected-lang-flag" src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/sa.svg" alt="Selected Language" style="width: 20px; height: auto; border-radius: 2px; box-shadow: 0 0 2px rgba(0,0,0,0.2);">
+    <span id="selected-lang-text">عربى</span>
+    <!-- END: MODIFIED CODE -->
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+    </svg>
+        </button>
+        <div class="lang-dropdown">
+    <a href="../medium-jigsaw-sudoku.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/gb.svg" alt="English Flag"> English</a>
+    <a href="../es/medium-jigsaw-sudoku.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/es.svg" alt="Spanish Flag"> Español</a>
+    <a href="../de/medium-jigsaw-sudoku.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/de.svg" alt="German Flag"> Deutsch</a>
+    <a href="../pt/medium-jigsaw-sudoku.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/pt.svg" alt="Portuguese Flag"> Português</a>
+    <a href="../fr/medium-jigsaw-sudoku.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/fr.svg" alt="French Flag"> Français</a>
+    <a href="../it/medium-jigsaw-sudoku.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/it.svg" alt="Italian Flag"> Italiano</a>
+    <a href="../ar/medium-jigsaw-sudoku.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/sa.svg" alt="Arabic Flag"> عربى</a>
+    <a href="../ja/medium-jigsaw-sudoku.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/jp.svg" alt="Japanese Flag"> 日本語</a>
+    <a href="../ru/medium-jigsaw-sudoku.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/ru.svg" alt="Russian Flag"> Русский</a>
+</div>
+    </div>
+    <!-- END: Language Selector -->
+
+            </nav>
+        </div>
+    </header>
+
+    <div id="mobile-menu">
+        <div class="mobile-menu-content">
+            <button id="close-menu-btn" aria-label="Close Menu">&times;</button>
+            <h3>Game Mode</h3>
+            <div class="game-mode-selector">
+                <a href="../index.html" class="mode-btn">Classic Sudoku</a>
+                <a href="../killer-index.html" class="mode-btn">Killer Sudoku</a>
+                <a href="../samurai-sudoku.html" class="mode-btn">Samurai Sudoku</a>
+                <a href="../sudoku-x.html" class="mode-btn">Sudoku X</a>
+                <a href="../sandwich-sudoku.html" class="mode-btn">Sandwich Sudoku</a>
+                <a href="../jigsaw-sudoku.html" class="mode-btn active">Jigsaw Sudoku</a>
+                <a href="../word-sudoku.html" class="mode-btn">Word Sudoku</a>
+                <a href="../daily-challenge.html" class="mode-btn">Daily Challenge</a>
+            </div>
+                    <hr>
+        <h3>Actions</h3>
+        <div class="header-actions">
+            <button id="mobile-stats-btn" class="icon-btn">📊 Statistics</button>
+            <button id="mobile-settings-btn" class="icon-btn">⚙️ Settings</button>
+        </div>
+
+        <!-- ============================================= -->
+        <!-- ===== أضف هذا الجزء الجديد بالكامل هنا ===== -->
+        <!-- ============================================= -->
+        <hr>
+        <h3>Languages</h3>
+        <!-- هذا هو الصندوق الفارغ الذي سيستقبل اللغات المنسوخة -->
+        <div id="mobile-language-placeholder" class="mobile-language-links"></div>
+
+        </div>
+    </div>
+
+    <main class="game-container jigsaw-container">
+        <div class="difficulty-and-new-game-controls">
+            <div class="difficulty-selector">
+                <select id="difficulty" title="Select Difficulty">
+                    <option value="jigsaw-easy">Easy</option>
+                    <option value="jigsaw-medium" selected>Medium</option>
+                    <option value="jigsaw-hard">Hard</option>
+                    <option value="jigsaw-expert">Expert</option>
+                    <option value="jigsaw-master">Master</option>
+                </select>
+            </div>
+            <div id="mobile-timer-display">00:00</div>
+            <button id="new-game-btn" class="new-game-button-style">New Game</button>
+        </div>
+        
+        <div id="jigsaw-grid-container">
+            <!-- The Jigsaw Sudoku grid will be generated here by JavaScript -->
+        </div>
+        
+        <div class="game-controls">
+            <div class="number-pad">
+                <button class="num-btn">1</button><button class="num-btn">2</button><button class="num-btn">3</button>
+                <button class="num-btn">4</button><button class="num-btn">5</button><button class="num-btn">6</button>
+                <button class="num-btn">7</button><button class="num-btn">8</button><button class="num-btn">9</button>
+                <button id="erase-btn" class="control-btn">Erase</button>
+                <button id="pencil-btn" class="control-btn">Pencil</button>
+            </div>
+
+            <div class="action-panel">
+                <div id="timer">00:00</div>
+                <button id="undo-btn" class="action-btn">Undo</button>
+                <button id="hint-btn" class="action-btn">Hint</button>
+                <button id="check-btn" class="action-btn">Check</button>
+                <button id="solve-btn" class="action-btn">Solve</button>
+                <button id="new-game-btn-bottom" class="new-game-button-style">New Game</button>
+            </div>
+        </div>
+    </main>
+
+<div class="info-section" lang="ar" dir="rtl">
+  <h2>سودوكو جيغسو المتوسط: تحديات سودوكو غير منتظمة للمتقدمين</h2>
+  <p>ارتقِ بمهاراتك في حل الألغاز مع سودوكو جيغسو المتوسط. تم تصميم هذه الألغاز غير المنتظمة أونلاين للاعبين الذين أتقنوا أساسيات سودوكو جيغسو السهل ومستعدون لمواجهة أنماط أكثر تعقيدًا. يمكنك اللعب أونلاين أو تنزيل أوراق سودوكو جيغسو للطباعة لحل الألغاز دون اتصال. التحديات اليومية توفر ألغازًا جديدة للحفاظ على نشاط ذهنك.</p>
+
+  <h3>كيفية لعب سودوكو جيغسو المتوسط</h3>
+  <p>تبقى القواعد متوافقة مع سودوكو التقليدي، مع تعديلها لتناسب الأشكال غير المنتظمة:</p>
+  <ul>
+    <li>يجب أن يحتوي كل <strong>صف</strong> على كل رقم (أو حرف) مرة واحدة فقط.</li>
+    <li>يجب أن يحتوي كل <strong>عمود</strong> على كل رقم (أو حرف) مرة واحدة فقط.</li>
+    <li>يجب أن تحتوي كل <strong>منطقة غير منتظمة</strong> على جميع الأرقام (أو الحروف) بدون تكرار.</li>
+  </ul>
+  <p>تقدم الألغاز المتوسطة مناطق وأنماط غير منتظمة أكثر تعقيدًا، مما يختبر قدرتك على التفكير المنطقي والتخطيط الاستراتيجي بما يتجاوز مستوى المبتدئين.</p>
+
+  <h3>فوائد لعب سودوكو جيغسو المتوسط</h3>
+  <ul>
+    <li>يعزز مهارات حل المشكلات والتفكير التحليلي في الشبكات الأكثر تعقيدًا.</li>
+    <li>يقوي الذاكرة والتركيز والانتباه من خلال الألغاز اليومية.</li>
+    <li>يعد اللاعبين لتحديات سودوكو غير منتظم أونلاين مجانية للمتقدمين.</li>
+    <li>يوفر خيارات اللعب أونلاين أو أوراق للطباعة.</li>
+    <li>يشجع التفكير الاستراتيجي باستخدام تقنيات منطق متعددة الخطوات.</li>
+  </ul>
+
+  <h3>أنواع ألغاز سودوكو جيغسو المتوسط</h3>
+  <ul>
+    <li>شبكات <strong>9x9 سودوكو جيغسو</strong> القياسية للمتوسطين.</li>
+    <li>أوراق <strong>سودوكو جيغسو للطباعة</strong> للحل دون اتصال.</li>
+    <li>تحديثات يومية <strong>سودوكو جيغسو 9x9</strong> لتحدي مهاراتك باستمرار.</li>
+    <li>نسخ أونلاين <strong>سودوكو غير منتظم أونلاين مجانية</strong> لتطوير المهارات.</li>
+  </ul>
+
+  <h3>استراتيجيات لحل سودوكو جيغسو المتوسط</h3>
+  <ul>
+    <li>ابدأ بالخلايا التي تحتوي على رقم أو حرف محتمل واحد فقط.</li>
+    <li>استخدم تقنيات الاستبعاد عبر الصفوف والأعمدة والمناطق غير المنتظمة.</li>
+    <li>ضع احتمالات الأرقام أو الحروف بخفة لتتبع الخيارات.</li>
+    <li>حلل الأنماط عبر مناطق غير منتظمة متعددة لحل الأقسام المعقدة.</li>
+    <li>تمرن باستمرار لتحسين السرعة والدقة.</li>
+  </ul>
+
+  <h3>لماذا تلعب سودوكو جيغسو المتوسط؟</h3>
+  <ul>
+    <li>يجسر الفجوة بين الألغاز السهلة والمتقدمة غير المنتظمة.</li>
+    <li>يختبر منطقك في أشكال غير منتظمة مبتكرة.</li>
+    <li>متاح أونلاين أو عبر أوراق للطباعة.</li>
+    <li>يدعم التدريب اليومي لفوائد معرفية طويلة المدى.</li>
+    <li>مثالي للاعبين الذين يرغبون بالانتقال من الألغاز السهلة إلى المستويات الصعبة والخبيرة.</li>
+  </ul>
+
+  <h3>ابدأ اللعب مع سودوكو جيغسو المتوسط</h3>
+  <p>العب سودوكو جيغسو المتوسط أونلاين مجانًا أو حمّل أوراق سودوكو جيغسو للطباعة لحل الألغاز دون اتصال. حسّن مهاراتك مع تحديات سودوكو اليومية، مارس أنماطًا غير منتظمة، واستعد لألغاز سودوكو غير منتظم أونلاين مجانية للمتقدمين. الألغاز المتوسطة مثالية لصقل ذهنك والاستمتاع بتجربة ألغاز محفزة ومشوقة!</p>
+</div>
+
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-links" id="difficulty-links">
+                <a href="../easy-jigsaw-sudoku.html">Easy</a> 
+                <a href="../medium-jigsaw-sudoku.html" style="font-weight: bold;">Medium</a> 
+                <a href="../hard-jigsaw-sudoku.html">Hard</a> 
+                <a href="../expert-jigsaw-sudoku.html">Expert</a> 
+                <a href="../master-jigsaw-sudoku.html">Master</a>
+            </div>
+            <hr class="footer-separator">
+            <div class="footer-links">
+                <a href="../index.html">Home</a> <a href="../about.html">About</a> <a href="../contact.html">Contact Us</a> <a href="../privacy.html">Privacy Policy</a> <a href="../terms.html">Terms of Service</a>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2025 Sudokuheroes.com. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals (reusing the same structure) -->
+    <div id="win-modal" class="modal"><div class="modal-content"><span class="close-btn">&times;</span><h2>Congratulations!</h2><p>You solved the Jigsaw Sudoku puzzle!</p><p>Difficulty: <span id="win-difficulty"></span></p><p>Your time: <span id="win-time"></span></p><p id="best-time-msg"></p><button id="win-new-game-btn" class="new-game-button-style">Play Again</button></div></div>
+    <div id="settings-modal" class="modal"><div class="modal-content"><span class="close-btn">&times;</span><h2>Settings</h2><div class="setting-item"><label for="theme-select">Theme</label><select id="theme-select"><option value="theme-light">Light</option><option value="theme-dark">Dark</option><option value="theme-paper">Paper</option></select></div><div class="setting-item"><label for="highlight-duplicates-toggle">Highlight Duplicates</label><input type="checkbox" id="highlight-duplicates-toggle" class="toggle-switch" checked></div><div class="setting-item"><label for="highlight-same-toggle">Highlight Same Numbers</label><input type="checkbox" id="highlight-same-toggle" class="toggle-switch" checked></div><div class="setting-item"><label for="sound-toggle">Sound Effects</label><input type="checkbox" id="sound-toggle" class="toggle-switch" checked></div></div></div>
+    <div id="stats-modal" class="modal"><div class="modal-content"><span class="close-btn">&times;</span><h2>Statistics</h2><div id="stats-container"></div><button id="reset-stats-btn">Reset Stats</button></div></div>
+    <div id="confirm-modal" class="modal"><div class="modal-content"><h2 id="confirm-title">Are you sure?</h2><p id="confirm-text">This action cannot be undone.</p><div class="confirm-buttons"><button id="confirm-cancel-btn">Cancel</button><button id="confirm-ok-btn" class="new-game-button-style">OK</button></div></div></div>
+    
+    <audio id="click-sound" src="../assets/sounds/click.mp3" preload="auto"></audio>
+    <audio id="place-sound" src="../assets/sounds/place.mp3" preload="auto"></audio>
+    <audio id="error-sound" src="../assets/sounds/error.mp3" preload="auto"></audio>
+    <audio id="win-sound" src="../assets/sounds/win.mp3" preload="auto"></audio>
+    
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+    <script src="../jigsaw-script.js"></script>
+</body>
+</html>
