@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medium Sandwich Sudoku - Play Free Sandwich Sudoku puzzles Online</title>
+    <meta name="description" content="Play Medium Sandwich Sudoku online for free! Balanced puzzles with sandwich sums between 1 and 9. Enjoy daily sandwich sudoku, printable sheets, and fun irregular challenges to sharpen your logic and brainpower." />
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="manifest" href="../site.webmanifest">
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../sandwich-style.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="theme-light">
+
+    <div id="notification-bar"></div>
+
+    <header>
+        <div class="header-content">
+            <button id="hamburger-btn" aria-label="Open Menu">
+                <span></span><span></span><span></span>
+            </button>
+            <h1><a href="../index.html" style="text-decoration: none; color: inherit;">Sudokuheroes.com</a></h1>
+
+            <!-- START: ADDED CODE FOR MOBILE THEME TOGGLE -->
+<div id="theme-toggle-mobile" class="theme-toggle-mobile">
+    <button id="mobile-theme-switcher" aria-label="Toggle Theme">
+        <!-- Sun Icon SVG -->
+        <svg class="icon-light" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <!-- Moon Icon SVG -->
+        <svg class="icon-dark" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+    </button>
+</div>
+<!-- END: ADDED CODE FOR MOBILE THEME TOGGLE -->
+ 
+            <nav>
+                <div class="game-mode-selector">
+                    <a href="../index.html" class="mode-btn">Classic Sudoku</a>
+                    <a href="../killer-index.html" class="mode-btn">Killer Sudoku</a>
+                    <a href="../samurai-sudoku.html" class="mode-btn">Samurai Sudoku</a>
+                    <a href="../sudoku-x.html" class="mode-btn">Sudoku X</a>
+                    <a href="../sandwich-sudoku.html" class="mode-btn active">Sandwich Sudoku</a>
+                    <a href="../jigsaw-sudoku.html" class="mode-btn">Jigsaw Sudoku</a>
+                    <a href="../word-sudoku.html" class="mode-btn">Word Sudoku</a>
+                    <a href="../daily-challenge.html" class="mode-btn">Daily Challenge</a>
+                </div>
+                <div class="header-right-side">
+    <div class="header-actions">
+        <button id="stats-btn" class="icon-btn">📊</button>
+        <button id="settings-btn" class="icon-btn">⚙️</button>
+    </div>
+    
+    <!-- START: Language Selector المحدث -->
+    <div class="language-selector">
+        <button class="lang-btn" aria-label="Select Language">
+    <!-- START: MODIFIED CODE -->
+    <img id="selected-lang-flag" src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/fr.svg" alt="Selected Language" style="width: 20px; height: auto; border-radius: 2px; box-shadow: 0 0 2px rgba(0,0,0,0.2);">
+    <span id="selected-lang-text">Français</span>
+    <!-- END: MODIFIED CODE -->
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+    </svg>
+        </button>
+        <div class="lang-dropdown">
+    <a href="../medium-sandwich-sudoku.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/gb.svg" alt="English Flag"> English</a>
+    <a href="../es/medium-sandwich-sudoku.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/es.svg" alt="Spanish Flag"> Español</a>
+    <a href="../de/medium-sandwich-sudoku.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/de.svg" alt="German Flag"> Deutsch</a>
+    <a href="../pt/medium-sandwich-sudoku.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/pt.svg" alt="Portuguese Flag"> Português</a>
+    <a href="../fr/medium-sandwich-sudoku.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/fr.svg" alt="French Flag"> Français</a>
+    <a href="../it/medium-sandwich-sudoku.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/it.svg" alt="Italian Flag"> Italiano</a>
+    <a href="../ar/medium-sandwich-sudoku.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/sa.svg" alt="Arabic Flag"> عربى</a>
+    <a href="../ja/medium-sandwich-sudoku.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/jp.svg" alt="Japanese Flag"> 日本語</a>
+    <a href="../ru/medium-sandwich-sudoku.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/ru.svg" alt="Russian Flag"> Русский</a>
+</div>
+    </div>
+    <!-- END: Language Selector -->
+
+            </nav>
+        </div>
+    </header>
+
+    <div id="mobile-menu">
+        <div class="mobile-menu-content">
+            <button id="close-menu-btn" aria-label="Close Menu">&times;</button>
+            <h3>Game Mode</h3>
+            <div class="game-mode-selector">
+                <a href="../index.html" class="mode-btn">Classic Sudoku</a>
+                <a href="../killer-index.html" class="mode-btn">Killer Sudoku</a>
+                <a href="../samurai-sudoku.html" class="mode-btn">Samurai Sudoku</a>
+                <a href="../sudoku-x.html" class="mode-btn">Sudoku X</a>
+                <a href="../sandwich-sudoku.html" class="mode-btn active">Sandwich Sudoku</a>
+                <a href="../jigsaw-sudoku.html" class="mode-btn">Jigsaw Sudoku</a>
+                <a href="../word-sudoku.html" class="mode-btn">Word Sudoku</a>
+                <a href="../daily-challenge.html" class="mode-btn">Daily Challenge</a>
+            </div>
+                    <hr>
+        <h3>Actions</h3>
+        <div class="header-actions">
+            <button id="mobile-stats-btn" class="icon-btn">📊 Statistics</button>
+            <button id="mobile-settings-btn" class="icon-btn">⚙️ Settings</button>
+        </div>
+
+        <!-- ============================================= -->
+        <!-- ===== أضف هذا الجزء الجديد بالكامل هنا ===== -->
+        <!-- ============================================= -->
+        <hr>
+        <h3>Languages</h3>
+        <!-- هذا هو الصندوق الفارغ الذي سيستقبل اللغات المنسوخة -->
+        <div id="mobile-language-placeholder" class="mobile-language-links"></div>
+
+        </div>
+    </div>
+
+    <main class="game-container sandwich-container">
+                <div class="difficulty-and-new-game-controls">
+            <div class="difficulty-selector">
+                <select id="difficulty" title="Select Difficulty">
+                    <option value="sandwich-easy">Easy</option>
+                    <option value="sandwich-medium" selected>Medium</option>
+                    <option value="sandwich-hard">Hard</option>
+                    <option value="sandwich-expert">Expert</option>
+                    <option value="sandwich-master">Master</option>
+                </select>
+            </div>
+            <div id="mobile-timer-display">00:00</div>
+            <button id="new-game-btn" class="new-game-button-style">New Game</button>
+        </div>
+        
+        <div id="sandwich-grid-wrapper">
+            <!-- Game board is generated by JS -->
+        </div>
+        
+        <div class="game-controls">
+            <div class="number-pad">
+                <button class="num-btn">1</button><button class="num-btn">2</button><button class="num-btn">3</button>
+                <button class="num-btn">4</button><button class="num-btn">5</button><button class="num-btn">6</button>
+                <button class="num-btn">7</button><button class="num-btn">8</button><button class="num-btn">9</button>
+                <button id="erase-btn" class="control-btn">Erase</button>
+                <button id="pencil-btn" class="control-btn">Pencil</button>
+            </div>
+
+            <div class="action-panel">
+                <div id="timer">00:00</div>
+                <button id="undo-btn" class="action-btn">Undo</button>
+                <button id="hint-btn" class="action-btn">Hint</button>
+                <button id="check-btn" class="action-btn">Check</button>
+                <button id="solve-btn" class="action-btn">Solve</button>
+                <button id="new-game-btn-bottom" class="new-game-button-style">New Game</button>
+            </div>
+        </div>
+    </main>
+
+<div class="info-section">
+    <h2>Sudoku Sandwich Moyen : Des défis équilibrés pour les passionnés de puzzles</h2>
+    <p>Le <strong>Sudoku Sandwich Moyen</strong> est le niveau parfait pour les joueurs qui ont déjà maîtrisé les bases du sudoku sandwich facile et qui recherchent maintenant des puzzles plus stimulants. Ces grilles combinent les règles du <strong>sudoku moyen</strong> classique avec une touche excitante : l'utilisation des chiffres entre 1 et 9 pour créer des "sommes sandwich". Au niveau moyen, les grilles ne sont pas trop simples mais pas non plus écrasantes, ce qui les rend idéales pour les joueurs qui veulent à la fois du plaisir et de l'exercice mental.</p>
+
+    <h3>Comment jouer au Sudoku Sandwich Moyen</h3>
+    <p>Tout comme le sudoku classique, chaque chiffre de 1 à 9 doit apparaître une seule fois dans chaque ligne et colonne. Cependant, la variante sandwich introduit de nouveaux indices qui la rendent unique :</p>
+    <ul>
+        <li>Les chiffres <strong>1 et 9</strong> agissent comme les "tranches de pain" du sandwich.</li>
+        <li>Les <strong>chiffres entre le 1 et le 9</strong> dans chaque ligne ou colonne doivent correspondre à l'indice donné à l'extérieur de la grille.</li>
+        <li>Vous devez utiliser la déduction logique, et non la devinette, pour compléter le puzzle avec succès.</li>
+    </ul>
+    <p>Au niveau moyen, les sandwichs deviennent plus complexes, vous obligeant à anticiper, à éliminer des possibilités et à vérifier soigneusement les lignes et les colonnes.</p>
+
+    <h3>Pourquoi le niveau Moyen est idéal</h3>
+    <p>Le <strong>sudoku sandwich moyen</strong> offre un équilibre parfait entre les puzzles faciles et les casse-tête avancés :</p>
+    <ul>
+        <li>Il aide les joueurs à prendre confiance avant de passer au <strong>sudoku difficile</strong>.</li>
+        <li>Les puzzles sont résolubles avec la seule logique — aucune devinette n'est requise.</li>
+        <li>Les défis quotidiens de <strong>sudoku du jour</strong> assurent une régularité pour l'entraînement cérébral.</li>
+        <li>Parfait pour ceux qui veulent profiter du <strong>sudoku en ligne</strong> ou télécharger des feuilles de <strong>sudoku à imprimer moyen</strong> pour une résolution hors ligne.</li>
+    </ul>
+
+    <h3>Avantages de jouer au Sudoku Sandwich Moyen</h3>
+    <p>S'engager régulièrement avec ces puzzles offre à la fois du divertissement et des avantages cognitifs :</p>
+    <ul>
+        <li>Renforce le raisonnement logique et les compétences de déduction.</li>
+        <li>Stimule la mémoire et la concentration en résolvant des défis étape par étape.</li>
+        <li>Encourage la patience, la planification stratégique et la pensée critique.</li>
+        <li>Fournit un passe-temps relaxant qui réduit le stress tout en gardant votre esprit actif.</li>
+        <li>Offre des options de jeu flexibles : <strong>sudoku moyen gratuit en ligne</strong> ou puzzles à imprimer pour en profiter n'importe où.</li>
+    </ul>
+
+    <h3>Variantes populaires de Sudoku Sandwich Moyen</h3>
+    <ul>
+        <li><strong>Sudoku Sandwich 9x9 :</strong> La taille classique qui offre une difficulté équilibrée.</li>
+        <li><strong>Sudoku Sandwich du jour :</strong> De nouvelles grilles publiées chaque jour pour une amélioration constante.</li>
+        <li><strong>Feuilles de Sudoku Sandwich à imprimer :</strong> Parfait pour résoudre sur papier pendant les pauses ou les voyages.</li>
+        <li><strong>Sudoku Sandwich Moyen en ligne :</strong> Résolution interactive avec un retour immédiat.</li>
+    </ul>
+
+    <h3>Stratégies pour résoudre le Sudoku Sandwich Moyen</h3>
+    <p>Contrairement aux puzzles faciles, ceux de niveau moyen nécessitent une réflexion plus approfondie. Voici quelques stratégies :</p>
+    <ul>
+        <li>Commencez par les sommes sandwich les plus petites ou les plus grandes, car elles offrent souvent moins d'options de chiffres.</li>
+        <li>Concentrez-vous sur les lignes ou les colonnes où les positions du 1 et du 9 sont plus faciles à déterminer.</li>
+        <li>Recherchez les chevauchements : lorsque deux sandwichs se croisent, la cellule partagée donne souvent un indice.</li>
+        <li>Utilisez des notes au crayon pour suivre les valeurs possibles avant de prendre une décision finale.</li>
+        <li>Revisitez souvent les placements antérieurs — résoudre une ligne peut débloquer des solutions cachées ailleurs.</li>
+    </ul>
+
+    <h3>Sudoku Sandwich Moyen vs Autres Niveaux</h3>
+    <p>Si vous ne savez pas quel niveau choisir, voici comment le niveau moyen se compare :</p>
+    <ul>
+        <li><strong>Sudoku Sandwich Facile :</strong> Idéal pour les débutants qui apprennent les règles.</li>
+        <li><strong>Sudoku Sandwich Moyen :</strong> Des puzzles équilibrés avec un défi modéré.</li>
+        <li><strong>Sudoku Sandwich Difficile :</strong> Pour les solveurs avancés qui aiment les chaînes logiques complexes.</li>
+        <li><strong>Niveaux Expert & Maître :</strong> Uniquement pour les joueurs très expérimentés qui veulent une difficulté maximale.</li>
+    </ul>
+
+    <h3>Options à imprimer et en ligne</h3>
+    <p>Vous pouvez jouer au <strong>sudoku sandwich moyen en ligne</strong> pour une résolution instantanée, ou télécharger des <strong>sudoku à imprimer</strong> pour une pratique hors ligne. De nombreux joueurs préfèrent alterner entre les deux pour profiter à la fois de la commodité numérique et de la sensation traditionnelle des puzzles sur papier.</p>
+
+    <h3>Commencez avec le Sudoku Sandwich Moyen dès aujourd'hui !</h3>
+    <p>Que vous résolviez le <strong>sudoku en ligne gratuit</strong> ou que vous profitiez des puzzles de <strong>sudoku à imprimer</strong>, le niveau moyen est parfait pour les amateurs de puzzles qui veulent une expérience enrichissante sans frustration. Mettez-vous au défi avec les mises à jour quotidiennes, affûtez vos compétences et préparez-vous pour les niveaux avancés tout en vous amusant. Essayez une grille de niveau moyen maintenant et voyez à quelle vitesse votre logique s'améliore !</p>
+</div>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+             <div class="footer-links" id="difficulty-links">
+                 <a href="../easy-sandwich-sudoku.html">Easy</a> 
+                 <a href="../medium-sandwich-sudoku.html">Medium</a> 
+                 <a href="../hard-sandwich-sudoku.html">Hard</a> 
+                 <a href="../expert-sandwich-sudoku.html">Expert</a> 
+                 <a href="../master-sandwich-sudoku.html">Master</a>
+            </div>
+             <hr class="footer-separator">
+            <div class="footer-links">
+                <a href="../index.html">Home</a> <a href="../about.html">About</a> <a href="../contact.html">Contact Us</a> <a href="../privacy.html">Privacy Policy</a> <a href="../terms.html">Terms of Service</a>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2025 Sudokuheroes.com. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <div id="win-modal" class="modal"><div class="modal-content"><span class="close-btn">&times;</span><h2>Congratulations!</h2><p>You solved the Sandwich Sudoku!</p><p>Difficulty: <span id="win-difficulty"></span></p><p>Your time: <span id="win-time"></span></p><p id="best-time-msg"></p><button id="win-new-game-btn" class="new-game-button-style">Play Again</button></div></div>
+    <div id="settings-modal" class="modal"><div class="modal-content"><span class="close-btn">&times;</span><h2>Settings</h2><div class="setting-item"><label for="theme-select">Theme</label><select id="theme-select"><option value="theme-light">Light</option><option value="theme-dark">Dark</option><option value="theme-paper">Paper</option></select></div><div class="setting-item"><label for="highlight-duplicates-toggle">Highlight Duplicates</label><input type="checkbox" id="highlight-duplicates-toggle" class="toggle-switch" checked></div><div class="setting-item"><label for="highlight-same-toggle">Highlight Same Numbers</label><input type="checkbox" id="highlight-same-toggle" class="toggle-switch" checked></div><div class="setting-item"><label for="sound-toggle">Sound Effects</label><input type="checkbox" id="sound-toggle" class="toggle-switch" checked></div></div></div>
+    <div id="stats-modal" class="modal"><div class="modal-content"><span class="close-btn">&times;</span><h2>Statistics</h2><div id="stats-container"></div><button id="reset-stats-btn">Reset Stats</button></div></div>
+    <div id="confirm-modal" class="modal"><div class="modal-content"><h2 id="confirm-title">Are you sure?</h2><p id="confirm-text">This action cannot be undone.</p><div class="confirm-buttons"><button id="confirm-cancel-btn">Cancel</button><button id="confirm-ok-btn" class="new-game-button-style">OK</button></div></div></div>
+    
+    <audio id="click-sound" src="../assets/sounds/click.mp3" preload="auto"></audio>
+    <audio id="place-sound" src="../assets/sounds/place.mp3" preload="auto"></audio>
+    <audio id="error-sound" src="../assets/sounds/error.mp3" preload="auto"></audio>
+    <audio id="win-sound" src="../assets/sounds/win.mp3" preload="auto"></audio>
+    
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+    <script src="../sandwich-script.js"></script>
+</body>
+</html>

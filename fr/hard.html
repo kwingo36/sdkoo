@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sudoku hard - Play Free hard Sudoku Puzzles | Web Sudoku Hard</title>
+    <meta name="description" content="Play Hard Sudoku online for free! Challenge yourself with difficult sudoku puzzles, nyt sudoku hard, and web sudoku hard levels. Solve printable sudoku hard puzzles or enjoy daily sudoku challenges. Perfect for advanced players who love sudoku online, sudoku 247, and free sudoku puzzles." />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="manifest" href="../site.webmanifest">
+
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="theme-light">
+
+    <div id="notification-bar"></div>
+
+    <header>
+        <div class="header-content">
+            <!-- أيقونة الهامبرغر (للشاشات الصغيرة) تم نقلها إلى اليسار -->
+            <button id="hamburger-btn" aria-label="Open Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- عنوان الموقع -->
+            <h1><a href="../index.html" style="text-decoration: none; color: inherit;">Sudokuheroes.com</a></h1>
+
+            <!-- START: UPDATED CODE FOR MOBILE THEME TOGGLE -->
+<div id="theme-toggle-mobile" class="theme-toggle-mobile">
+    <button id="mobile-theme-switcher" aria-label="Toggle Theme">
+        <!-- Sun Icon SVG -->
+        <svg class="icon-light" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <!-- Moon Icon SVG -->
+        <svg class="icon-dark" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+    </button>
+</div>
+<!-- END: UPDATED CODE FOR MOBILE THEME TOGGLE -->
+
+            <!-- حاوية التنقل (للشاشات الكبيرة) -->
+            <nav>
+                <div class="game-mode-selector">
+                    <a href="../index.html" class="mode-btn">Classic Sudoku</a>
+                    <a href="../killer-index.html" class="mode-btn">Killer Sudoku</a> 
+                    <a href="../samurai-sudoku.html" class="mode-btn">Samurai Sudoku</a> 
+                    <a href="../sudoku-x.html" class="mode-btn">Sudoku X</a> 
+                    <a href="../sandwich-sudoku.html" class="mode-btn">Sandwich Sudoku</a>
+                    <a href="../jigsaw-sudoku.html" class="mode-btn">Jigsaw Sudoku</a>
+                    <a href="../word-sudoku.html" class="mode-btn">Word Sudoku</a>
+                    <a href="../daily-challenge.html" class="mode-btn">Daily Challenge</a>
+                </div>
+                <div class="header-right-side">
+    <div class="header-actions">
+        <button id="stats-btn" class="icon-btn">📊</button>
+        <button id="settings-btn" class="icon-btn">⚙️</button>
+    </div>
+    
+    <!-- START: Language Selector المحدث -->
+    <div class="language-selector">
+        <button class="lang-btn" aria-label="Select Language">
+    <!-- START: MODIFIED CODE -->
+    <img id="selected-lang-flag" src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/fr.svg" alt="Selected Language" style="width: 20px; height: auto; border-radius: 2px; box-shadow: 0 0 2px rgba(0,0,0,0.2);">
+    <span id="selected-lang-text">Français</span>
+    <!-- END: MODIFIED CODE -->
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+    </svg>
+        </button>
+        <div class="lang-dropdown">
+    <a href="../hard.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/gb.svg" alt="English Flag"> English</a>
+    <a href="../es/hard.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/es.svg" alt="Spanish Flag"> Español</a>
+    <a href="../de/hard.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/de.svg" alt="German Flag"> Deutsch</a>
+    <a href="../pt/hard.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/pt.svg" alt="Portuguese Flag"> Português</a>
+    <a href="../fr/hard.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/fr.svg" alt="French Flag"> Français</a>
+    <a href="../it/hard.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/it.svg" alt="Italian Flag"> Italiano</a>
+    <a href="../ar/hard.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/sa.svg" alt="Arabic Flag"> عربى</a>
+    <a href="../ja/hard.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/jp.svg" alt="Japanese Flag"> 日本語</a>
+    <a href="../ru/hard.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/ru.svg" alt="Russian Flag"> Русский</a>
+</div>
+    </div>
+    <!-- END: Language Selector -->
+
+            </nav>
+        </div>
+    </header>
+
+    <!-- القائمة الجانبية للشاشات الصغيرة (توضع خارج الهيدر) -->
+    <div id="mobile-menu">
+        <div class="mobile-menu-content">
+            <button id="close-menu-btn" aria-label="Close Menu">&times;</button>
+            <h3>Game Mode</h3>
+            <div class="game-mode-selector">
+                <a href="../index.html" class="mode-btn">Classic Sudoku</a>
+                <a href="../killer-index.html" class="mode-btn">Killer Sudoku</a> 
+                <a href="../samurai-sudoku.html" class="mode-btn">Samurai Sudoku</a> 
+                <a href="../sudoku-x.html" class="mode-btn">Sudoku X</a> 
+                <a href="../sandwich-sudoku.html" class="mode-btn">Sandwich Sudoku</a>
+                <a href="../jigsaw-sudoku.html" class="mode-btn">Jigsaw Sudoku</a>
+                <a href="../word-sudoku.html" class="mode-btn">Word Sudoku</a>
+                <a href="../daily-challenge.html" class="mode-btn">Daily Challenge</a>
+            </div>
+                    <hr>
+        <h3>Actions</h3>
+        <div class="header-actions">
+            <button id="mobile-stats-btn" class="icon-btn">📊 Statistics</button>
+            <button id="mobile-settings-btn" class="icon-btn">⚙️ Settings</button>
+        </div>
+
+        <!-- ============================================= -->
+        <!-- ===== أضف هذا الجزء الجديد بالكامل هنا ===== -->
+        <!-- ============================================= -->
+        <hr>
+        <h3>Languages</h3>
+        <!-- هذا هو الصندوق الفارغ الذي سيستقبل اللغات المنسوخة -->
+        <div id="mobile-language-placeholder" class="mobile-language-links"></div>
+
+        </div>
+    </div>
+        </div>
+
+    <main class="game-container">
+        <div class="difficulty-and-new-game-controls">
+            <div class="difficulty-selector">
+                <select id="difficulty" title="Select Difficulty">
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard" selected>Hard</option>
+                    <option value="expert">Expert</option>
+                    <option value="master">Master</option>
+                </select>
+            </div>
+            <div id="mobile-timer-display">00:00</div>
+            <button id="new-game-btn" class="new-game-button-style">New Game</button>
+        </div>
+
+        <div id="sudoku-grid"></div>
+        
+        <div class="game-controls">
+            <div class="number-pad">
+                <button class="num-btn">1</button>
+                <button class="num-btn">2</button>
+                <button class="num-btn">3</button>
+                <button class="num-btn">4</button>
+                <button class="num-btn">5</button>
+                <button class="num-btn">6</button>
+                <button class="num-btn">7</button>
+                <button class="num-btn">8</button>
+                <button class="num-btn">9</button>
+                <button id="erase-btn" class="control-btn">Erase</button>
+                <button id="pencil-btn" class="control-btn">Pencil</button>
+            </div>
+
+            <div class="action-panel">
+                <div id="timer">00:00</div>
+                <button id="undo-btn" class="action-btn">Undo</button>
+                <button id="hint-btn" class="action-btn">Hint</button>
+                <button id="check-btn" class="action-btn">Check</button>
+                <button id="solve-btn" class="action-btn">Solve</button>
+                <button id="new-game-btn-bottom" class="new-game-button-style">New Game</button>
+            </div>
+        </div>
+    </main>
+
+<div class="info-section">
+    <h2>Sudoku Difficile : Le défi ultime pour votre cerveau</h2>
+    <p>Le <strong>sudoku difficile</strong> est l'un des niveaux de puzzle les plus stimulants et excitants disponibles aujourd'hui. Conçu pour les joueurs avancés, il offre des défis complexes qui vont bien au-delà des bases des grilles de sudoku facile et moyen. Que vous aimiez le <strong>sudoku en ligne difficile</strong>, les <strong>grilles de sudoku difficile</strong> à imprimer, ou résoudre des défis quotidiens, ce niveau pousse votre logique et votre patience à l'extrême.</p>
+
+    <h3>L'histoire du Sudoku Difficile</h3>
+    <p>Le Sudoku a été introduit pour la première fois dans les magazines de jeux il y a des décennies, mais la catégorie "<strong>sudoku difficile</strong>" a rapidement gagné en popularité à mesure que les joueurs réclamaient des versions plus complexes. Aujourd'hui, les grilles de <strong>sudoku difficile gratuit</strong> sont un standard pour les solveurs expérimentés du monde entier, présentes dans le New York Times Sudoku, Sudoku 247, et de nombreuses plateformes de <strong>sudoku en ligne</strong>.</p>
+
+    <h3>Comment jouer au Sudoku Difficile</h3>
+    <p>Les règles restent simples, mais les grilles sont intentionnellement complexes :</p>
+    <ul>
+        <li>Chaque <strong>ligne</strong> doit contenir les chiffres de 1 à 9 sans répétition.</li>
+        <li>Chaque <strong>colonne</strong> doit contenir les chiffres de 1 à 9 une seule fois.</li>
+        <li>Chaque <strong>sous-grille de 3x3</strong> doit également contenir les chiffres de 1 à 9.</li>
+    </ul>
+    <p>Contrairement au sudoku facile, le <strong>sudoku difficile</strong> exige une logique avancée et des stratégies comme le <em>X-Wing, le Swordfish, les Chaînes de Forçage,</em> et le <em>Coloring</em>.</p>
+
+    <h3>Pourquoi choisir le Sudoku Difficile ?</h3>
+    <ul>
+        <li><strong>Entraînement cérébral :</strong> Renforce la résolution de problèmes, la patience et la concentration. Un <strong>sudoku tres difficile</strong> est un excellent exercice.</li>
+        <li><strong>Défi Sudoku du jour :</strong> Profitez des mises à jour quotidiennes du <strong>sudoku difficile du jour</strong> sur des plateformes comme NYT ou Web Sudoku.</li>
+        <li><strong>À imprimer et en ligne :</strong> Jouez à des grilles de <strong>sudoku difficile</strong> n'importe où, n'importe quand.</li>
+        <li><strong>Préparation pour les experts :</strong> C'est un tremplin vers le <strong>Sudoku Expert</strong> et le <strong>Sudoku Maître</strong>.</li>
+    </ul>
+
+    <h3>Stratégies pour résoudre le Sudoku Difficile</h3>
+    <p>Pour maîtriser le <strong>sudoku difficile</strong>, vous devez aller au-delà de la simple élimination. Les stratégies populaires incluent :</p>
+    <ul>
+        <li><strong>Paires et Triplets cachés :</strong> Repérez les chiffres qui n'apparaissent que dans des cellules spécifiques.</li>
+        <li><strong>Logique des chaînes avancées :</strong> Utilisez le "coloring" pour suivre les possibilités.</li>
+        <li><strong>Reconnaissance de motifs :</strong> Appliquez des techniques comme le <em>Swordfish</em> pour des éliminations croisées dans la grille.</li>
+        <li><strong>Patience :</strong> Certaines grilles peuvent prendre des heures à résoudre — ne vous précipitez pas !</li>
+    </ul>
+
+    <h3>Sudoku Difficile vs Sudoku Diabolique</h3>
+    <p>Bien que les deux niveaux soient complexes, le <strong>sudoku difficile</strong> est plus logique, tandis que le <strong>sudoku diabolique</strong> nécessite souvent des hypothèses et des chaînes de résolution avancées. Les joueurs qui maîtrisent le <strong>sudoku difficile</strong> progressent généralement vers les redoutables défis du <strong>sudoku diabolique très difficile</strong>.</p>
+
+    <h3>Bénéfices éducatifs du Sudoku Difficile</h3>
+    <ul>
+        <li>Améliore le raisonnement logique et les compétences analytiques.</li>
+        <li>Aide les étudiants à affiner leur concentration pour l'apprentissage des mathématiques et des sciences.</li>
+        <li>Maintient l'esprit des personnes âgées actif et vif.</li>
+        <li>Fournit un exercice cérébral sain et sans écran avec des <strong>grilles de sudoku difficile</strong> à imprimer.</li>
+    </ul>
+
+    <h3>FAQ sur le Sudoku Difficile</h3>
+    <ul>
+        <li><strong>Q :</strong> En quoi le <strong>sudoku difficile</strong> est-il différent du sudoku facile ?<br>
+            <strong>R :</strong> Le <strong>sudoku difficile</strong> nécessite des stratégies avancées et a moins de "chiffres donnés", ce qui le rend plus stimulant.</li>
+        <li><strong>Q :</strong> Puis-je jouer au <strong>sudoku difficile en ligne gratuitement</strong> ?<br>
+            <strong>R :</strong> Oui, de nombreuses plateformes proposent un <strong>sudoku difficile gratuit sans pub</strong> chaque jour.</li>
+        <li><strong>Q :</strong> Existe-t-il une version à imprimer ?<br>
+            <strong>R :</strong> Absolument ! Téléchargez des <strong>grilles de sudoku difficile</strong> à imprimer pour jouer hors ligne à tout moment.</li>
+    </ul>
+
+    <h3>Commencez votre aventure avec le Sudoku Difficile</h3>
+    <p>Que vous jouiez au NYT <strong>sudoku difficile</strong>, au Web Sudoku, ou que vous téléchargiez des grilles à imprimer, le <strong>sudoku difficile</strong> poussera vos compétences à la limite. Rejoignez des milliers de joueurs dans le monde, entraînez votre cerveau quotidiennement, et voyez si vous pouvez maîtriser les grilles de sudoku les plus ardues dès aujourd'hui !</p>
+</div>
+
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-links" id="difficulty-links">
+                <a href="../easy.html">Easy</a>
+                <a href="../medium.html">Medium</a>
+                <a href="../hard.html">Hard</a>
+                <a href="../expert.html">Expert</a>
+                <a href="../master.html">Master</a>
+            </div>
+            <hr class="footer-separator">
+            <div class="footer-links">
+                <a href="../index.html">Home</a>
+                <a href="../about.html">About</a>
+                <a href="../contact.html">Contact Us</a>
+                <a href="../privacy.html">Privacy Policy</a>
+                <a href="../terms.html">Terms of Service</a>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2025 Sudokuheroes.com. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- --- START: All Modals --- -->
+    <div id="settings-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Settings</h2>
+            <div class="setting-item">
+                <label for="theme-select">Theme</label>
+                <select id="theme-select">
+                    <option value="theme-light">Light</option>
+                    <option value="theme-dark">Dark</option>
+                    <option value="theme-paper">Paper</option>
+                </select>
+            </div>
+            <div class="setting-item">
+                <label for="highlight-duplicates-toggle">Highlight Duplicates</label>
+                <input type="checkbox" id="highlight-duplicates-toggle" class="toggle-switch" checked>
+            </div>
+            <div class="setting-item">
+                <label for="highlight-same-toggle">Highlight Same Numbers</label>
+                <input type="checkbox" id="highlight-same-toggle" class="toggle-switch" checked>
+            </div>
+            <div class="setting-item">
+                <label for="timer-toggle">Show Timer</label>
+                <input type="checkbox" id="timer-toggle" class="toggle-switch" checked>
+            </div>
+            <div class="setting-item">
+                <label for="auto-remove-notes-toggle">Auto-remove Notes</label>
+                <input type="checkbox" id="auto-remove-notes-toggle" class="toggle-switch" checked>
+            </div>
+            <div class="setting-item">
+                <label for="sound-toggle">Sound Effects</label>
+                <input type="checkbox" id="sound-toggle" class="toggle-switch" checked>
+            </div>
+        </div>
+    </div>
+    
+    <div id="stats-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Statistics</h2>
+            <div id="stats-container"></div>
+            <button id="reset-stats-btn">Reset Stats</button>
+        </div>
+    </div>
+
+    <div id="win-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Congratulations!</h2>
+            <p>You solved the puzzle!</p>
+            <p>Difficulty: <span id="win-difficulty"></span></p>
+            <p>Your time: <span id="win-time"></span></p>
+            <p id="best-time-msg"></p>
+            <button id="win-new-game-btn" class="new-game-button-style">Play New Game</button>
+        </div>
+    </div>
+    
+    <div id="confirm-modal" class="modal">
+        <div class="modal-content">
+            <h2 id="confirm-title">Are you sure?</h2>
+            <p id="confirm-text">This action cannot be undone.</p>
+            <div class="confirm-buttons">
+                <button id="confirm-cancel-btn">Cancel</button>
+                <button id="confirm-ok-btn" class="new-game-button-style">OK</button>
+            </div>
+        </div>
+    </div>
+    <!-- --- END: All Modals --- -->
+
+    <audio id="click-sound" src="../assets/sounds/click.mp3" preload="auto"></audio>
+    <audio id="place-sound" src="../assets/sounds/place.mp3" preload="auto"></audio>
+    <audio id="error-sound" src="../assets/sounds/error.mp3" preload="auto"></audio>
+    <audio id="win-sound" src="../assets/sounds/win.mp3" preload="auto"></audio>
+    
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hard Sudoku X - Play Free X Sudoku Puzzles Online</title>
+    <meta name="description" content="Play Hard Sudoku X online for free! Solve challenging 9x9 X-Sudoku puzzles, improve your logic with hard Sudoku puzzles, explore printable Sudoku puzzles, and enjoy expert-level sudoku puzzle books. Perfect for advanced solvers seeking the ultimate Sudoku X experience." />
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="manifest" href="../site.webmanifest">
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../sudoku-x-style.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="theme-light">
+
+    <div id="notification-bar"></div>
+
+    <header>
+        <div class="header-content">
+            <button id="hamburger-btn" aria-label="Open Menu">
+                <span></span><span></span><span></span>
+            </button>
+            <h1><a href="../index.html" style="text-decoration: none; color: inherit;">Sudokuheroes.com</a></h1>
+
+            <!-- START: ADDED CODE FOR MOBILE THEME TOGGLE -->
+<div id="theme-toggle-mobile" class="theme-toggle-mobile">
+    <button id="mobile-theme-switcher" aria-label="Toggle Theme">
+        <!-- Sun Icon SVG -->
+        <svg class="icon-light" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <!-- Moon Icon SVG -->
+        <svg class="icon-dark" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+    </button>
+</div>
+<!-- END: ADDED CODE FOR MOBILE THEME TOGGLE -->
+ 
+            <nav>
+                <div class="game-mode-selector">
+                    <a href="../index.html" class="mode-btn">Classic Sudoku</a>
+                    <a href="../killer-index.html" class="mode-btn">Killer Sudoku</a>
+                    <a href="../samurai-sudoku.html" class="mode-btn">Samurai Sudoku</a>
+                    <a href="../medium-sudoku-x.html" class="mode-btn active">Sudoku X</a> 
+                    <a href="../sandwich-sudoku.html" class="mode-btn">Sandwich Sudoku</a>
+                    <a href="../jigsaw-sudoku.html" class="mode-btn">Jigsaw Sudoku</a>
+                    <a href="../word-sudoku.html" class="mode-btn">Word Sudoku</a>
+                    <a href="../daily-challenge.html" class="mode-btn">Daily Challenge</a>
+                </div>
+                <div class="header-right-side">
+    <div class="header-actions">
+        <button id="stats-btn" class="icon-btn">📊</button>
+        <button id="settings-btn" class="icon-btn">⚙️</button>
+    </div>
+    
+    <!-- START: Language Selector المحدث -->
+    <div class="language-selector">
+        <button class="lang-btn" aria-label="Select Language">
+    <!-- START: MODIFIED CODE -->
+    <img id="selected-lang-flag" src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/fr.svg" alt="Selected Language" style="width: 20px; height: auto; border-radius: 2px; box-shadow: 0 0 2px rgba(0,0,0,0.2);">
+    <span id="selected-lang-text">Français</span>
+    <!-- END: MODIFIED CODE -->
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+    </svg>
+        </button>
+        <div class="lang-dropdown">
+    <a href="../hard-sudoku-x.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/gb.svg" alt="English Flag"> English</a>
+    <a href="../es/hard-sudoku-x.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/es.svg" alt="Spanish Flag"> Español</a>
+    <a href="../de/hard-sudoku-x.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/de.svg" alt="German Flag"> Deutsch</a>
+    <a href="../pt/hard-sudoku-x.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/pt.svg" alt="Portuguese Flag"> Português</a>
+    <a href="../fr/hard-sudoku-x.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/fr.svg" alt="French Flag"> Français</a>
+    <a href="../it/hard-sudoku-x.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/it.svg" alt="Italian Flag"> Italiano</a>
+    <a href="../ar/hard-sudoku-x.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/sa.svg" alt="Arabic Flag"> عربى</a>
+    <a href="../ja/hard-sudoku-x.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/jp.svg" alt="Japanese Flag"> 日本語</a>
+    <a href="../ru/hard-sudoku-x.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/ru.svg" alt="Russian Flag"> Русский</a>
+</div>
+    </div>
+    <!-- END: Language Selector -->
+
+            </nav>
+        </div>
+    </header>
+
+    <div id="mobile-menu">
+        <div class="mobile-menu-content">
+            <button id="close-menu-btn" aria-label="Close Menu">&times;</button>
+            <h3>Game Mode</h3>
+            <div class="game-mode-selector">
+                <a href="../index.html" class="mode-btn">Classic Sudoku</a>
+                <a href="../killer-index.html" class="mode-btn">Killer Sudoku</a>
+                <a href="../samurai-sudoku.html" class="mode-btn">Samurai Sudoku</a>
+                <a href="../medium-sudoku-x.html" class="mode-btn active">Sudoku X</a>
+                <a href="../sandwich-sudoku.html" class="mode-btn">Sandwich Sudoku</a>
+                <a href="../jigsaw-sudoku.html" class="mode-btn">Jigsaw Sudoku</a>
+                <a href="../word-sudoku.html" class="mode-btn">Word Sudoku</a>
+                <a href="../daily-challenge.html" class="mode-btn">Daily Challenge</a>
+            </div>
+                    <hr>
+        <h3>Actions</h3>
+        <div class="header-actions">
+            <button id="mobile-stats-btn" class="icon-btn">📊 Statistics</button>
+            <button id="mobile-settings-btn" class="icon-btn">⚙️ Settings</button>
+        </div>
+
+        <!-- ============================================= -->
+        <!-- ===== أضف هذا الجزء الجديد بالكامل هنا ===== -->
+        <!-- ============================================= -->
+        <hr>
+        <h3>Languages</h3>
+        <!-- هذا هو الصندوق الفارغ الذي سيستقبل اللغات المنسوخة -->
+        <div id="mobile-language-placeholder" class="mobile-language-links"></div>
+
+        </div>
+    </div>
+
+    <main class="game-container sudoku-x-container">
+        <div class="difficulty-and-new-game-controls">
+            <div class="difficulty-selector">
+                <select id="difficulty" title="Select Difficulty">
+                    <option value="sudoku-x-easy">Easy</option>
+                    <option value="sudoku-x-medium">Medium</option>
+                    <option value="sudoku-x-hard" selected>Hard</option>
+                    <option value="sudoku-x-expert">Expert</option>
+                    <option value="sudoku-x-master">Master</option>
+                </select>
+            </div>
+            <div id="mobile-timer-display">00:00</div>
+            <button id="new-game-btn" class="new-game-button-style">New Game</button>
+        </div>
+        
+        <div id="sudoku-x-grid-container">
+            <!-- The Sudoku X grid will be generated here by JavaScript -->
+        </div>
+        
+        <div class="game-controls">
+            <div class="number-pad">
+                <button class="num-btn">1</button><button class="num-btn">2</button><button class="num-btn">3</button>
+                <button class="num-btn">4</button><button class="num-btn">5</button><button class="num-btn">6</button>
+                <button class="num-btn">7</button><button class="num-btn">8</button><button class="num-btn">9</button>
+                <button id="erase-btn" class="control-btn">Erase</button>
+                <button id="pencil-btn" class="control-btn">Pencil</button>
+            </div>
+
+            <div class="action-panel">
+                <div id="timer">00:00</div>
+                <button id="undo-btn" class="action-btn">Undo</button>
+                <button id="hint-btn" class="action-btn">Hint</button>
+                <button id="check-btn" class="action-btn">Check</button>
+                <button id="solve-btn" class="action-btn">Solve</button>
+                <button id="new-game-btn-bottom" class="new-game-button-style">New Game</button>
+            </div>
+        </div>
+    </main>
+
+<div class="info-section">
+    <h2>Sudoku X Difficile : Puzzles de Sudoku X 9x9 avancés</h2>
+    <p>Passez au niveau supérieur de jeu de puzzle avec le <strong>Sudoku X Difficile</strong>, conçu pour les joueurs avancés en quête d'un défi sérieux. Cette variante de <strong>sudoku difficile</strong> ajoute une particularité : non seulement chaque ligne, colonne et bloc 3x3 doit contenir les chiffres de 1 à 9 sans répétition, mais les deux diagonales principales doivent également contenir tous les chiffres une seule fois. Que vous jouiez au <strong>sudoku en ligne</strong> ou que vous téléchargiez des <strong>sudoku à imprimer</strong>, ce niveau est parfait pour aiguiser votre cerveau et tester votre pensée stratégique.</p>
+
+    <h3>Comment jouer au Sudoku X Difficile</h3>
+    <p>Les règles sont simples, mais la complexité est élevée :</p>
+    <ul>
+        <li>Chaque <strong>ligne</strong> doit inclure les chiffres de 1 à 9 une seule fois.</li>
+        <li>Chaque <strong>colonne</strong> doit inclure les chiffres de 1 à 9 une seule fois.</li>
+        <li>Chaque <strong>bloc 3x3</strong> doit contenir les chiffres de 1 à 9 une seule fois.</li>
+        <li>Les deux <strong>diagonales principales</strong> doivent également contenir les chiffres de 1 à 9 sans répétition.</li>
+    </ul>
+    <p>Les grilles de <strong>Sudoku X Difficile</strong> mettent au défi même les solveurs expérimentés, nécessitant des stratégies avancées et une planification minutieuse.</p>
+
+    <h3>Avantages de jouer au Sudoku X Difficile</h3>
+    <ul>
+        <li>Améliore le raisonnement logique et les compétences de pensée critique, essentiel pour tout <strong>sudoku tres difficile</strong>.</li>
+        <li>Stimule la mémoire et l'attention aux détails grâce à la reconnaissance de motifs.</li>
+        <li>Améliore les stratégies de résolution de problèmes dans des conditions complexes.</li>
+        <li>Offre simultanément une stimulation mentale et de la relaxation.</li>
+        <li>Jeu flexible : <strong>sudoku en ligne difficile</strong> interactif ou feuilles à imprimer pour une résolution hors ligne.</li>
+    </ul>
+
+    <h3>Stratégies avancées pour résoudre le Sudoku X Difficile</h3>
+    <ul>
+        <li>Utilisez des notes au crayon pour suivre les chiffres possibles dans chaque case.</li>
+        <li>Appliquez des techniques comme le X-Wing, le Swordfish et les Paires Nues pour éliminer des possibilités.</li>
+        <li>Concentrez-vous tôt sur les diagonales pour réduire la complexité des chiffres restants.</li>
+        <li>Divisez la grille en segments plus petits et attaquez d'abord les sections les plus faciles.</li>
+        <li>Vérifiez continuellement les lignes, colonnes, blocs et diagonales à la recherche de motifs cachés.</li>
+    </ul>
+
+    <h3>Types de puzzles de Sudoku X Difficile</h3>
+    <ul>
+        <li>Grilles de Sudoku X 9x9 classiques pour les joueurs de niveau <strong>sudoku expert</strong>.</li>
+        <li>Puzzles de <strong>Sudoku X à imprimer</strong> pour résoudre hors ligne à votre propre rythme.</li>
+        <li>Défis quotidiens de <strong>sudoku difficile du jour</strong> en ligne pour une pratique continue.</li>
+        <li>Grilles combinées avec des contraintes supplémentaires, parfaites pour les solveurs avancés.</li>
+    </ul>
+
+    <h3>Conseils pour réussir</h3>
+    <ul>
+        <li>Faites des pauses si une grille vous semble écrasante ; un regard neuf permet souvent de repérer les chiffres manqués.</li>
+        - Entraînez-vous quotidiennement pour améliorer votre raisonnement logique et votre vitesse.</li>
+        <li>Mélangez le jeu en ligne avec le <strong>Sudoku X à imprimer</strong> pour expérimenter différents styles de résolution.</li>
+        <li>Utilisez des techniques d'élimination et de déduction au lieu de deviner pour une meilleure précision.</li>
+    </ul>
+
+    <h3>Commencez à jouer au Sudoku X Difficile dès aujourd'hui !</h3>
+    <p>Jouez au <strong>Sudoku X Difficile en ligne gratuitement</strong>, explorez des grilles de Sudoku X 9x9 stimulantes, ou imprimez des feuilles de <strong>sudoku difficile gratuit</strong> de type X pour jouer hors ligne. Boostez vos compétences analytiques, profitez d'un plaisir mentalement stimulant et faites passer votre résolution de puzzles au niveau supérieur avec les défis avancés de Sudoku X.</p>
+</div>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                 <a href="../easy-sudoku-x.html">Easy</a> <a href="../medium-sudoku-x.html">Medium</a> <a href="../hard-sudoku-x.html">Hard</a> <a href="../expert-sudoku-x.html">Expert</a> <a href="../master-sudoku-x.html">Master</a>
+            </div>
+             <hr class="footer-separator">
+            <div class="footer-links">
+                <a href="../index.html">Home</a> <a href="../about.html">About</a> <a href="../contact.html">Contact Us</a> <a href="../privacy.html">Privacy Policy</a> <a href="../terms.html">Terms of Service</a>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2025 Sudokuheroes.com. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <div id="win-modal" class="modal"><div class="modal-content"><span class="close-btn">&times;</span><h2>Congratulations!</h2><p>You solved the Sudoku X puzzle!</p><p>Difficulty: <span id="win-difficulty"></span></p><p>Your time: <span id="win-time"></span></p><p id="best-time-msg"></p><button id="win-new-game-btn" class="new-game-button-style">Play Again</button></div></div>
+    <div id="settings-modal" class="modal"><div class="modal-content"><span class="close-btn">&times;</span><h2>Settings</h2><div class="setting-item"><label for="theme-select">Theme</label><select id="theme-select"><option value="theme-light">Light</option><option value="theme-dark">Dark</option><option value="theme-paper">Paper</option></select></div><div class="setting-item"><label for="highlight-duplicates-toggle">Highlight Duplicates</label><input type="checkbox" id="highlight-duplicates-toggle" class="toggle-switch" checked></div><div class="setting-item"><label for="highlight-same-toggle">Highlight Same Numbers</label><input type="checkbox" id="highlight-same-toggle" class="toggle-switch" checked></div><div class="setting-item"><label for="sound-toggle">Sound Effects</label><input type="checkbox" id="sound-toggle" class="toggle-switch" checked></div></div></div>
+    <div id="stats-modal" class="modal"><div class="modal-content"><span class="close-btn">&times;</span><h2>Statistics</h2><div id="stats-container"></div><button id="reset-stats-btn">Reset Stats</button></div></div>
+    <div id="confirm-modal" class="modal"><div class="modal-content"><h2 id="confirm-title">Are you sure?</h2><p id="confirm-text">This action cannot be undone.</p><div class="confirm-buttons"><button id="confirm-cancel-btn">Cancel</button><button id="confirm-ok-btn" class="new-game-button-style">OK</button></div></div></div>
+    
+    <audio id="click-sound" src="../assets/sounds/click.mp3" preload="auto"></audio>
+    <audio id="place-sound" src="../assets/sounds/place.mp3" preload="auto"></audio>
+    <audio id="error-sound" src="../assets/sounds/error.mp3" preload="auto"></audio>
+    <audio id="win-sound" src="../assets/sounds/win.mp3" preload="auto"></audio>
+    
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+    <script src="../sudoku-x-script.js"></script>
+</body>
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expert Sandwich Sudoku - Play Free Sandwich Sudoku puzzles Online</title>
+    <meta name="description" content="Play Expert Sandwich Sudoku online for free! Solve the most challenging sandwich sudoku puzzles with advanced strategies, daily expert puzzles, and printable sheets for offline play. Boost your logic, focus, and problem-solving skills today.">
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="manifest" href="../site.webmanifest">
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../sandwich-style.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="theme-light">
+
+    <div id="notification-bar"></div>
+
+    <header>
+        <div class="header-content">
+            <button id="hamburger-btn" aria-label="Open Menu">
+                <span></span><span></span><span></span>
+            </button>
+            <h1><a href="../index.html" style="text-decoration: none; color: inherit;">Sudokuheroes.com</a></h1>
+
+            <!-- START: ADDED CODE FOR MOBILE THEME TOGGLE -->
+<div id="theme-toggle-mobile" class="theme-toggle-mobile">
+    <button id="mobile-theme-switcher" aria-label="Toggle Theme">
+        <!-- Sun Icon SVG -->
+        <svg class="icon-light" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <!-- Moon Icon SVG -->
+        <svg class="icon-dark" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+    </button>
+</div>
+<!-- END: ADDED CODE FOR MOBILE THEME TOGGLE -->
+ 
+            <nav>
+                <div class="game-mode-selector">
+                    <a href="../index.html" class="mode-btn">Classic Sudoku</a>
+                    <a href="../killer-index.html" class="mode-btn">Killer Sudoku</a>
+                    <a href="../samurai-sudoku.html" class="mode-btn">Samurai Sudoku</a>
+                    <a href="../sudoku-x.html" class="mode-btn">Sudoku X</a>
+                    <a href="../sandwich-sudoku.html" class="mode-btn active">Sandwich Sudoku</a>
+                    <a href="../jigsaw-sudoku.html" class="mode-btn">Jigsaw Sudoku</a>
+                    <a href="../word-sudoku.html" class="mode-btn">Word Sudoku</a>
+                    <a href="../daily-challenge.html" class="mode-btn">Daily Challenge</a>
+                </div>
+                <div class="header-right-side">
+    <div class="header-actions">
+        <button id="stats-btn" class="icon-btn">📊</button>
+        <button id="settings-btn" class="icon-btn">⚙️</button>
+    </div>
+    
+    <!-- START: Language Selector المحدث -->
+    <div class="language-selector">
+        <button class="lang-btn" aria-label="Select Language">
+    <!-- START: MODIFIED CODE -->
+    <img id="selected-lang-flag" src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/es.svg" alt="Selected Language" style="width: 20px; height: auto; border-radius: 2px; box-shadow: 0 0 2px rgba(0,0,0,0.2);">
+    <span id="selected-lang-text">Español</span>
+    <!-- END: MODIFIED CODE -->
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+    </svg>
+        </button>
+        <div class="lang-dropdown">
+    <a href="../expert-sandwich-sudoku.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/gb.svg" alt="English Flag"> English</a>
+    <a href="../es/expert-sandwich-sudoku.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/es.svg" alt="Spanish Flag"> Español</a>
+    <a href="../de/expert-sandwich-sudoku.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/de.svg" alt="German Flag"> Deutsch</a>
+    <a href="../pt/expert-sandwich-sudoku.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/pt.svg" alt="Portuguese Flag"> Português</a>
+    <a href="../fr/expert-sandwich-sudoku.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/fr.svg" alt="French Flag"> Français</a>
+    <a href="../it/expert-sandwich-sudoku.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/it.svg" alt="Italian Flag"> Italiano</a>
+    <a href="../ar/expert-sandwich-sudoku.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/sa.svg" alt="Arabic Flag"> عربى</a>
+    <a href="../ja/expert-sandwich-sudoku.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/jp.svg" alt="Japanese Flag"> 日本語</a>
+    <a href="../ru/expert-sandwich-sudoku.html"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/ru.svg" alt="Russian Flag"> Русский</a>
+</div>
+    </div>
+    <!-- END: Language Selector -->
+
+            </nav>
+        </div>
+    </header>
+
+    <div id="mobile-menu">
+        <div class="mobile-menu-content">
+            <button id="close-menu-btn" aria-label="Close Menu">&times;</button>
+            <h3>Game Mode</h3>
+            <div class="game-mode-selector">
+                <a href="../index.html" class="mode-btn">Classic Sudoku</a>
+                <a href="../killer-index.html" class="mode-btn">Killer Sudoku</a>
+                <a href="../samurai-sudoku.html" class="mode-btn">Samurai Sudoku</a>
+                <a href="../sudoku-x.html" class="mode-btn">Sudoku X</a>
+                <a href="../sandwich-sudoku.html" class="mode-btn active">Sandwich Sudoku</a>
+                <a href="../jigsaw-sudoku.html" class="mode-btn">Jigsaw Sudoku</a>
+                <a href="../word-sudoku.html" class="mode-btn">Word Sudoku</a>
+                <a href="../daily-challenge.html" class="mode-btn">Daily Challenge</a>
+            </div>
+                    <hr>
+        <h3>Actions</h3>
+        <div class="header-actions">
+            <button id="mobile-stats-btn" class="icon-btn">📊 Statistics</button>
+            <button id="mobile-settings-btn" class="icon-btn">⚙️ Settings</button>
+        </div>
+
+        <!-- ============================================= -->
+        <!-- ===== أضف هذا الجزء الجديد بالكامل هنا ===== -->
+        <!-- ============================================= -->
+        <hr>
+        <h3>Languages</h3>
+        <!-- هذا هو الصندوق الفارغ الذي سيستقبل اللغات المنسوخة -->
+        <div id="mobile-language-placeholder" class="mobile-language-links"></div>
+
+        </div>
+    </div>
+
+    <main class="game-container sandwich-container">
+        <div class="difficulty-and-new-game-controls">
+            <div class="difficulty-selector">
+                <select id="difficulty" title="Select Difficulty">
+                    <option value="sandwich-easy">Easy</option>
+                    <option value="sandwich-medium">Medium</option>
+                    <option value="sandwich-hard">Hard</option>
+                    <option value="sandwich-expert" selected>Expert</option>
+                    <option value="sandwich-master">Master</option>
+                </select>
+            </div>
+            <div id="mobile-timer-display">00:00</div>
+            <button id="new-game-btn" class="new-game-button-style">New Game</button>
+        </div>
+        
+        <div id="sandwich-grid-wrapper">
+            <!-- Game board is generated by JS -->
+        </div>
+        
+        <div class="game-controls">
+            <div class="number-pad">
+                <button class="num-btn">1</button><button class="num-btn">2</button><button class="num-btn">3</button>
+                <button class="num-btn">4</button><button class="num-btn">5</button><button class="num-btn">6</button>
+                <button class="num-btn">7</button><button class="num-btn">8</button><button class="num-btn">9</button>
+                <button id="erase-btn" class="control-btn">Erase</button>
+                <button id="pencil-btn" class="control-btn">Pencil</button>
+            </div>
+
+            <div class="action-panel">
+                <div id="timer">00:00</div>
+                <button id="undo-btn" class="action-btn">Undo</button>
+                <button id="hint-btn" class="action-btn">Hint</button>
+                <button id="check-btn" class="action-btn">Check</button>
+                <button id="solve-btn" class="action-btn">Solve</button>
+                <button id="new-game-btn-bottom" class="new-game-button-style">New Game</button>
+            </div>
+        </div>
+    </main>
+
+<div class="info-section">
+    <h2>Sudoku Sandwich Experto: El Desafío Mental Definitivo</h2>
+    <p>Bienvenido al mundo del <strong>Sudoku Sandwich Experto</strong>, donde solo los solucionadores de rompecabezas más valientes se atreven a jugar. Esta no es solo otra variante de Sudoku, es una prueba de resistencia, paciencia y dominio lógico. Si ya has conquistado los rompecabezas de <strong>sudoku sandwich</strong> de nivel fácil, medio y difícil, el nivel <strong>experto</strong> llevará tus habilidades para resolver problemas al límite absoluto.</p>
+
+    <h3>¿Qué Hace Diferente al Sudoku Sandwich Experto?</h3>
+    <p>A diferencia de los niveles más fáciles, los rompecabezas de <strong>sudoku sandwich experto</strong> están diseñados con menos pistas, una lógica más estricta y deducciones más complejas. Las pistas exteriores que muestran las "sumas sándwich" entre el <em>1</em> y el <em>9</em> a menudo dejan muy poco margen de error. Cada movimiento cuenta, y el más mínimo error puede desbaratar tu progreso. Eso es lo que convierte al <strong>sudoku sandwich experto</strong> en el desafío definitivo para los jugadores avanzados.</p>
+
+    <h3>Cómo Jugar al Sudoku Sandwich Experto</h3>
+    <ul>
+        <li>Cada <strong>fila</strong> y <strong>columna</strong> debe contener los dígitos del 1 al 9 exactamente una vez, como en el <strong>Sudoku clásico</strong>.</li>
+        <li>Los números entre el <strong>1</strong> y el <strong>9</strong> en una fila o columna deben sumar la pista sándwich indicada.</li>
+        <li>Usa lógica avanzada, técnicas de eliminación y estrategias de varios pasos para <strong>resolver el sudoku</strong>.</li>
+    </ul>
+    <p>A este nivel, los métodos estándar ya no son suficientes. Los rompecabezas de nivel experto requieren un pensamiento profundo, previsión y técnicas de resolución avanzadas como X-Wing, Swordfish, Coloring y cadenas lógicas.</p>
+
+    <h3>¿Por Qué Jugar al Sudoku Sandwich Experto?</h3>
+    <ul>
+        <li><strong>Desafío Definitivo:</strong> Diseñado para jugadores de nivel <strong>sudoku experto</strong> que quieren superar sus límites.</li>
+        <li><strong>Puzzles Diarios de Nivel Experto:</strong> Resuelve un nuevo <strong>sudoku diario</strong> online cada día.</li>
+        <li><strong>Opciones para Imprimir:</strong> Accede a un <strong>sudoku para imprimir gratis</strong> para la práctica sin conexión.</li>
+        <li><strong>Potencia tu Cerebro:</strong> Mejora el razonamiento lógico, la memoria y la concentración a largo plazo.</li>
+        <li><strong>Perfecto para Competiciones:</strong> Prepárate para torneos de Sudoku profesionales.</li>
+    </ul>
+
+    <h3>Estrategias para el Sudoku Sandwich Experto</h3>
+    <p>En el nivel experto, los jugadores deben usar estrategias que van más allá de la simple eliminación. Algunas de las más efectivas incluyen:</p>
+    <ul>
+        <li><strong>Marcas a Lápiz Avanzadas:</strong> Lleva un registro de múltiples candidatos en cada celda para probar posibilidades.</li>
+        <li><strong>Interacción Cruzada de Pistas:</strong> Usa las sumas sándwich de diferentes filas y columnas para reducir las opciones.</li>
+        <li><strong>Reconocimiento de Patrones:</strong> Detecta estructuras recurrentes que revelan soluciones ocultas.</li>
+        <li><strong>Planificación Paso a Paso:</strong> Piensa varios movimientos por adelantado, ya que muchas soluciones requieren una lógica por capas.</li>
+    </ul>
+    <p>Los rompecabezas de <strong>sudoku sandwich experto</strong> no se tratan solo de resolver, sino de desarrollar resiliencia, paciencia y la capacidad de pensar de forma innovadora.</p>
+
+    <h3>Beneficios de Jugar al Sudoku Sandwich Experto</h3>
+    <ul>
+        <li>Mejora el pensamiento estratégico y las habilidades de planificación a largo plazo.</li>
+        <li>Agudiza la memoria al recordar la ubicación de los números y las reglas lógicas.</li>
+        <li>Mejora la concentración a través de un enfoque profundo en cuadrículas complejas.</li>
+        <li>Fortalece las habilidades analíticas al probar múltiples escenarios de forma lógica.</li>
+        <li>Proporciona una sensación de logro después de resolver una de las variantes de Sudoku más difíciles.</li>
+    </ul>
+
+    <h3>Desafíos Diarios de Sudoku Sandwich Experto</h3>
+    <p>Muchos jugadores disfrutan de los desafíos del <strong>sudoku diario</strong> para mantenerse en forma. Un nuevo rompecabezas cada día mantiene tu cerebro activo y asegura un progreso continuo. Estas actualizaciones diarias son perfectas para cualquiera que busque hacer de la resolución de puzzles parte de su rutina.</p>
+
+    <h3>Sudoku Sandwich Experto para Imprimir</h3>
+    <p>Si prefieres resolver rompecabezas en papel, hay versiones de <strong>sudoku para imprimir</strong> de nivel experto disponibles. Imprímelos, coge un lápiz y disfruta resolviéndolos sin conexión. Esta es una gran opción para viajar, para los descansos de estudio o para sesiones de puzzles sin pantalla.</p>
+
+    <h3>¿Quién Debería Probar el Sudoku Sandwich Experto?</h3>
+    <ul>
+        <li>Aficionados al Sudoku que quieren ir más allá de los rompecabezas tradicionales.</li>
+        <li>Jugadores que disfrutan de desafíos largos y complejos que llevan tiempo resolver.</li>
+        <li>Solucionadores avanzados que se preparan para competiciones de Sudoku.</li>
+        <li>Cualquiera que ya haya dominado los niveles de <strong>sudoku fácil</strong>, <strong>medio</strong> y <strong>difícil</strong>.</li>
+    </ul>
+
+    <h3>Comienza tu Aventura con el Sudoku Sandwich Experto</h3>
+    <p>¿Listo para poner a prueba tus habilidades? Juega al <strong>sudoku sandwich experto online gratis</strong> o <strong>descarga sudoku gratis</strong> para imprimir y jugar sin conexión. Con puzzles diarios de nivel experto y desafíos interminables, este nivel es la prueba definitiva de tus habilidades lógicas. ¡Da el salto y experimenta el sudoku sandwich más difícil hoy mismo!</p>
+</div>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+             <div class="footer-links" id="difficulty-links">
+                 <a href="../easy-sandwich-sudoku.html">Easy</a> 
+                 <a href="../medium-sandwich-sudoku.html">Medium</a> 
+                 <a href="../hard-sandwich-sudoku.html">Hard</a> 
+                 <a href="../expert-sandwich-sudoku.html">Expert</a> 
+                 <a href="../master-sandwich-sudoku.html">Master</a>
+            </div>
+             <hr class="footer-separator">
+            <div class="footer-links">
+                <a href="../index.html">Home</a> <a href="../about.html">About</a> <a href="../contact.html">Contact Us</a> <a href="../privacy.html">Privacy Policy</a> <a href="../terms.html">Terms of Service</a>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2025 Sudokuheroes.com. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <div id="win-modal" class="modal"><div class="modal-content"><span class="close-btn">&times;</span><h2>Congratulations!</h2><p>You solved the Sandwich Sudoku!</p><p>Difficulty: <span id="win-difficulty"></span></p><p>Your time: <span id="win-time"></span></p><p id="best-time-msg"></p><button id="win-new-game-btn" class="new-game-button-style">Play Again</button></div></div>
+    <div id="settings-modal" class="modal"><div class="modal-content"><span class="close-btn">&times;</span><h2>Settings</h2><div class="setting-item"><label for="theme-select">Theme</label><select id="theme-select"><option value="theme-light">Light</option><option value="theme-dark">Dark</option><option value="theme-paper">Paper</option></select></div><div class="setting-item"><label for="highlight-duplicates-toggle">Highlight Duplicates</label><input type="checkbox" id="highlight-duplicates-toggle" class="toggle-switch" checked></div><div class="setting-item"><label for="highlight-same-toggle">Highlight Same Numbers</label><input type="checkbox" id="highlight-same-toggle" class="toggle-switch" checked></div><div class="setting-item"><label for="sound-toggle">Sound Effects</label><input type="checkbox" id="sound-toggle" class="toggle-switch" checked></div></div></div>
+    <div id="stats-modal" class="modal"><div class="modal-content"><span class="close-btn">&times;</span><h2>Statistics</h2><div id="stats-container"></div><button id="reset-stats-btn">Reset Stats</button></div></div>
+    <div id="confirm-modal" class="modal"><div class="modal-content"><h2 id="confirm-title">Are you sure?</h2><p id="confirm-text">This action cannot be undone.</p><div class="confirm-buttons"><button id="confirm-cancel-btn">Cancel</button><button id="confirm-ok-btn" class="new-game-button-style">OK</button></div></div></div>
+    
+    <audio id="click-sound" src="../assets/sounds/click.mp3" preload="auto"></audio>
+    <audio id="place-sound" src="../assets/sounds/place.mp3" preload="auto"></audio>
+    <audio id="error-sound" src="../assets/sounds/error.mp3" preload="auto"></audio>
+    <audio id="win-sound" src="../assets/sounds/win.mp3" preload="auto"></audio>
+    
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+    <script src="../sandwich-script.js"></script>
+</body>
+</html>
